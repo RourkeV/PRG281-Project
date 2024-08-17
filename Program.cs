@@ -10,6 +10,11 @@ namespace PRG281_Project
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("hello world");
+
+            Console.ReadKey();
+
         }
     }
 }
