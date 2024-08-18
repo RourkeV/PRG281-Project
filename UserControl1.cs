@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,15 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG281_Project
 {
-    internal class Program
+    public partial class UserControl1 : UserControl
     {
-        static void Main(string[] args)
+        public UserControl1()
         {
-
-            Console.WriteLine("yo");
-
-            Application.Run(new UserSIgnUp());
-
+            InitializeComponent();
         }
     }
 }
