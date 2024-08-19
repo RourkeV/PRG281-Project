@@ -12,7 +12,7 @@ namespace PRG281_Project
         static void Main(string[] args)
         {
 
-            Console.WriteLine("yo");
+            Console.WriteLine("cheese");
 
             Application.Run(new UserSignUp());
 
