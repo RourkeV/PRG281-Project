@@ -13,8 +13,8 @@ namespace PRG281_Project
         {
 
 
-            Console.WriteLine("yessir");
-
+            Console.WriteLine("hellos");
+            Console.WriteLine("hell yes");
             Application.Run(new UserSignUp());
 
         }
