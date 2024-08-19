@@ -14,7 +14,7 @@ namespace PRG281_Project
 
             Console.WriteLine("yo");
 
-            Application.Run(new UserSIgnUp());
+            Application.Run(new UserSignUp());
 
         }
         public static List<UserDetails> allUsers = new List<UserDetails>{

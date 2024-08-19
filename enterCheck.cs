@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG281_Project
 {
-    public partial class UserSignUp : Form
+    public partial class enterCheck : Form
     {
-        public UserSignUp()
+        public enterCheck()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
