@@ -17,5 +17,6 @@ namespace PRG281_Project
             Application.Run(new UserSIgnUp());
 
         }
+        public static List<UserDetails> allUsers = new List<UserDetails>();
     }
 }
