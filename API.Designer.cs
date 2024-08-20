@@ -53,7 +53,7 @@
             this.richTextBox.ReadOnly = true;
             this.richTextBox.Size = new System.Drawing.Size(370, 354);
             this.richTextBox.TabIndex = 1;
-            this.richTextBox.Text = "Your conversation will appear here...";
+            this.richTextBox.Text = "";
             // 
             // submitBtn
             // 
