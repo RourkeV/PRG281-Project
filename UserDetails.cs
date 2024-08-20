@@ -12,14 +12,14 @@ namespace PRG281_Project
         private string name;
         private string email;
         private string password;
-        private int age;
+        private decimal age;
 
         public string name1 { get => name; set => name = value; }
         public string email1 { get => email; set => email = value; }
         public string password1 { get => password; set => password = value; }
-        public int age1 { get => age; set => age = value; }
+        public decimal age1 { get => age; set => age = value; }
 
-        public UserDetails(string name, string email, string password, int age)
+        public UserDetails(string name, string email, string password, decimal age)
         {
             this.name1 = name;
             this.email1 = email;
