@@ -36,6 +36,7 @@
             // 
             // textBox
             // 
+            this.textBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox.Location = new System.Drawing.Point(63, 455);
             this.textBox.Multiline = true;
@@ -47,6 +48,7 @@
             // 
             // richTextBox
             // 
+            this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.richTextBox.Location = new System.Drawing.Point(63, 80);
             this.richTextBox.Name = "richTextBox";
@@ -57,6 +59,7 @@
             // 
             // submitBtn
             // 
+            this.submitBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitBtn.Location = new System.Drawing.Point(346, 455);
@@ -64,7 +67,7 @@
             this.submitBtn.Size = new System.Drawing.Size(95, 46);
             this.submitBtn.TabIndex = 2;
             this.submitBtn.Text = "Send";
-            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.UseVisualStyleBackColor = false;
             // 
             // lblHeading
             // 
@@ -81,9 +84,9 @@
             // 
             this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(504, 557);
+            this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.submitBtn);
-            this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.textBox);
             this.Name = "API";
             this.Text = "Love Bot";

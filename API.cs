@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
 using System.Linq;
+using System.Drawing;
 
 namespace PRG281_Project
 {
@@ -21,7 +22,7 @@ namespace PRG281_Project
             textBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
         }
 
-        private async void submitBtn_Click(object sender, EventArgs e)
+    private async void submitBtn_Click(object sender, EventArgs e)
         {
             await SubmitUserInputAsync();
         }
@@ -39,17 +40,15 @@ namespace PRG281_Project
             string userInput = textBox.Text.Trim();
 
             if (lengthValidation(userInput))
-            {
-                // Simulate right alignment for user input
+            { 
+               
                 richTextBox.SelectionAlignment = HorizontalAlignment.Right;
                 richTextBox.AppendText("User: " + userInput + Environment.NewLine);
                 textBox.Clear();
                 richTextBox.ScrollToCaret();
-
-                // Get the AI response and append it to the RichTextBox
+                
                 string aiResponse = await GetAIResponseAsync(userInput);
-
-                // Simulate left alignment for AI response
+                
                 richTextBox.SelectionAlignment = HorizontalAlignment.Left;
                 richTextBox.AppendText("AI: " + aiResponse + Environment.NewLine);
                 richTextBox.ScrollToCaret();
