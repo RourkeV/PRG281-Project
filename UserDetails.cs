@@ -26,5 +26,5 @@ namespace PRG281_Project
             this.password1 = password;
             this.age1 = age;
         }
-    }
+
 }

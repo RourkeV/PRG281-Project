@@ -16,5 +16,11 @@ namespace PRG281_Project
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserDetails newUser = new UserDetails();
+            allUsers.add(newUser);
+        }
     }
 }
