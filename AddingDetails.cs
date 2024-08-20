@@ -16,5 +16,18 @@ namespace PRG281_Project
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserSignUp userSignUp = new UserSignUp();
+            string email = userSignUp.userEmail;
+            string passw = userSignUp.userPass;
+            string first = txtFirst.Text;
+            string last = txtLast.Text;
+            string fullName = $"{first} {last}";
+            decimal age = numAge.Value;
+            UserDetails newUser = new UserDetails(fullName, email, passw, age);
+            //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
+        }
     }
 }

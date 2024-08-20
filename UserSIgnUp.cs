@@ -18,15 +18,28 @@ namespace PRG281_Project
         {
             InitializeComponent();
             instance = this;
-            email = textBox1;
         }
 
+        //private string _name;
+
+        //public string Name
+        //{
+        //    get { return _name; }
+        //    set
+        //    {
+
+        public string userEmail;
+        public string userPass;
+        
         private void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
-            string userEmail = textBox1.Text;
-            string userPass = textBox2.Text;
-            textBox1.Clear();
+            userEmail = txtEmail.Text;
+            userPass = txtPass.Text;
+            AddingDetails detailPage = new AddingDetails();
+            detailPage.Show();
+            Visible = false;
+            txtEmail.Clear();
         }
 
         private void label1_Click(object sender, EventArgs e)
