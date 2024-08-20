@@ -15,6 +15,21 @@ namespace PRG281_Project
         public enterCheck()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //sign up button
+            UserSignUp signUpPage = new UserSignUp();
+            signUpPage.Show();
+            Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //login button
+
         }
     }
 }
