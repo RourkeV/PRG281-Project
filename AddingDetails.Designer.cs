@@ -1,4 +1,4 @@
-﻿namespace PRG281_Project
+namespace PRG281_Project
 {
     partial class AddingDetails
     {
@@ -84,6 +84,7 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Age";
             // 
+
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(284, 474);
@@ -116,6 +117,7 @@
             0,
             0,
             0});
+
             // 
             // AddingDetails
             // 

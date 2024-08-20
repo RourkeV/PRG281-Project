@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +30,6 @@ namespace PRG281_Project
             FullUserList list = new FullUserList();
             list.AllUsers.Add(newUser);
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
-        }
+
     }
 }
