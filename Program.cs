@@ -13,7 +13,7 @@ namespace PRG281_Project
         {
 
             Console.WriteLine("hey");
-            //sex
+     
             Application.Run(new UserSignUp());
 
         }

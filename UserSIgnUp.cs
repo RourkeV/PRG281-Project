@@ -19,7 +19,12 @@ namespace PRG281_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            SwipeForm swipeForm = new SwipeForm();
+            swipeForm.Show();
+
+            swipeForm.FormClosed += (s, args) => Application.Exit();
         }
 
         private void label1_Click(object sender, EventArgs e)
