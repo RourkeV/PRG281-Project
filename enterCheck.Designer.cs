@@ -28,46 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.head = new System.Windows.Forms.Label();
+            this.login = new System.Windows.Forms.Button();
+            this.signUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // head
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(230, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "what do you wish to do";
+            this.head.AutoSize = true;
+            this.head.Location = new System.Drawing.Point(307, 140);
+            this.head.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.head.Name = "head";
+            this.head.Size = new System.Drawing.Size(140, 16);
+            this.head.TabIndex = 0;
+            this.head.Text = "what do you wish to do";
             // 
-            // button1
+            // login
             // 
-            this.button1.Location = new System.Drawing.Point(343, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = true;
+            this.login.Location = new System.Drawing.Point(457, 226);
+            this.login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(137, 42);
+            this.login.TabIndex = 1;
+            this.login.Text = "Log In";
+            this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // signUp
             // 
-            this.button2.Location = new System.Drawing.Point(119, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 34);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Sign Up";
-            this.button2.UseVisualStyleBackColor = true;
+            this.signUp.Location = new System.Drawing.Point(159, 226);
+            this.signUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signUp.Name = "signUp";
+            this.signUp.Size = new System.Drawing.Size(153, 42);
+            this.signUp.TabIndex = 2;
+            this.signUp.Text = "Sign Up";
+            this.signUp.UseVisualStyleBackColor = true;
+            this.signUp.Click += new System.EventHandler(this.button2_Click);
             // 
             // enterCheck
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 315);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(843, 388);
+            this.Controls.Add(this.signUp);
+            this.Controls.Add(this.login);
+            this.Controls.Add(this.head);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "enterCheck";
             this.Text = "enterCheck";
             this.ResumeLayout(false);
@@ -77,8 +83,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label head;
+        private System.Windows.Forms.Button login;
+        private System.Windows.Forms.Button signUp;
     }
 }
