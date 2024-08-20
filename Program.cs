@@ -15,10 +15,10 @@ namespace PRG281_Project
 
             Console.WriteLine("hellos");
             Console.WriteLine("hell yes");
-            Application.Run(new UserSignUp());
+            Application.Run(new enterCheck());
 
         }
-        public static List<UserDetails> allUsers = new List<UserDetails>{
+        public List<UserDetails> allUsers = new List<UserDetails>{
             new UserDetails("John Doe", "john.doe@example.com", "password123", 30),
             new UserDetails("Jane Smith", "jane.smith@example.com", "password456", 25),
             new UserDetails("Alice Johnson", "alice.johnson@example.com", "alicepass789", 22),
