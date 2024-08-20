@@ -36,7 +36,7 @@
             // 
             // textBox
             // 
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox.Location = new System.Drawing.Point(63, 455);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
@@ -47,6 +47,7 @@
             // 
             // richTextBox
             // 
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.richTextBox.Location = new System.Drawing.Point(63, 80);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.ReadOnly = true;
@@ -69,10 +70,10 @@
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.BackColor = System.Drawing.Color.RosyBrown;
-            this.lblHeading.Font = new System.Drawing.Font("PMingLiU-ExtB", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Font = new System.Drawing.Font("PMingLiU-ExtB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.Location = new System.Drawing.Point(59, 48);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(223, 20);
+            this.lblHeading.Size = new System.Drawing.Size(265, 24);
             this.lblHeading.TabIndex = 3;
             this.lblHeading.Text = "Welcome to the Love Bot";
             // 
