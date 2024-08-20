@@ -27,6 +27,8 @@ namespace PRG281_Project
             string fullName = $"{first} {last}";
             decimal age = numAge.Value;
             UserDetails newUser = new UserDetails(fullName, email, passw, age);
+            FullUserList list = new FullUserList();
+            list.AllUsers.Add(newUser);
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
         }
     }
