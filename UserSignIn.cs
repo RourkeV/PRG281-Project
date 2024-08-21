@@ -25,6 +25,10 @@ namespace PRG281_Project
             users = fullUserList.AllUsers;
         }
 
+        public string inEmail;
+        public string inPassword;
+        public bool inCheck = false;
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {           
            
@@ -34,8 +38,9 @@ namespace PRG281_Project
                 {
                     if (item.password1 == txtPass.Text)
                     {
-                        current = item;
-                        //assign main user must be assigned here
+                        inEmail = txtEmail.Text;
+                        inPassword = txtPass.Text;
+                        inCheck = true;
                         //AddingDetails detailPage = new AddingDetails(); ***this page needs to link to swipe page
                         //detailPage.Show();
                         Visible = false;
