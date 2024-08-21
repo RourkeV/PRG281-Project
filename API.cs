@@ -12,6 +12,8 @@ namespace PRG281_Project
 {
     public partial class API : Form
     {
+        bool clickedbtn = false;
+  
         public static readonly HttpClient client = new HttpClient();
 
         public API()
@@ -24,13 +26,27 @@ namespace PRG281_Project
 
     private async void submitBtn_Click(object sender, EventArgs e)
         {
+            if (clickedbtn == false)
+            {
+                richTextBox.Clear();
+                clickedbtn = true;
+            }
+            
             await SubmitUserInputAsync();
+
+
         }
 
         private async void textBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (clickedbtn == false)
+                {
+                    richTextBox.Clear();
+                    clickedbtn = true;
+                }
+                
                 await SubmitUserInputAsync();
             }
         }
@@ -74,7 +90,7 @@ namespace PRG281_Project
                         new { role = "system", content = "You are a dating app assistant." },
                         new { role = "user", content = userInput }
                     },
-                    max_tokens = 250,
+                    max_tokens = 350,
                     temperature = 0.7,
                     top_p = 0.85
                 };
