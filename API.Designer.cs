@@ -43,7 +43,7 @@
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(268, 46);
             this.textBox.TabIndex = 0;
-            this.textBox.Text = "Enter Your Message...";
+            this.textBox.Text = "Ask me for any dating advice...";
             this.textBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // richTextBox
@@ -66,7 +66,7 @@
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(95, 46);
             this.submitBtn.TabIndex = 2;
-            this.submitBtn.Text = "Send";
+            this.submitBtn.Text = "Ask";
             this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
