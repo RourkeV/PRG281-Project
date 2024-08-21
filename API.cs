@@ -59,14 +59,14 @@ namespace PRG281_Project
             { 
                
                 richTextBox.SelectionAlignment = HorizontalAlignment.Right;
-                richTextBox.AppendText("User: " + userInput + Environment.NewLine);
+                richTextBox.AppendText("User: " + userInput + Environment.NewLine + Environment.NewLine);
                 textBox.Clear();
                 richTextBox.ScrollToCaret();
                 
                 string aiResponse = await GetAIResponseAsync(userInput);
                 
                 richTextBox.SelectionAlignment = HorizontalAlignment.Left;
-                richTextBox.AppendText("AI: " + aiResponse + Environment.NewLine);
+                richTextBox.AppendText("AI: " + aiResponse + Environment.NewLine + Environment.NewLine);
                 richTextBox.ScrollToCaret();
             }
             else
