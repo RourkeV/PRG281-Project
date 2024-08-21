@@ -29,14 +29,14 @@ namespace PRG281_Project
             userEmail = txtEmail.Text;
             userPass = txtPass.Text;
             newPage();
-            Visible = false;
-            txtEmail.Clear();
 
         }
         public virtual void newPage()
         {
             AddingDetails detailPage = new AddingDetails();
             detailPage.Show();
+            Visible = false;
+            txtEmail.Clear();
         }
     }
 }

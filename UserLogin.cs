@@ -18,6 +18,10 @@ namespace PRG281_Project
         }
         public override void newPage()
         {
+            //need to do varification
+
+            //user email and password work
+
             //takes you to the home page
         }
     }
