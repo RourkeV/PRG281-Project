@@ -37,7 +37,7 @@
             // textBox
             // 
             this.textBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.Location = new System.Drawing.Point(63, 455);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
@@ -49,13 +49,13 @@
             // richTextBox
             // 
             this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox.Location = new System.Drawing.Point(63, 80);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.ReadOnly = true;
             this.richTextBox.Size = new System.Drawing.Size(370, 354);
             this.richTextBox.TabIndex = 1;
-            this.richTextBox.Text = "";
+            this.richTextBox.Text = "Your conversation will appear here...";
             // 
             // submitBtn
             // 
@@ -68,6 +68,7 @@
             this.submitBtn.TabIndex = 2;
             this.submitBtn.Text = "Send";
             this.submitBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // lblHeading
             // 
