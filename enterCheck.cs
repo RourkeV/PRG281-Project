@@ -21,6 +21,7 @@ namespace PRG281_Project
         private void button2_Click(object sender, EventArgs e)
         {
             //sign up button
+            //opens sign up form
             UserSignUp signUpPage = new UserSignUp();
             signUpPage.Show();
             Visible = false;
@@ -29,7 +30,9 @@ namespace PRG281_Project
         private void button1_Click(object sender, EventArgs e)
         {
             //login button
-
+            UserLogin loginPage = new UserLogin();
+            loginPage.Show();
+            Visible = false;
         }
     }
 }
