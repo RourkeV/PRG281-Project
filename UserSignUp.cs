@@ -20,14 +20,6 @@ namespace PRG281_Project
             instance = this;
         }
 
-        //private string _name;
-
-        //public string Name
-        //{
-        //    get { return _name; }
-        //    set
-        //    {
-
         public string userEmail;
         public string userPass;
         
