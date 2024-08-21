@@ -24,14 +24,14 @@ namespace PRG281_Project
         public string Security { get => security; set => security = value; }
         public string SecAnswer { get => secAnswer; set => secAnswer = value; }
 
-        public UserDetails(string name, string email, string password, decimal age, string Security, string secAnswer)
+        public UserDetails(string name, string email, string password, decimal age, string security, string secAnswer)
         {
             this.name1 = name;
             this.email1 = email;
             this.password1 = password;
             this.age1 = age;
-            this.security = Security;
-            this.secAnswer = secAnswer;
+            this.Security = security;
+            this.SecAnswer = secAnswer;
         }
     }
 }

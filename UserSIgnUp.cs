@@ -20,31 +20,23 @@ namespace PRG281_Project
             instance = this;
         }
 
-        //private string _name;
-
-        //public string Name
-        //{
-        //    get { return _name; }
-        //    set
-        //    {
-
         public string userEmail;
         public string userPass;
-        
-        private void button1_Click(object sender, EventArgs e)
+
+        public void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
             userEmail = txtEmail.Text;
             userPass = txtPass.Text;
-            AddingDetails detailPage = new AddingDetails();
-            detailPage.Show();
+            newPage();
             Visible = false;
             txtEmail.Clear();
-        }
 
-        private void label1_Click(object sender, EventArgs e)
+        }
+        public virtual void newPage()
         {
-            
+            AddingDetails detailPage = new AddingDetails();
+            detailPage.Show();
         }
     }
 }
