@@ -13,7 +13,6 @@ namespace PRG281_Project
     public partial class UserSignUp : Form
     {
         public static UserSignUp instance;
-        public TextBox email;
         public UserSignUp()
         {
             InitializeComponent();
@@ -22,16 +21,16 @@ namespace PRG281_Project
 
         public string userEmail;
         public string userPass;
-
-        public void button1_Click(object sender, EventArgs e)
+        
+        private void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
             userEmail = txtEmail.Text;
             userPass = txtPass.Text;
-            newPage();
 
+            
         }
-        public virtual void newPage()
+        public virtual void submit()
         {
             AddingDetails detailPage = new AddingDetails();
             detailPage.Show();
