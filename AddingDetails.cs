@@ -26,10 +26,12 @@ namespace PRG281_Project
             string last = txtLast.Text;
             string fullName = $"{first} {last}";
             decimal age = numAge.Value;
-            UserDetails newUser = new UserDetails(fullName, email, passw, age);
+            string security = scrtyQstn.Text;
+            string secAns = scrtyAnswer.Text;
+            UserDetails newUser = new UserDetails(fullName, email, passw, age, security, secAns);
             FullUserList list = new FullUserList();
             list.AllUsers.Add(newUser);
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
-
+        }
     }
 }

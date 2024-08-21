@@ -30,7 +30,9 @@ namespace PRG281_Project
         private void button1_Click(object sender, EventArgs e)
         {
             //login button
-
+            UserLogin loginPage = new UserLogin();
+            loginPage.Show();
+            Visible = false;
         }
     }
 }
