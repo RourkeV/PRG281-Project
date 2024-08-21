@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +21,7 @@ namespace PRG281_Project
 
         public string userEmail;
         public string userPass;
+
         
         
         private void button1_Click(object sender, EventArgs e)

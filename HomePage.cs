@@ -21,5 +21,42 @@ namespace PRG281_Project
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxChat_Click(object sender, EventArgs e)
+        {
+            //https://www.flaticon.com/free-icons/chatbot to attribute freepik incase 
+
+
+        }
     }
 }
