@@ -29,8 +29,10 @@ namespace PRG281_Project
             string security = scrtyQstn.Text;
             string secAns = scrtyAnswer.Text;
             FullUserList userUserList = new FullUserList();
+
             userUserList.addUser(fullName, email, passw, age, security, secAns);
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
+            
         }
     }
 }
