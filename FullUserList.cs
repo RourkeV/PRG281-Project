@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PRG281_Project
 {
     internal class FullUserList
-    {
+    {       
+
         private List<UserDetails> allUsers = new List<UserDetails>{
             new UserDetails("John Doe", "john.doe@example.com", "password123", 30, "What was the name of your first pet?", "Max"),
             new UserDetails("Jane Smith", "jane.smith@example.com", "password456", 25, "In what city were you born?", "Denver"),
@@ -23,35 +26,11 @@ namespace PRG281_Project
         };
 
         public List<UserDetails> AllUsers { get => allUsers; set => allUsers = value; }
+
+        public void addUser(string name, string email, string password, decimal age, string security, string secAns)
+        {
+            UserDetails newUser = new UserDetails(name, email, password, age, security, secAns);
+            allUsers.Add(newUser);
+        }
     }
 }
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: 
-
-//Question: 
-//Answer: Marie
-
-//Question: 
-//Answer: 

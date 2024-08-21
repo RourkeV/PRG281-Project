@@ -16,6 +16,7 @@ namespace PRG281_Project
         {
             InitializeComponent();
         }
+        public bool signCheck = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -28,10 +29,12 @@ namespace PRG281_Project
             decimal age = numAge.Value;
             string security = scrtyQstn.Text;
             string secAns = scrtyAnswer.Text;
-            UserDetails newUser = new UserDetails(fullName, email, passw, age, security, secAns);
-            FullUserList list = new FullUserList();
-            list.AllUsers.Add(newUser);
+            FullUserList userUserList = new FullUserList();
+
+            userUserList.addUser(fullName, email, passw, age, security, secAns);
+            signCheck = true;
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
+            
         }
     }
 }
