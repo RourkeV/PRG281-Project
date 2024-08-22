@@ -26,5 +26,10 @@ namespace PRG281_Project
         {
             
         }
+
+        private void UserSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

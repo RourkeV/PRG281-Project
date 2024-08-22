@@ -17,6 +17,19 @@ namespace PRG281_Project
             Console.WriteLine("hell yes");
             Application.Run(new UserSignUp());
 
+            likedUsers liked = new likedUsers();
+
+            // Add specific users to the group (e.g., users older than 30)
+
+            foreach (var user in allUsers)
+            {
+                if (user.name1 == "John Doe")
+                {
+                    liked.AddUser(user);
+                }
+            }
+
+
         }
         public static List<UserDetails> allUsers = new List<UserDetails>{
             new UserDetails("John Doe", "john.doe@example.com", "password123", 30),
@@ -28,6 +41,8 @@ namespace PRG281_Project
             new UserDetails("George Hall", "george.hall@example.com", "georgepass222", 31),
             new UserDetails("Fiona Green", "fiona.green@example.com", "fionapass111", 29),
             new UserDetails("Hannah King", "hannah.king@example.com", "hannahpass333", 26)
+
+
         };
     }
 }
