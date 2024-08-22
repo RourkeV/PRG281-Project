@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +13,6 @@ namespace PRG281_Project
     public partial class UserSignUp : Form
     {
         public static UserSignUp instance;
-        public TextBox email;
         public UserSignUp()
         {
             InitializeComponent();
@@ -23,7 +22,9 @@ namespace PRG281_Project
         public string userEmail;
         public string userPass;
 
-        public void button1_Click(object sender, EventArgs e)
+        
+        
+        private void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
             userEmail = txtEmail.Text;

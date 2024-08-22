@@ -37,25 +37,25 @@
             // textBox
             // 
             this.textBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.Location = new System.Drawing.Point(63, 455);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(268, 46);
             this.textBox.TabIndex = 0;
-            this.textBox.Text = "Enter Your Message...";
+            this.textBox.Text = "Ask me for any dating advice...";
             this.textBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // richTextBox
             // 
             this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox.Location = new System.Drawing.Point(63, 80);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.ReadOnly = true;
             this.richTextBox.Size = new System.Drawing.Size(370, 354);
             this.richTextBox.TabIndex = 1;
-            this.richTextBox.Text = "";
+            this.richTextBox.Text = "Your conversation will appear here...";
             // 
             // submitBtn
             // 
@@ -66,17 +66,18 @@
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(95, 46);
             this.submitBtn.TabIndex = 2;
-            this.submitBtn.Text = "Send";
+            this.submitBtn.Text = "Ask";
             this.submitBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // lblHeading
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.BackColor = System.Drawing.Color.RosyBrown;
-            this.lblHeading.Font = new System.Drawing.Font("PMingLiU-ExtB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(59, 48);
+            this.lblHeading.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(56, 38);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(265, 24);
+            this.lblHeading.Size = new System.Drawing.Size(329, 39);
             this.lblHeading.TabIndex = 3;
             this.lblHeading.Text = "Welcome to the Love Bot";
             // 
