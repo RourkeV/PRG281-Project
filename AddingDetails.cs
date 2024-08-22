@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +15,26 @@ namespace PRG281_Project
         public AddingDetails()
         {
             InitializeComponent();
+        }
+        public bool signCheck = false;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserSignUp userSignUp = new UserSignUp();
+            string email = userSignUp.userEmail;
+            string passw = userSignUp.userPass;
+            string first = txtFirst.Text;
+            string last = txtLast.Text;
+            string fullName = $"{first} {last}";
+            decimal age = numAge.Value;
+            string security = scrtyQstn.Text;
+            string secAns = scrtyAnswer.Text;
+            FullUserList userUserList = new FullUserList();
+
+            userUserList.addUser(fullName, email, passw, age, security, secAns);
+            signCheck = true;
+            //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
+            
         }
     }
 }

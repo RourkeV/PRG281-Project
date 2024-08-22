@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PRG281_Project
 {
@@ -12,19 +14,26 @@ namespace PRG281_Project
         private string name;
         private string email;
         private string password;
-        private int age;
+        private decimal age;
+        private string security;
+        private string secAnswer;
 
         public string name1 { get => name; set => name = value; }
         public string email1 { get => email; set => email = value; }
         public string password1 { get => password; set => password = value; }
-        public int age1 { get => age; set => age = value; }
+        public decimal age1 { get => age; set => age = value; }
+        public string Security { get => security; set => security = value; }
+        public string SecAnswer { get => secAnswer; set => secAnswer = value; }
 
-        public UserDetails(string name, string email, string password, int age)
+        public UserDetails(string name, string email, string password, decimal age, string security, string secAnswer)
         {
             this.name1 = name;
             this.email1 = email;
             this.password1 = password;
             this.age1 = age;
+            this.Security = security;
+            this.SecAnswer = secAnswer;
         }
+        
     }
 }
