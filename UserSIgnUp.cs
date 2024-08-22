@@ -39,5 +39,10 @@ namespace PRG281_Project
             Visible = false;
             txtEmail.Clear();
         }
+
+        private void UserSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

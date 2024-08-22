@@ -17,7 +17,22 @@ namespace PRG281_Project
             Console.WriteLine("hell yes");
             Application.Run(new HomePage());
 
+            likedUsers liked = new likedUsers();
+
+            // Add specific users to the group (e.g., users older than 30)
+
+            foreach (var user in allUsers)
+            {
+                if (user.name1 == "John Doe")
+                {
+                    liked.AddUser(user);
+                }
+            }
+
+
         }
+
         
+
     }
 }
