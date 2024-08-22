@@ -41,13 +41,13 @@ namespace PRG281_Project
                         inEmail = txtEmail.Text;
                         inPassword = txtPass.Text;
                         inCheck = true;
-                        //AddingDetails detailPage = new AddingDetails(); ***this page needs to link to swipe page
-                        //detailPage.Show();
+                        HomePage homePage = new HomePage();
+                        homePage.Show();
                         Visible = false;
-                        txtEmail.Clear();
                     }
                 }
-            }            
+            } 
+            //need to create user alert if login details dont line up
         }       
     }
 }
