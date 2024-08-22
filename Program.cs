@@ -11,10 +11,6 @@ namespace PRG281_Project
     {
         static void Main(string[] args)
         {
-
-
-            Console.WriteLine("hellos");
-            Console.WriteLine("hell yes");
             Application.Run(new HomePage());
 
         }

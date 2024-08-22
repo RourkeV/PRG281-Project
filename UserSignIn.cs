@@ -47,7 +47,7 @@ namespace PRG281_Project
                     }
                 }
             } 
-            //need to create user alert if login details dont line up
+            //need to create user alert if login details arent valid
         }       
     }
 }
