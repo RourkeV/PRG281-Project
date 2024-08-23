@@ -33,12 +33,12 @@
             this.btnChatBot = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.picBoxChatBot = new System.Windows.Forms.PictureBox();
             this.picBoxSwipe = new System.Windows.Forms.PictureBox();
             this.picBoxSearch = new System.Windows.Forms.PictureBox();
             this.picBoxChat = new System.Windows.Forms.PictureBox();
             this.picBoxProfile = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxChatBot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSwipe)).BeginInit();
@@ -100,6 +100,14 @@
             this.panel1.Size = new System.Drawing.Size(626, 120);
             this.panel1.TabIndex = 0;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(503, 17);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(120, 100);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Click += new System.EventHandler(this.button5_Click);
+            // 
             // picBoxChatBot
             // 
             this.picBoxChatBot.Image = global::PRG281_Project.Properties.Resources.Chat_Icon;
@@ -147,14 +155,6 @@
             this.picBoxProfile.TabIndex = 5;
             this.picBoxProfile.TabStop = false;
             this.picBoxProfile.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(503, 17);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 100);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Click += new System.EventHandler(this.button5_Click);
             // 
             // HomePage
             // 
