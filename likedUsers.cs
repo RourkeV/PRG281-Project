@@ -8,17 +8,19 @@ namespace PRG281_Project
 {
     internal class likedUsers
     {
-        public List<UserDetails> Users
-        { get; set; }
+        FullUserList list = new FullUserList();
+        public List<UserDetails> users = new List<UserDetails>();
 
-        public void UserGroup()
+        public likedUsers()
         {
-            Users = new List<UserDetails>();
+            users = list.AllUsers;
         }
+
+        
 
         public void AddUser(UserDetails user)
         {
-            Users.Add(user);
+            users.Add(user);
         }
     }
 }

@@ -101,7 +101,7 @@
 
             this.Name = "UserSignUp";
             this.Text = "UserSIgnUp";
-            this.Load += new System.EventHandler(this.UserSignUp_Load);
+            //this.Load += new System.EventHandler(this.UserSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

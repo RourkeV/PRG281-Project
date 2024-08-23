@@ -17,14 +17,26 @@ namespace PRG281_Project
             InitializeComponent();
         }
 
-        List<UserDetails> users = new List<UserDetails>();
+       likedUsers lUsers = new likedUsers();
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var user in users)
+
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (var user in lUsers.users)
             {
-                listBox1.Text += $"{user.name1} - {user.email1}  - {user.password1} - {user.age1}";
+                textBox1.Text += $"{user.name1} - {user.email1}  - {user.password1} - {user.age1}\n";
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
