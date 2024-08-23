@@ -201,5 +201,11 @@
   <ItemGroup>
     <None Include="Resources\walter_white.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign_Out_Icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
