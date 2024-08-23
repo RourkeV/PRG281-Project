@@ -17,6 +17,7 @@ namespace PRG281_Project
         private Point _startPoint;
         private bool _isDragging = false;
         private Point _initialPosition;
+        usersLiked likedUsers = new usersLiked();
 
         public HomePage()
         {
@@ -138,7 +139,8 @@ namespace PRG281_Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            
+            likedUsers.Show();
         }
 
         private void picBoxChat_Click(object sender, EventArgs e)
