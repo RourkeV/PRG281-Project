@@ -1,6 +1,6 @@
 ﻿namespace PRG281_Project
 {
-    partial class HomePage
+    partial class usersLiked
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            this.userCard = new System.Windows.Forms.Panel();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.lblHobbyTwo = new System.Windows.Forms.Label();
-            this.lblHobbyThree = new System.Windows.Forms.Label();
-            this.lblHobbyOne = new System.Windows.Forms.Label();
-            this.lblBio = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.userPicture = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usersLiked));
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
             this.tabList = new System.Windows.Forms.TabControl();
@@ -46,90 +40,28 @@
             this.tabSwipePage = new System.Windows.Forms.TabPage();
             this.tabChatBotPage = new System.Windows.Forms.TabPage();
             this.tabSearchPage = new System.Windows.Forms.TabPage();
-            this.imageMainList = new System.Windows.Forms.ImageList(this.components);
-            this.userCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
+            this.imageSearchList = new System.Windows.Forms.ImageList(this.components);
             this.tabList.SuspendLayout();
             this.SuspendLayout();
             // 
-            // userCard
+            // button1
             // 
-            this.userCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(225)))));
-            this.userCard.Controls.Add(this.lblAge);
-            this.userCard.Controls.Add(this.lblHobbyTwo);
-            this.userCard.Controls.Add(this.lblHobbyThree);
-            this.userCard.Controls.Add(this.lblHobbyOne);
-            this.userCard.Controls.Add(this.lblBio);
-            this.userCard.Controls.Add(this.lblUsername);
-            this.userCard.Controls.Add(this.userPicture);
-            this.userCard.Location = new System.Drawing.Point(128, 105);
-            this.userCard.Name = "userCard";
-            this.userCard.Size = new System.Drawing.Size(368, 424);
-            this.userCard.TabIndex = 1;
+            this.button1.Location = new System.Drawing.Point(529, 132);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblAge
+            // textBox1
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(250, 320);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(47, 13);
-            this.lblAge.TabIndex = 6;
-            this.lblAge.Text = "Age:  50";
-            // 
-            // lblHobbyTwo
-            // 
-            this.lblHobbyTwo.Location = new System.Drawing.Point(229, 363);
-            this.lblHobbyTwo.Name = "lblHobbyTwo";
-            this.lblHobbyTwo.Size = new System.Drawing.Size(116, 13);
-            this.lblHobbyTwo.TabIndex = 5;
-            this.lblHobbyTwo.Text = "Hobby 2: Music";
-            this.lblHobbyTwo.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblHobbyThree
-            // 
-            this.lblHobbyThree.Location = new System.Drawing.Point(229, 381);
-            this.lblHobbyThree.Name = "lblHobbyThree";
-            this.lblHobbyThree.Size = new System.Drawing.Size(116, 13);
-            this.lblHobbyThree.TabIndex = 4;
-            this.lblHobbyThree.Text = "Hobby 3: Meth";
-            // 
-            // lblHobbyOne
-            // 
-            this.lblHobbyOne.Location = new System.Drawing.Point(229, 345);
-            this.lblHobbyOne.Name = "lblHobbyOne";
-            this.lblHobbyOne.Size = new System.Drawing.Size(116, 13);
-            this.lblHobbyOne.TabIndex = 3;
-            this.lblHobbyOne.Text = "Hobby 1: Making Meth";
-            this.lblHobbyOne.Click += new System.EventHandler(this.lblHobbyOne_Click);
-            // 
-            // lblBio
-            // 
-            this.lblBio.Location = new System.Drawing.Point(12, 345);
-            this.lblBio.Name = "lblBio";
-            this.lblBio.Size = new System.Drawing.Size(205, 71);
-            this.lblBio.TabIndex = 2;
-            this.lblBio.Text = "Chemistry teacher by day, blue crystal enthusiast by night. I’m the guy who knock" +
-    "s... with 99.1% pure fun. I’m all about that high-quality product, whether it’s " +
-    "in the lab or in life.";
-            this.lblBio.Click += new System.EventHandler(this.lblBio_Click);
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(12, 320);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(123, 13);
-            this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "Username: Walter White";
-            // 
-            // userPicture
-            // 
-            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
-            this.userPicture.Location = new System.Drawing.Point(24, 21);
-            this.userPicture.Name = "userPicture";
-            this.userPicture.Size = new System.Drawing.Size(321, 292);
-            this.userPicture.TabIndex = 0;
-            this.userPicture.TabStop = false;
+            this.textBox1.Location = new System.Drawing.Point(128, 105);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(368, 424);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnSignOut
             // 
@@ -137,9 +69,8 @@
             this.btnSignOut.Location = new System.Drawing.Point(12, 12);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(90, 75);
-            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.TabIndex = 8;
             this.btnSignOut.UseVisualStyleBackColor = true;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // btnFilter
             // 
@@ -147,9 +78,8 @@
             this.btnFilter.Location = new System.Drawing.Point(525, 12);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(90, 75);
-            this.btnFilter.TabIndex = 4;
+            this.btnFilter.TabIndex = 7;
             this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabList
             // 
@@ -160,19 +90,19 @@
             this.tabList.Controls.Add(this.tabSwipePage);
             this.tabList.Controls.Add(this.tabChatBotPage);
             this.tabList.Controls.Add(this.tabSearchPage);
-            this.tabList.ImageList = this.imageMainList;
+            this.tabList.ImageList = this.imageSearchList;
             this.tabList.ItemSize = new System.Drawing.Size(122, 120);
             this.tabList.Location = new System.Drawing.Point(0, -1);
             this.tabList.Name = "tabList";
             this.tabList.SelectedIndex = 0;
             this.tabList.Size = new System.Drawing.Size(629, 718);
             this.tabList.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabList.TabIndex = 6;
+            this.tabList.TabIndex = 9;
             this.tabList.Tag = "";
             // 
             // tabPageProfile
             // 
-            this.tabPageProfile.ImageKey = "Profile_Icon1.png";
+            this.tabPageProfile.ImageIndex = 0;
             this.tabPageProfile.Location = new System.Drawing.Point(4, 4);
             this.tabPageProfile.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageProfile.Name = "tabPageProfile";
@@ -221,53 +151,45 @@
             this.tabSearchPage.TabIndex = 4;
             this.tabSearchPage.UseVisualStyleBackColor = true;
             // 
-            // imageMainList
+            // imageSearchList
             // 
-            this.imageMainList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageMainList.ImageStream")));
-            this.imageMainList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageMainList.Images.SetKeyName(0, "Profile_Icon1.png");
-            this.imageMainList.Images.SetKeyName(1, "Chat_Icon.png");
-            this.imageMainList.Images.SetKeyName(2, "Swipe_Icon.png");
-            this.imageMainList.Images.SetKeyName(3, "ChatBot_Icon1.png");
-            this.imageMainList.Images.SetKeyName(4, "Search_Icon.png");
+            this.imageSearchList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageSearchList.ImageStream")));
+            this.imageSearchList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageSearchList.Images.SetKeyName(0, "Profile_Icon1.png");
+            this.imageSearchList.Images.SetKeyName(1, "Chat_Icon.png");
+            this.imageSearchList.Images.SetKeyName(2, "Swipe_Icon.png");
+            this.imageSearchList.Images.SetKeyName(3, "ChatBot_Icon1.png");
+            this.imageSearchList.Images.SetKeyName(4, "Search_Icon.png");
             // 
-            // HomePage
+            // usersLiked
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 717);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
-            this.Controls.Add(this.userCard);
             this.Controls.Add(this.tabList);
-            this.Name = "HomePage";
-            this.Text = "HomePage";
-            this.Load += new System.EventHandler(this.HomePage_Load);
-            this.userCard.ResumeLayout(false);
-            this.userCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
+            this.Name = "usersLiked";
+            this.Text = "usersLiked";
             this.tabList.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel userCard;
-        private System.Windows.Forms.PictureBox userPicture;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblBio;
-        private System.Windows.Forms.Label lblHobbyTwo;
-        private System.Windows.Forms.Label lblHobbyThree;
-        private System.Windows.Forms.Label lblHobbyOne;
-        private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.Button btnFilter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.TabControl tabList;
         private System.Windows.Forms.TabPage tabPageProfile;
         private System.Windows.Forms.TabPage tabChatPage;
         private System.Windows.Forms.TabPage tabSwipePage;
         private System.Windows.Forms.TabPage tabChatBotPage;
         private System.Windows.Forms.TabPage tabSearchPage;
-        private System.Windows.Forms.ImageList imageMainList;
+        private System.Windows.Forms.ImageList imageSearchList;
     }
 }

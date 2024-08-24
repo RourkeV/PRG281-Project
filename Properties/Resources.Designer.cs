@@ -83,6 +83,16 @@ namespace PRG281_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Filter_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Filter_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Profile_Icon1 {
             get {
                 object obj = ResourceManager.GetObject("Profile_Icon1", resourceCulture);
@@ -103,9 +113,29 @@ namespace PRG281_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sign_Out_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Sign_Out_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Swipe_Icon {
             get {
                 object obj = ResourceManager.GetObject("Swipe_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walter_white {
+            get {
+                object obj = ResourceManager.GetObject("walter_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

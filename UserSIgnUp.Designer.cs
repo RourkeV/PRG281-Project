@@ -37,22 +37,30 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(269, 278);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+
+            this.btnSubmit.Location = new System.Drawing.Point(359, 342);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(56, 19);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
+
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(165, 121);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+
+            this.txtEmail.Location = new System.Drawing.Point(220, 149);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(258, 20);
             this.txtEmail.TabIndex = 1;
+
             // 
             // txtPass
             // 
@@ -83,15 +91,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+
+
+            this.ClientSize = new System.Drawing.Size(800, 450);
+
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnSubmit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
             this.Name = "UserSignUp";
             this.Text = "UserSIgnUp";
+            //this.Load += new System.EventHandler(this.UserSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
