@@ -34,7 +34,13 @@ namespace PRG281_Project
             userUserList.addUser(fullName, email, passw, age, security, secAns);
             signCheck = true;
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
-            
+            System.Threading.Thread.Sleep(1000);
+            HomePage homePage = new HomePage();
+            homePage.Show();
+            Visible = false;
+            //loadingBar load = new loadingBar();
+            //load.Show(); --> go to loading bar
+
         }
     }
 }
