@@ -109,8 +109,9 @@
     <Compile Include="ProfileEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProfileEdit.Designer.cs">
-      <DependentUpon>ProfileEdit.cs</DependentUpon>
+	  <Compile Include="ProfileEdit.Designer.cs">
+		  <DependentUpon>ProfileEdit.cs</DependentUpon>
+	  </Compile>
 
     <Compile Include="loading bar.cs">
       <SubType>Form</SubType>
