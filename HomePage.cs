@@ -107,6 +107,23 @@ namespace PRG281_Project
 
         private void HomePage_Load(object sender, EventArgs e)
         {//now we have the current user depedning on if the signed in or signed up ***nbnbnb still need to do a full system test
+            signInOrUp();
+            
+        }
+        
+        
+        
+//current user
+        
+        public string curName;
+        public string curEmail;
+        public string curPass;
+        public decimal curAge;
+        public string curSecurity;
+        public string curSecAns;        
+        
+        public void signInOrUp()
+        {
             UserSignUp userSignUp = new UserSignUp();
             AddingDetails details = new AddingDetails();
             UserSignIn userSignIn = new UserSignIn();
@@ -126,19 +143,7 @@ namespace PRG281_Project
                 findUser(email, pass);
             }
         }
-        
-        
-        
-//current user
-        
-        public string curName;
-        public string curEmail;
-        public string curPass;
-        public decimal curAge;
-        public string curSecurity;
-        public string curSecAns;        
-        
-        
+
         public void findUser(string email, string password)
         {
             FullUserList userList = new FullUserList();
