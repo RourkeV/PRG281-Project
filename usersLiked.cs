@@ -28,6 +28,7 @@ namespace PRG281_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
             foreach (var user in lUsers.users)
             {
                 textBox1.Text += $"{user.name1} - {user.email1}  - {user.password1} - {user.age1}\n";
