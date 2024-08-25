@@ -104,13 +104,14 @@
             this.tabList.Controls.Add(this.tabSearchPage);
             this.tabList.ImageList = this.imageChatBotList;
             this.tabList.ItemSize = new System.Drawing.Size(122, 120);
-            this.tabList.Location = new System.Drawing.Point(0, -1);
+            this.tabList.Location = new System.Drawing.Point(0, 593);
             this.tabList.Name = "tabList";
             this.tabList.SelectedIndex = 0;
-            this.tabList.Size = new System.Drawing.Size(629, 718);
+            this.tabList.Size = new System.Drawing.Size(629, 124);
             this.tabList.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabList.TabIndex = 7;
             this.tabList.Tag = "";
+            this.tabList.SelectedIndexChanged += new System.EventHandler(this.tabList_SelectedIndexChanged);
             // 
             // tabPageProfile
             // 
