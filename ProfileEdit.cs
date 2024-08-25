@@ -16,5 +16,10 @@ namespace PRG281_Project
         {
             InitializeComponent();
         }
+
+        private void ProfileEdit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

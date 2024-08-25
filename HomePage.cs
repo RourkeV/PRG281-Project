@@ -229,5 +229,10 @@ namespace PRG281_Project
         {
 
         }
+
+        private void lblHobbyThree_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
