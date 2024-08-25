@@ -40,7 +40,10 @@
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+
             this.tabControlProfileEdit.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlProfileEdit
@@ -64,6 +67,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.ImageIndex = 0;
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
@@ -160,6 +164,16 @@
             this.button1.TabIndex = 12;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+
             // ProfileEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -174,6 +188,8 @@
             this.Text = "ProfileEdit";
             this.Load += new System.EventHandler(this.ProfileEdit_Load);
             this.tabControlProfileEdit.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -189,5 +205,6 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList imgProfileEditList;
+        private System.Windows.Forms.Label label1;
     }
 }

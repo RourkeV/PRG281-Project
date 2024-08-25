@@ -27,23 +27,42 @@ namespace PRG281_Project
         private void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
-            
-            
-            emailCheck();
-            if (valid == true)
+
+            if (txtEmail.Text == "" && txtPass.Text == "" && txtPassCon.Text == "")
             {
-                userEmail = txtEmail.Text;
-                userPass = txtPass.Text;
-                newPage();
+                MessageBox.Show("A username and password must be provided", "registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else 
+            else if (txtPass.Text == txtPassCon.Text) 
             {
+
+                emailCheck();
+                if (valid == true)
+                {
+                    userEmail = txtEmail.Text;
+                    userPass = txtPass.Text;
+                    newPage();
+                    MessageBox.Show("Your account has Successfully been Created", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    //alerts
+                    //figure out how to change border style
+                    //create error message that email in use
+                }
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPass.Text = "";
-                //figure out how to change border style
-                //create error message that email in use
+                txtPassCon.Text = "";
+                txtPass.Focus();
             }
 
-            
+
+
+
+
+
 
         }
         public virtual void newPage()
@@ -65,6 +84,16 @@ namespace PRG281_Project
                     valid = false;
                 }
             }
+        }
+
+
+        private void chkBxShow_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
