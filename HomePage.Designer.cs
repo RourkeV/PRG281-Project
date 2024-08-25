@@ -37,9 +37,6 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblBio = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.userPicture = new System.Windows.Forms.PictureBox();
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.btnFilter = new System.Windows.Forms.Button();
             this.tabList = new System.Windows.Forms.TabControl();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
             this.tabChatPage = new System.Windows.Forms.TabPage();
@@ -47,9 +44,12 @@
             this.tabChatBotPage = new System.Windows.Forms.TabPage();
             this.tabSearchPage = new System.Windows.Forms.TabPage();
             this.imageMainList = new System.Windows.Forms.ImageList(this.components);
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.userPicture = new System.Windows.Forms.PictureBox();
             this.userCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // userCard
@@ -62,7 +62,7 @@
             this.userCard.Controls.Add(this.lblBio);
             this.userCard.Controls.Add(this.lblUsername);
             this.userCard.Controls.Add(this.userPicture);
-            this.userCard.Location = new System.Drawing.Point(111, 98);
+            this.userCard.Location = new System.Drawing.Point(118, 97);
             this.userCard.Margin = new System.Windows.Forms.Padding(7);
             this.userCard.Name = "userCard";
             this.userCard.Size = new System.Drawing.Size(389, 465);
@@ -181,6 +181,7 @@
             this.tabList.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabList.TabIndex = 6;
             this.tabList.Tag = "";
+            this.tabList.SelectedIndexChanged += new System.EventHandler(this.tabList_SelectedIndexChanged);
             // 
             // tabPageProfile
             // 
@@ -245,6 +246,38 @@
             this.imageMainList.Images.SetKeyName(3, "ChatBot_Icon1.png");
             this.imageMainList.Images.SetKeyName(4, "Search_Icon.png");
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
+            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
+            this.btnFilter.Location = new System.Drawing.Point(525, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(90, 75);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // userPicture
+            // 
+            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
+            this.userPicture.Location = new System.Drawing.Point(30, 28);
+            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(330, 298);
+            this.userPicture.TabIndex = 0;
+            this.userPicture.TabStop = false;
+            // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -261,8 +294,8 @@
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.userCard.ResumeLayout(false);
             this.userCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.tabList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
