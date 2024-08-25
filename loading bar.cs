@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace PRG281_Project
 {
-    public partial class UserLogin : UserSignUp
+    public partial class loadingBar : Form
     {
-        public UserLogin()
+        public loadingBar()
         {
             InitializeComponent();
-        }
-        public override void newPage()
-        {
-            //need to do varification
-
-            //user email and password work
-
-            //takes you to the home page
         }
     }
 }

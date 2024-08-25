@@ -13,6 +13,7 @@ namespace PRG281_Project
         {
 
 
+
             Console.WriteLine("hellos");
             Console.WriteLine("hell yes");
             Application.Run(new API());
@@ -20,8 +21,6 @@ namespace PRG281_Project
             likedUsers liked = new likedUsers();
 
             // Add specific users to the group (e.g., users older than 30)
-
-            
 
 
         }
