@@ -36,7 +36,7 @@ namespace PRG281_Project
             
             FullUserList userUserList = new FullUserList();
 
-            userUserList.addUser(fullName, email, passw,gend, age, security, secAns, bio);
+            userUserList.addUser(fullName, email, passw, gend, age, security, secAns, bio);
             signCheck = true;
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
             System.Threading.Thread.Sleep(1000);
