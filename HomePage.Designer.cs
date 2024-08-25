@@ -63,7 +63,7 @@
             this.userCard.Controls.Add(this.lblUsername);
             this.userCard.Controls.Add(this.userPicture);
             this.userCard.Location = new System.Drawing.Point(111, 98);
-            this.userCard.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.userCard.Margin = new System.Windows.Forms.Padding(7);
             this.userCard.Name = "userCard";
             this.userCard.Size = new System.Drawing.Size(389, 465);
             this.userCard.TabIndex = 1;
@@ -140,7 +140,7 @@
             // 
             this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
             this.userPicture.Location = new System.Drawing.Point(30, 28);
-            this.userPicture.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
             this.userPicture.Name = "userPicture";
             this.userPicture.Size = new System.Drawing.Size(330, 298);
             this.userPicture.TabIndex = 0;
@@ -150,7 +150,7 @@
             // 
             this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
             this.btnSignOut.Location = new System.Drawing.Point(12, 12);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(90, 75);
             this.btnSignOut.TabIndex = 5;
@@ -161,7 +161,7 @@
             // 
             this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
             this.btnFilter.Location = new System.Drawing.Point(525, 12);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(90, 75);
             this.btnFilter.TabIndex = 4;
@@ -180,7 +180,7 @@
             this.tabList.ImageList = this.imageMainList;
             this.tabList.ItemSize = new System.Drawing.Size(122, 120);
             this.tabList.Location = new System.Drawing.Point(0, 593);
-            this.tabList.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabList.Margin = new System.Windows.Forms.Padding(7);
             this.tabList.Name = "tabList";
             this.tabList.SelectedIndex = 0;
             this.tabList.Size = new System.Drawing.Size(629, 123);
@@ -204,7 +204,7 @@
             this.tabChatPage.Location = new System.Drawing.Point(4, 4);
             this.tabChatPage.Margin = new System.Windows.Forms.Padding(0);
             this.tabChatPage.Name = "tabChatPage";
-            this.tabChatPage.Size = new System.Drawing.Size(1460, 0);
+            this.tabChatPage.Size = new System.Drawing.Size(621, 0);
             this.tabChatPage.TabIndex = 1;
             this.tabChatPage.UseVisualStyleBackColor = true;
             // 
@@ -224,7 +224,7 @@
             this.tabChatBotPage.Location = new System.Drawing.Point(4, 4);
             this.tabChatBotPage.Margin = new System.Windows.Forms.Padding(0);
             this.tabChatBotPage.Name = "tabChatBotPage";
-            this.tabChatBotPage.Size = new System.Drawing.Size(1460, 0);
+            this.tabChatBotPage.Size = new System.Drawing.Size(621, 0);
             this.tabChatBotPage.TabIndex = 3;
             this.tabChatBotPage.UseVisualStyleBackColor = true;
             // 
@@ -235,7 +235,7 @@
             this.tabSearchPage.Location = new System.Drawing.Point(4, 4);
             this.tabSearchPage.Margin = new System.Windows.Forms.Padding(0);
             this.tabSearchPage.Name = "tabSearchPage";
-            this.tabSearchPage.Size = new System.Drawing.Size(1460, 0);
+            this.tabSearchPage.Size = new System.Drawing.Size(621, 0);
             this.tabSearchPage.TabIndex = 4;
             this.tabSearchPage.UseVisualStyleBackColor = true;
             // 
@@ -251,14 +251,13 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(628, 717);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.userCard);
             this.Controls.Add(this.tabList);
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.HomePage_Load);
