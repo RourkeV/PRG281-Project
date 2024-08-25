@@ -91,6 +91,12 @@
     <Compile Include="API.Designer.cs">
       <DependentUpon>API.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChatBetweenUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatBetweenUsersForm.Designer.cs">
+      <DependentUpon>ChatBetweenUsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="enterCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,7 @@
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="likedUsers.cs" />
+    <Compile Include="LikeObject.cs" />
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="API.resx">
       <DependentUpon>API.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatBetweenUsersForm.resx">
+      <DependentUpon>ChatBetweenUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="enterCheck.resx">
       <DependentUpon>enterCheck.cs</DependentUpon>

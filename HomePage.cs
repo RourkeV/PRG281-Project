@@ -20,7 +20,8 @@ namespace PRG281_Project
         usersLiked likedUsers = new usersLiked();
 
         public HomePage()
-        {
+        {            
+
             InitializeComponent();
 
             System.Drawing.Image SignOutImg;
@@ -77,12 +78,31 @@ namespace PRG281_Project
 
             if (userCard.Left > this.Width / 1.7)
             {
+                bool match = false;
+                Random random = new Random();
+                int number = 0;
                 // Swiped right
                 MessageBox.Show("Swiped Right!");
 
                 //add user to possible match if other user(maybe a randomiser) also swipes right its a match
 
-                //nextUser();
+                number = random.Next(1, 4);
+
+                if (number == 3)
+                {
+                    match = true;
+                    //matchedUsers.Add("Calvin", "Nijenhuis", 21);
+                    //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
+                    //nextUser()
+                }
+                else
+                {
+                    //nextUser();                  
+                }
+
+                displayNew(viewCount);
+
+
 
 
             }
@@ -94,6 +114,7 @@ namespace PRG281_Project
                 // Dont store user
 
                 //nextUser();
+                displayNew(viewCount);
             }
 
             // Reset the card position
@@ -105,10 +126,32 @@ namespace PRG281_Project
 
         }
 
+        static FullUserList fullUserList = new FullUserList();
+        static List<UserDetails> userDetails = new List<UserDetails>();
+        static int viewCount = 0;
         private void HomePage_Load(object sender, EventArgs e)
         {//now we have the current user depedning on if the signed in or signed up ***nbnbnb still need to do a full system test
             signInOrUp();
+            userDetails = fullUserList.AllUsers;
             
+            displayNew(viewCount);
+            
+            
+        }
+        public void displayNew(int i)
+        {
+            string viewName;
+            decimal viewAge;
+            string viewBio;
+            viewName = userDetails[i].name1;
+            viewAge = userDetails[i].age1;
+            viewBio = userDetails[i].Bio;
+
+            lblSearchName.Text = viewName;
+            lblBio.Text = viewBio;
+            lblViewAge.Text = viewAge.ToString();
+
+            viewCount++;
         }
         
         
@@ -120,7 +163,8 @@ namespace PRG281_Project
         public string curPass;
         public decimal curAge;
         public string curSecurity;
-        public string curSecAns;        
+        public string curSecAns;
+        public string curBio;
         
         public void signInOrUp()
         {
@@ -161,6 +205,7 @@ namespace PRG281_Project
                         curAge = item.age1;
                         curSecurity = item.Security;
                         curSecAns = item.SecAnswer;
+                        //curBio = item.
                     }
                 }
             }

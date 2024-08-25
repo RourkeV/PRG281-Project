@@ -59,7 +59,9 @@
             this.Controls.Add(this.lblDetails);
             this.Controls.Add(this.prgBar);
             this.Name = "loadingBar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loading_bar";
+            this.Load += new System.EventHandler(this.loadingBar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
