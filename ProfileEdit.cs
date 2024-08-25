@@ -10,19 +10,16 @@ using System.Windows.Forms;
 
 namespace PRG281_Project
 {
-    public partial class UserLogin : UserSignUp
+    public partial class ProfileEdit : Form
     {
-        public UserLogin()
+        public ProfileEdit()
         {
             InitializeComponent();
         }
-        public override void newPage()
+
+        private void ProfileEdit_Load(object sender, EventArgs e)
         {
-            //need to do varification
 
-            //user email and password work
-
-            //takes you to the home page
         }
     }
 }

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PRG281_Project
 {
@@ -41,13 +40,38 @@ namespace PRG281_Project
                         inEmail = txtEmail.Text;
                         inPassword = txtPass.Text;
                         inCheck = true;
-                        //AddingDetails detailPage = new AddingDetails(); ***this page needs to link to swipe page
-                        //detailPage.Show();
-                        Visible = false;
-                        txtEmail.Clear();
+                        HomePage homePage = new HomePage();
+                        homePage.Show();
+                        this.Hide();
                     }
                 }
-            }            
-        }       
+                else
+                {
+                    MessageBox.Show("invalid email, please try again", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEmail.Text = "";
+                    txtPass.Text = "";
+                }
+            } 
+            //need to create user alert if login details arent valid
+        }
+
+        private void chkBxShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBxShow.Checked)
+            {
+                txtPass.PasswordChar = '\0';
+
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
+            }
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+            new UserSignUp().Show();
+            this.Hide();
+        }
     }
 }

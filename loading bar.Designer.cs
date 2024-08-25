@@ -1,6 +1,6 @@
 ﻿namespace PRG281_Project
 {
-    partial class UserLogin
+    partial class loadingBar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.testText = new System.Windows.Forms.TextBox();
-            this.testBtn = new System.Windows.Forms.Button();
+            this.prgBar = new System.Windows.Forms.ProgressBar();
+            this.lblDetails = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // testText
+            // prgBar
             // 
-            this.testText.Location = new System.Drawing.Point(435, 28);
-            this.testText.Name = "testText";
-            this.testText.Size = new System.Drawing.Size(100, 20);
-            this.testText.TabIndex = 5;
+            this.prgBar.Location = new System.Drawing.Point(62, 48);
+            this.prgBar.MarqueeAnimationSpeed = 3000;
+            this.prgBar.Name = "prgBar";
+            this.prgBar.Size = new System.Drawing.Size(369, 23);
+            this.prgBar.TabIndex = 0;
             // 
-            // testBtn
+            // lblDetails
             // 
-            this.testBtn.Location = new System.Drawing.Point(445, 71);
-            this.testBtn.Name = "testBtn";
-            this.testBtn.Size = new System.Drawing.Size(75, 23);
-            this.testBtn.TabIndex = 6;
-            this.testBtn.Text = "test";
-            this.testBtn.UseVisualStyleBackColor = true;
+            this.lblDetails.AutoSize = true;
+            this.lblDetails.Location = new System.Drawing.Point(200, 32);
+            this.lblDetails.Name = "lblDetails";
+            this.lblDetails.Size = new System.Drawing.Size(123, 13);
+            this.lblDetails.TabIndex = 1;
+            this.lblDetails.Text = "Stealing your Information";
             // 
-            // UserLogin
+            // loadingBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 363);
-            this.Controls.Add(this.testBtn);
-            this.Controls.Add(this.testText);
-            this.Name = "UserLogin";
-            this.Text = "UserLogin";
-            this.Controls.SetChildIndex(this.testText, 0);
-            this.Controls.SetChildIndex(this.testBtn, 0);
+            this.ClientSize = new System.Drawing.Size(502, 92);
+            this.Controls.Add(this.lblDetails);
+            this.Controls.Add(this.prgBar);
+            this.Name = "loadingBar";
+            this.Text = "loading_bar";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -66,7 +65,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox testText;
-        private System.Windows.Forms.Button testBtn;
+        private System.Windows.Forms.ProgressBar prgBar;
+        private System.Windows.Forms.Label lblDetails;
     }
 }
