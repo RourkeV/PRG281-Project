@@ -34,6 +34,7 @@
             // 
             // prgBar
             // 
+            this.prgBar.BackColor = System.Drawing.Color.White;
             this.prgBar.Location = new System.Drawing.Point(62, 48);
             this.prgBar.MarqueeAnimationSpeed = 3000;
             this.prgBar.Name = "prgBar";
@@ -53,11 +54,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(502, 92);
             this.Controls.Add(this.lblDetails);
             this.Controls.Add(this.prgBar);
             this.Name = "loadingBar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loading_bar";
+            this.Load += new System.EventHandler(this.loadingBar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

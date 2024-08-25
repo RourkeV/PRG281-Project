@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace PRG281_Project
 {
@@ -15,6 +16,14 @@ namespace PRG281_Project
         public loadingBar()
         {
             InitializeComponent();
+        }
+
+        private void loadingBar_Load(object sender, EventArgs e)
+        {
+            Thread.Sleep(3000);
+            //HomePage homePage = new HomePage();
+            //homePage.Show();
+            //this.Hide();
         }
     }
 }

@@ -43,19 +43,21 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.BackColor = System.Drawing.Color.White;
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmit.ForeColor = System.Drawing.Color.Black;
             this.btnSubmit.Location = new System.Drawing.Point(89, 347);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(99, 35);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(50, 126);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
@@ -64,7 +66,7 @@
             // 
             // txtPass
             // 
-            this.txtPass.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPass.BackColor = System.Drawing.Color.White;
             this.txtPass.Location = new System.Drawing.Point(50, 201);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -74,6 +76,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(50, 98);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
@@ -83,6 +86,7 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
+            this.lblPass.ForeColor = System.Drawing.Color.Black;
             this.lblPass.Location = new System.Drawing.Point(50, 173);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(53, 13);
@@ -92,6 +96,7 @@
             // lblPasswordCon
             // 
             this.lblPasswordCon.AutoSize = true;
+            this.lblPasswordCon.ForeColor = System.Drawing.Color.Black;
             this.lblPasswordCon.Location = new System.Drawing.Point(50, 245);
             this.lblPasswordCon.Name = "lblPasswordCon";
             this.lblPasswordCon.Size = new System.Drawing.Size(91, 13);
@@ -100,7 +105,7 @@
             // 
             // txtPassCon
             // 
-            this.txtPassCon.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPassCon.BackColor = System.Drawing.Color.White;
             this.txtPassCon.Location = new System.Drawing.Point(50, 270);
             this.txtPassCon.Name = "txtPassCon";
             this.txtPassCon.PasswordChar = '*';
@@ -112,6 +117,7 @@
             this.chkBxShow.AutoSize = true;
             this.chkBxShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkBxShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkBxShow.ForeColor = System.Drawing.Color.Black;
             this.chkBxShow.Location = new System.Drawing.Point(117, 308);
             this.chkBxShow.Name = "chkBxShow";
             this.chkBxShow.Size = new System.Drawing.Size(99, 17);
@@ -124,6 +130,7 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.ForeColor = System.Drawing.Color.Black;
             this.lblHeader.Location = new System.Drawing.Point(77, 21);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(139, 39);
@@ -133,7 +140,8 @@
             // lblMovePage
             // 
             this.lblMovePage.AutoSize = true;
-            this.lblMovePage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblMovePage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMovePage.ForeColor = System.Drawing.Color.Black;
             this.lblMovePage.Location = new System.Drawing.Point(77, 429);
             this.lblMovePage.Name = "lblMovePage";
             this.lblMovePage.Size = new System.Drawing.Size(127, 13);
@@ -144,6 +152,7 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogin.ForeColor = System.Drawing.Color.Crimson;
             this.lblLogin.Location = new System.Drawing.Point(117, 456);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(40, 13);
@@ -155,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Plum;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(285, 506);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblMovePage);

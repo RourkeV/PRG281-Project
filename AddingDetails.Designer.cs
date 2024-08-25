@@ -38,13 +38,17 @@ namespace PRG281_Project
             this.scrtyQstn = new System.Windows.Forms.ComboBox();
             this.scrtyLbl = new System.Windows.Forms.Label();
             this.scrtyAnswer = new System.Windows.Forms.TextBox();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.cmboGender = new System.Windows.Forms.ComboBox();
+            this.lblBio = new System.Windows.Forms.Label();
+            this.rchBio = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 25);
+            this.label1.Location = new System.Drawing.Point(48, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
@@ -52,14 +56,14 @@ namespace PRG281_Project
             // 
             // txtFirst
             // 
-            this.txtFirst.Location = new System.Drawing.Point(100, 54);
+            this.txtFirst.Location = new System.Drawing.Point(51, 62);
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(158, 20);
             this.txtFirst.TabIndex = 1;
             // 
             // txtLast
             // 
-            this.txtLast.Location = new System.Drawing.Point(100, 135);
+            this.txtLast.Location = new System.Drawing.Point(51, 143);
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(158, 20);
             this.txtLast.TabIndex = 3;
@@ -67,7 +71,7 @@ namespace PRG281_Project
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 106);
+            this.label2.Location = new System.Drawing.Point(48, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 2;
@@ -76,7 +80,7 @@ namespace PRG281_Project
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 178);
+            this.label3.Location = new System.Drawing.Point(49, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 4;
@@ -84,7 +88,7 @@ namespace PRG281_Project
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(100, 384);
+            this.btnSubmit.Location = new System.Drawing.Point(48, 553);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 6;
@@ -94,8 +98,8 @@ namespace PRG281_Project
             // 
             // numAge
             // 
-            this.numAge.Location = new System.Drawing.Point(100, 203);
-            this.numAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numAge.Location = new System.Drawing.Point(51, 210);
+            this.numAge.Margin = new System.Windows.Forms.Padding(2);
             this.numAge.Maximum = new decimal(new int[] {
             150,
             0,
@@ -138,7 +142,7 @@ namespace PRG281_Project
             "What is the middle name of your oldest sibling?",
             "",
             "What was the name of your first employer?"});
-            this.scrtyQstn.Location = new System.Drawing.Point(100, 272);
+            this.scrtyQstn.Location = new System.Drawing.Point(48, 477);
             this.scrtyQstn.Name = "scrtyQstn";
             this.scrtyQstn.Size = new System.Drawing.Size(158, 21);
             this.scrtyQstn.TabIndex = 8;
@@ -146,7 +150,7 @@ namespace PRG281_Project
             // scrtyLbl
             // 
             this.scrtyLbl.AutoSize = true;
-            this.scrtyLbl.Location = new System.Drawing.Point(101, 253);
+            this.scrtyLbl.Location = new System.Drawing.Point(49, 458);
             this.scrtyLbl.Name = "scrtyLbl";
             this.scrtyLbl.Size = new System.Drawing.Size(90, 13);
             this.scrtyLbl.TabIndex = 9;
@@ -154,17 +158,60 @@ namespace PRG281_Project
             // 
             // scrtyAnswer
             // 
-            this.scrtyAnswer.Location = new System.Drawing.Point(100, 314);
+            this.scrtyAnswer.Location = new System.Drawing.Point(48, 519);
             this.scrtyAnswer.Name = "scrtyAnswer";
             this.scrtyAnswer.Size = new System.Drawing.Size(158, 20);
             this.scrtyAnswer.TabIndex = 10;
             this.scrtyAnswer.Text = "answer";
             // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Location = new System.Drawing.Point(49, 254);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(42, 13);
+            this.lblGender.TabIndex = 11;
+            this.lblGender.Text = "Gender";
+            // 
+            // cmboGender
+            // 
+            this.cmboGender.FormattingEnabled = true;
+            this.cmboGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.cmboGender.Location = new System.Drawing.Point(48, 279);
+            this.cmboGender.Name = "cmboGender";
+            this.cmboGender.Size = new System.Drawing.Size(158, 21);
+            this.cmboGender.TabIndex = 12;
+            // 
+            // lblBio
+            // 
+            this.lblBio.AutoSize = true;
+            this.lblBio.Location = new System.Drawing.Point(49, 329);
+            this.lblBio.Name = "lblBio";
+            this.lblBio.Size = new System.Drawing.Size(22, 13);
+            this.lblBio.TabIndex = 13;
+            this.lblBio.Text = "Bio";
+            // 
+            // rchBio
+            // 
+            this.rchBio.Location = new System.Drawing.Point(48, 346);
+            this.rchBio.Name = "rchBio";
+            this.rchBio.Size = new System.Drawing.Size(340, 96);
+            this.rchBio.TabIndex = 14;
+            this.rchBio.Text = "";
+            // 
             // AddingDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 450);
+            this.BackColor = System.Drawing.Color.Pink;
+            this.ClientSize = new System.Drawing.Size(420, 622);
+            this.Controls.Add(this.rchBio);
+            this.Controls.Add(this.lblBio);
+            this.Controls.Add(this.cmboGender);
+            this.Controls.Add(this.lblGender);
             this.Controls.Add(this.scrtyAnswer);
             this.Controls.Add(this.scrtyLbl);
             this.Controls.Add(this.scrtyQstn);
@@ -176,6 +223,7 @@ namespace PRG281_Project
             this.Controls.Add(this.txtFirst);
             this.Controls.Add(this.label1);
             this.Name = "AddingDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddingDetails";
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();
             this.ResumeLayout(false);
@@ -195,5 +243,9 @@ namespace PRG281_Project
         private System.Windows.Forms.ComboBox scrtyQstn;
         private System.Windows.Forms.Label scrtyLbl;
         private System.Windows.Forms.TextBox scrtyAnswer;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.ComboBox cmboGender;
+        private System.Windows.Forms.Label lblBio;
+        private System.Windows.Forms.RichTextBox rchBio;
     }
 }
