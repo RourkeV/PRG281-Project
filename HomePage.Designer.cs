@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.userCard = new System.Windows.Forms.Panel();
+            this.lblViewBio = new System.Windows.Forms.Label();
+            this.lblViewAge = new System.Windows.Forms.Label();
+            this.lblSearchName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblBio = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -51,7 +54,10 @@
             // 
             // userCard
             // 
-            this.userCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(225)))));
+            this.userCard.BackColor = System.Drawing.Color.White;
+            this.userCard.Controls.Add(this.lblViewBio);
+            this.userCard.Controls.Add(this.lblViewAge);
+            this.userCard.Controls.Add(this.lblSearchName);
             this.userCard.Controls.Add(this.lblAge);
             this.userCard.Controls.Add(this.lblBio);
             this.userCard.Controls.Add(this.lblUsername);
@@ -62,40 +68,99 @@
             this.userCard.Size = new System.Drawing.Size(389, 465);
             this.userCard.TabIndex = 1;
             // 
+            // lblViewBio
+            // 
+            this.lblViewBio.AutoSize = true;
+            this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewBio.Location = new System.Drawing.Point(44, 371);
+            this.lblViewBio.Name = "lblViewBio";
+            this.lblViewBio.Size = new System.Drawing.Size(29, 13);
+            this.lblViewBio.TabIndex = 9;
+            this.lblViewBio.Text = "Bio:";
+            // 
+            // lblViewAge
+            // 
+            this.lblViewAge.AutoSize = true;
+            this.lblViewAge.Location = new System.Drawing.Point(292, 341);
+            this.lblViewAge.Name = "lblViewAge";
+            this.lblViewAge.Size = new System.Drawing.Size(51, 13);
+            this.lblViewAge.TabIndex = 8;
+            this.lblViewAge.Text = "User Age";
+            // 
+            // lblSearchName
+            // 
+            this.lblSearchName.AutoSize = true;
+            this.lblSearchName.Location = new System.Drawing.Point(138, 341);
+            this.lblSearchName.Name = "lblSearchName";
+            this.lblSearchName.Size = new System.Drawing.Size(55, 13);
+            this.lblSearchName.TabIndex = 7;
+            this.lblSearchName.Text = "Username";
+            // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(299, 333);
+            this.lblAge.Location = new System.Drawing.Point(258, 337);
             this.lblAge.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(61, 18);
+            this.lblAge.Size = new System.Drawing.Size(37, 18);
             this.lblAge.TabIndex = 6;
-            this.lblAge.Text = "Age:  50";
+            this.lblAge.Text = "Age:";
             // 
             // lblBio
             // 
             this.lblBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBio.Location = new System.Drawing.Point(14, 364);
+            this.lblBio.Location = new System.Drawing.Point(123, 371);
             this.lblBio.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblBio.Name = "lblBio";
             this.lblBio.Size = new System.Drawing.Size(220, 79);
             this.lblBio.TabIndex = 2;
-            this.lblBio.Text = "Chemistry teacher by day, blue crystal enthusiast by night. I’m the guy who knock" +
-    "s... with 99.1% pure fun. I’m all about that high-quality product, whether it’s " +
-    "in the lab or in life.";
             this.lblBio.Click += new System.EventHandler(this.lblBio_Click);
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(13, 333);
+            this.lblUsername.Location = new System.Drawing.Point(40, 337);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(182, 20);
+            this.lblUsername.Size = new System.Drawing.Size(87, 20);
             this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "Username: Walter White";
+            this.lblUsername.Text = "Username:";
+            // 
+            // userPicture
+            // 
+            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
+            this.userPicture.Location = new System.Drawing.Point(30, 28);
+            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(330, 298);
+            this.userPicture.TabIndex = 0;
+            this.userPicture.TabStop = false;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
+            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
+            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.White;
+            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
+            this.btnFilter.Location = new System.Drawing.Point(525, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(90, 75);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabList
             // 
@@ -120,13 +185,15 @@
             // 
             // tabPageProfile
             // 
-            this.tabPageProfile.ImageKey = "Profile_Icon1.png";
+            this.tabPageProfile.BackColor = System.Drawing.Color.Pink;
+            this.tabPageProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPageProfile.ImageIndex = 0;
             this.tabPageProfile.Location = new System.Drawing.Point(4, 4);
             this.tabPageProfile.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageProfile.Name = "tabPageProfile";
+            this.tabPageProfile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPageProfile.Size = new System.Drawing.Size(621, 0);
             this.tabPageProfile.TabIndex = 0;
-            this.tabPageProfile.UseVisualStyleBackColor = true;
             // 
             // tabChatPage
             // 
@@ -172,7 +239,7 @@
             // imageMainList
             // 
             this.imageMainList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageMainList.ImageStream")));
-            this.imageMainList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageMainList.TransparentColor = System.Drawing.Color.Pink;
             this.imageMainList.Images.SetKeyName(0, "Profile_Icon1.png");
             this.imageMainList.Images.SetKeyName(1, "Chat_Icon.png");
             this.imageMainList.Images.SetKeyName(2, "Swipe_Icon.png");
@@ -214,11 +281,13 @@
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(628, 717);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.userCard);
             this.Controls.Add(this.tabList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "HomePage";
             this.Text = "HomePage";
@@ -246,5 +315,8 @@
         private System.Windows.Forms.TabPage tabChatBotPage;
         private System.Windows.Forms.TabPage tabSearchPage;
         private System.Windows.Forms.ImageList imageMainList;
+        private System.Windows.Forms.Label lblSearchName;
+        private System.Windows.Forms.Label lblViewAge;
+        private System.Windows.Forms.Label lblViewBio;
     }
 }

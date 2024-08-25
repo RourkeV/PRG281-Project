@@ -123,17 +123,19 @@
             // 
             // btnSignOut
             // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
             this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
             this.btnSignOut.Location = new System.Drawing.Point(12, 12);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(90, 75);
             this.btnSignOut.TabIndex = 10;
-            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.UseVisualStyleBackColor = false;
             // 
             // ChatBetweenUsersForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(628, 717);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.tabList);
