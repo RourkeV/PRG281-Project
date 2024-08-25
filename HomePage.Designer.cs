@@ -31,26 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.userCard = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblViewBio = new System.Windows.Forms.Label();
             this.lblViewAge = new System.Windows.Forms.Label();
             this.lblSearchName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblBio = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.tabList = new System.Windows.Forms.TabControl();
-            this.tabPageProfile = new System.Windows.Forms.TabPage();
-            this.tabChatPage = new System.Windows.Forms.TabPage();
-            this.tabSwipePage = new System.Windows.Forms.TabPage();
-            this.tabChatBotPage = new System.Windows.Forms.TabPage();
-            this.tabSearchPage = new System.Windows.Forms.TabPage();
+            this.userPicture = new System.Windows.Forms.PictureBox();
             this.imageMainList = new System.Windows.Forms.ImageList(this.components);
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.userPicture = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.rchTxtBio = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblAgeHead = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblEmailHead = new System.Windows.Forms.Label();
+            this.lblHeading = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblNameHead = new System.Windows.Forms.Label();
             this.userCard.SuspendLayout();
-            this.tabList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // userCard
@@ -64,17 +76,29 @@
             this.userCard.Controls.Add(this.lblBio);
             this.userCard.Controls.Add(this.lblUsername);
             this.userCard.Controls.Add(this.userPicture);
-            this.userCard.Location = new System.Drawing.Point(118, 97);
+            this.userCard.Location = new System.Drawing.Point(100, 10);
             this.userCard.Margin = new System.Windows.Forms.Padding(7);
             this.userCard.Name = "userCard";
-            this.userCard.Size = new System.Drawing.Size(389, 465);
+            this.userCard.Size = new System.Drawing.Size(390, 465);
             this.userCard.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = global::PRG281_Project.Properties.Resources.caution;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(336, 417);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(38, 33);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // lblViewBio
             // 
             this.lblViewBio.AutoSize = true;
             this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewBio.Location = new System.Drawing.Point(44, 371);
+            this.lblViewBio.Location = new System.Drawing.Point(27, 373);
             this.lblViewBio.Name = "lblViewBio";
             this.lblViewBio.Size = new System.Drawing.Size(29, 13);
             this.lblViewBio.TabIndex = 9;
@@ -83,18 +107,20 @@
             // lblViewAge
             // 
             this.lblViewAge.AutoSize = true;
-            this.lblViewAge.Location = new System.Drawing.Point(292, 341);
+            this.lblViewAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewAge.Location = new System.Drawing.Point(273, 333);
             this.lblViewAge.Name = "lblViewAge";
-            this.lblViewAge.Size = new System.Drawing.Size(51, 13);
+            this.lblViewAge.Size = new System.Drawing.Size(76, 20);
             this.lblViewAge.TabIndex = 8;
             this.lblViewAge.Text = "User Age";
             // 
             // lblSearchName
             // 
             this.lblSearchName.AutoSize = true;
-            this.lblSearchName.Location = new System.Drawing.Point(138, 341);
+            this.lblSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchName.Location = new System.Drawing.Point(111, 333);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(55, 13);
+            this.lblSearchName.Size = new System.Drawing.Size(83, 20);
             this.lblSearchName.TabIndex = 7;
             this.lblSearchName.Text = "Username";
             // 
@@ -102,7 +128,7 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(258, 337);
+            this.lblAge.Location = new System.Drawing.Point(237, 333);
             this.lblAge.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(37, 18);
@@ -112,7 +138,7 @@
             // lblBio
             // 
             this.lblBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBio.Location = new System.Drawing.Point(123, 371);
+            this.lblBio.Location = new System.Drawing.Point(66, 362);
             this.lblBio.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblBio.Name = "lblBio";
             this.lblBio.Size = new System.Drawing.Size(220, 79);
@@ -123,86 +149,23 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(40, 337);
+            this.lblUsername.Location = new System.Drawing.Point(26, 333);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(87, 20);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username:";
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
-            // tabList
+            // userPicture
             // 
-            this.tabList.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.tabList.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabList.Controls.Add(this.tabPageProfile);
-            this.tabList.Controls.Add(this.tabChatPage);
-            this.tabList.Controls.Add(this.tabSwipePage);
-            this.tabList.Controls.Add(this.tabChatBotPage);
-            this.tabList.Controls.Add(this.tabSearchPage);
-            this.tabList.ImageList = this.imageMainList;
-            this.tabList.ItemSize = new System.Drawing.Size(122, 120);
-            this.tabList.Location = new System.Drawing.Point(0, 593);
-            this.tabList.Margin = new System.Windows.Forms.Padding(7);
-            this.tabList.Name = "tabList";
-            this.tabList.SelectedIndex = 0;
-            this.tabList.Size = new System.Drawing.Size(629, 123);
-            this.tabList.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabList.TabIndex = 6;
-            this.tabList.Tag = "";
-            this.tabList.SelectedIndexChanged += new System.EventHandler(this.tabList_SelectedIndexChanged);
-            // 
-            // tabPageProfile
-            // 
-            this.tabPageProfile.BackColor = System.Drawing.Color.Pink;
-            this.tabPageProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPageProfile.ImageIndex = 0;
-            this.tabPageProfile.Location = new System.Drawing.Point(4, 4);
-            this.tabPageProfile.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageProfile.Name = "tabPageProfile";
-            this.tabPageProfile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPageProfile.Size = new System.Drawing.Size(621, 0);
-            this.tabPageProfile.TabIndex = 0;
-            // 
-            // tabChatPage
-            // 
-            this.tabChatPage.ImageIndex = 1;
-            this.tabChatPage.Location = new System.Drawing.Point(4, 4);
-            this.tabChatPage.Margin = new System.Windows.Forms.Padding(0);
-            this.tabChatPage.Name = "tabChatPage";
-            this.tabChatPage.Size = new System.Drawing.Size(621, 0);
-            this.tabChatPage.TabIndex = 1;
-            this.tabChatPage.UseVisualStyleBackColor = true;
-            // 
-            // tabSwipePage
-            // 
-            this.tabSwipePage.ImageIndex = 2;
-            this.tabSwipePage.Location = new System.Drawing.Point(4, 4);
-            this.tabSwipePage.Margin = new System.Windows.Forms.Padding(0);
-            this.tabSwipePage.Name = "tabSwipePage";
-            this.tabSwipePage.Size = new System.Drawing.Size(621, 0);
-            this.tabSwipePage.TabIndex = 2;
-            this.tabSwipePage.UseVisualStyleBackColor = true;
-            // 
-            // tabChatBotPage
-            // 
-            this.tabChatBotPage.ImageIndex = 3;
-            this.tabChatBotPage.Location = new System.Drawing.Point(4, 4);
-            this.tabChatBotPage.Margin = new System.Windows.Forms.Padding(0);
-            this.tabChatBotPage.Name = "tabChatBotPage";
-            this.tabChatBotPage.Size = new System.Drawing.Size(621, 0);
-            this.tabChatBotPage.TabIndex = 3;
-            this.tabChatBotPage.UseVisualStyleBackColor = true;
-            // 
-            // tabSearchPage
-            // 
-            this.tabSearchPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tabSearchPage.ImageIndex = 4;
-            this.tabSearchPage.Location = new System.Drawing.Point(4, 4);
-            this.tabSearchPage.Margin = new System.Windows.Forms.Padding(0);
-            this.tabSearchPage.Name = "tabSearchPage";
-            this.tabSearchPage.Size = new System.Drawing.Size(621, 0);
-            this.tabSearchPage.TabIndex = 4;
-            this.tabSearchPage.UseVisualStyleBackColor = true;
+            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
+            this.userPicture.Location = new System.Drawing.Point(30, 28);
+            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(330, 298);
+            this.userPicture.TabIndex = 0;
+            this.userPicture.TabStop = false;
             // 
             // imageMainList
             // 
@@ -238,37 +201,182 @@
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button1
+            // tabControl1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::PRG281_Project.Properties.Resources.caution;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(336, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 33);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.ImageList = this.imageMainList;
+            this.tabControl1.ItemSize = new System.Drawing.Size(149, 80);
+            this.tabControl1.Location = new System.Drawing.Point(12, 97);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(600, 600);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.TabIndex = 7;
             // 
-            // userPicture
+            // tabPage1
             // 
-            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
-            this.userPicture.Location = new System.Drawing.Point(30, 28);
-            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
-            this.userPicture.Name = "userPicture";
-            this.userPicture.Size = new System.Drawing.Size(330, 298);
-            this.userPicture.TabIndex = 0;
-            this.userPicture.TabStop = false;
+            this.tabPage1.Controls.Add(this.rchTxtBio);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lblAgeHead);
+            this.tabPage1.Controls.Add(this.lblEmail);
+            this.tabPage1.Controls.Add(this.lblEmailHead);
+            this.tabPage1.Controls.Add(this.lblHeading);
+            this.tabPage1.Controls.Add(this.lblName);
+            this.tabPage1.Controls.Add(this.lblNameHead);
+            this.tabPage1.ImageKey = "Profile_Icon1.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(592, 512);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.ImageKey = "Chat_Icon.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(592, 512);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Pink;
+            this.tabPage3.Controls.Add(this.userCard);
+            this.tabPage3.ImageKey = "Swipe_Icon.png";
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(592, 512);
+            this.tabPage3.TabIndex = 2;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.ImageKey = "Search_Icon.png";
+            this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(592, 512);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // rchTxtBio
+            // 
+            this.rchTxtBio.Location = new System.Drawing.Point(58, 407);
+            this.rchTxtBio.Name = "rchTxtBio";
+            this.rchTxtBio.Size = new System.Drawing.Size(477, 96);
+            this.rchTxtBio.TabIndex = 19;
+            this.rchTxtBio.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(67, 388);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Bio:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(161, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 222);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(320, 361);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "userage";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblAgeHead
+            // 
+            this.lblAgeHead.AutoSize = true;
+            this.lblAgeHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeHead.Location = new System.Drawing.Point(213, 356);
+            this.lblAgeHead.Name = "lblAgeHead";
+            this.lblAgeHead.Size = new System.Drawing.Size(41, 18);
+            this.lblAgeHead.TabIndex = 15;
+            this.lblAgeHead.Text = "Age:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(320, 336);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 13);
+            this.lblEmail.TabIndex = 14;
+            this.lblEmail.Text = "useremail";
+            // 
+            // lblEmailHead
+            // 
+            this.lblEmailHead.AutoSize = true;
+            this.lblEmailHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailHead.Location = new System.Drawing.Point(197, 331);
+            this.lblEmailHead.Name = "lblEmailHead";
+            this.lblEmailHead.Size = new System.Drawing.Size(55, 18);
+            this.lblEmailHead.TabIndex = 13;
+            this.lblEmailHead.Text = "Email:";
+            // 
+            // lblHeading
+            // 
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(242, 0);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(90, 29);
+            this.lblHeading.TabIndex = 12;
+            this.lblHeading.Text = "Profile";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(320, 309);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(53, 13);
+            this.lblName.TabIndex = 11;
+            this.lblName.Text = "username";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
+            // 
+            // lblNameHead
+            // 
+            this.lblNameHead.AutoSize = true;
+            this.lblNameHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameHead.Location = new System.Drawing.Point(196, 306);
+            this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNameHead.Name = "lblNameHead";
+            this.lblNameHead.Size = new System.Drawing.Size(57, 18);
+            this.lblNameHead.TabIndex = 10;
+            this.lblNameHead.Text = "Name:";
             // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(628, 717);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
-            this.Controls.Add(this.userCard);
-            this.Controls.Add(this.tabList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "HomePage";
@@ -277,8 +385,12 @@
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.userCard.ResumeLayout(false);
             this.userCard.PerformLayout();
-            this.tabList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,16 +403,25 @@
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button btnSignOut;
-        private System.Windows.Forms.TabControl tabList;
-        private System.Windows.Forms.TabPage tabPageProfile;
-        private System.Windows.Forms.TabPage tabChatPage;
-        private System.Windows.Forms.TabPage tabSwipePage;
-        private System.Windows.Forms.TabPage tabChatBotPage;
-        private System.Windows.Forms.TabPage tabSearchPage;
         private System.Windows.Forms.ImageList imageMainList;
         private System.Windows.Forms.Label lblSearchName;
         private System.Windows.Forms.Label lblViewAge;
         private System.Windows.Forms.Label lblViewBio;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.RichTextBox rchTxtBio;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAgeHead;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblEmailHead;
+        private System.Windows.Forms.Label lblHeading;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblNameHead;
     }
 }

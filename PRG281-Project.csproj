@@ -103,6 +103,9 @@
     <Compile Include="enterCheck.Designer.cs">
       <DependentUpon>enterCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="FixedTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FullUserList.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
