@@ -8,19 +8,16 @@ namespace PRG281_Project
 {
     internal class likedUsers
     {
-        FullUserList list = new FullUserList();
-        public List<UserDetails> users = new List<UserDetails>();
-
-        public likedUsers()
+        List<Tuple<string, string>> matchedUsers = new List<Tuple<string, string>>();
+       
+        public void AddUser(string name, string lastname)
         {
-            users = list.AllUsers;
+            matchedUsers.Add(Tuple.Create(name, lastname));
         }
 
-        
-
-        public void AddUser(UserDetails user)
+        public List<Tuple<string, string>> MatchedUsers
         {
-            users.Add(user);
+            get { return matchedUsers; }
         }
     }
 }
