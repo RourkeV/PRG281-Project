@@ -41,6 +41,7 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+
             this.tabControlProfileEdit.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -56,10 +57,11 @@
             this.tabControlProfileEdit.Controls.Add(this.tabPage5);
             this.tabControlProfileEdit.ImageList = this.imgProfileEditList;
             this.tabControlProfileEdit.ItemSize = new System.Drawing.Size(122, 120);
-            this.tabControlProfileEdit.Location = new System.Drawing.Point(-1, 0);
+            this.tabControlProfileEdit.Location = new System.Drawing.Point(-2, 595);
+            this.tabControlProfileEdit.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tabControlProfileEdit.Name = "tabControlProfileEdit";
             this.tabControlProfileEdit.SelectedIndex = 0;
-            this.tabControlProfileEdit.Size = new System.Drawing.Size(628, 716);
+            this.tabControlProfileEdit.Size = new System.Drawing.Size(629, 123);
             this.tabControlProfileEdit.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlProfileEdit.TabIndex = 0;
             // 
@@ -68,9 +70,10 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.ImageIndex = 0;
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(620, 0);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPage1.Size = new System.Drawing.Size(621, 0);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -78,9 +81,10 @@
             // 
             this.tabPage2.ImageIndex = 1;
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(620, 0);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPage2.Size = new System.Drawing.Size(1457, 0);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -88,9 +92,10 @@
             // 
             this.tabPage3.ImageIndex = 2;
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(620, 0);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPage3.Size = new System.Drawing.Size(1457, 0);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
@@ -98,9 +103,10 @@
             // 
             this.tabPage4.ImageIndex = 3;
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(620, 0);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPage4.Size = new System.Drawing.Size(1457, 0);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
@@ -108,9 +114,10 @@
             // 
             this.tabPage5.ImageIndex = 4;
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(620, 0);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.tabPage5.Size = new System.Drawing.Size(1457, 0);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
@@ -129,6 +136,7 @@
             this.btnSignOut.BackColor = System.Drawing.Color.White;
             this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
             this.btnSignOut.Location = new System.Drawing.Point(12, 12);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(90, 75);
             this.btnSignOut.TabIndex = 11;
@@ -138,7 +146,8 @@
             // 
             this.btnFilter.BackColor = System.Drawing.Color.White;
             this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
-            this.btnFilter.Location = new System.Drawing.Point(12, 12);
+            this.btnFilter.Location = new System.Drawing.Point(525, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(90, 75);
             this.btnFilter.TabIndex = 10;
@@ -148,9 +157,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
-            this.button1.Location = new System.Drawing.Point(525, 12);
+            this.button1.Location = new System.Drawing.Point(1225, 27);
+            this.button1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 75);
+            this.button1.Size = new System.Drawing.Size(210, 167);
             this.button1.TabIndex = 12;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -163,17 +173,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
+
             // ProfileEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 717);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.tabControlProfileEdit);
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Name = "ProfileEdit";
             this.Text = "ProfileEdit";
+            this.Load += new System.EventHandler(this.ProfileEdit_Load);
             this.tabControlProfileEdit.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

@@ -154,5 +154,10 @@ namespace PRG281_Project
         {
 
         }
+
+        private void tabList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
