@@ -42,7 +42,7 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Location = new System.Drawing.Point(31, 206);
+            this.lblPass.Location = new System.Drawing.Point(31, 196);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(53, 13);
             this.lblPass.TabIndex = 9;
@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 132);
+            this.label1.Location = new System.Drawing.Point(31, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 8;
@@ -112,7 +112,7 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogin.Location = new System.Drawing.Point(82, 431);
+            this.lblLogin.Location = new System.Drawing.Point(84, 456);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(105, 13);
             this.lblLogin.TabIndex = 13;
@@ -123,7 +123,7 @@
             // 
             this.lblMovePage.AutoSize = true;
             this.lblMovePage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblMovePage.Location = new System.Drawing.Point(71, 397);
+            this.lblMovePage.Location = new System.Drawing.Point(77, 429);
             this.lblMovePage.Name = "lblMovePage";
             this.lblMovePage.Size = new System.Drawing.Size(135, 13);
             this.lblMovePage.TabIndex = 12;
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 467);
+            this.ClientSize = new System.Drawing.Size(285, 506);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblMovePage);
             this.Controls.Add(this.lblHeader);
