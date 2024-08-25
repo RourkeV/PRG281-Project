@@ -98,7 +98,11 @@ namespace PRG281_Project
             // 
             // numAge
             // 
-            this.numAge.Location = new System.Drawing.Point(51, 211);
+
+            this.numAge.Location = new System.Drawing.Point(100, 203);
+
+
+
             this.numAge.Margin = new System.Windows.Forms.Padding(2);
             this.numAge.Maximum = new decimal(new int[] {
             150,
@@ -206,11 +210,16 @@ namespace PRG281_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.BackColor = System.Drawing.Color.Pink;
+
+
             this.ClientSize = new System.Drawing.Size(420, 622);
             this.Controls.Add(this.rchBio);
             this.Controls.Add(this.lblBio);
             this.Controls.Add(this.cmboGender);
             this.Controls.Add(this.lblGender);
+
             this.Controls.Add(this.scrtyAnswer);
             this.Controls.Add(this.scrtyLbl);
             this.Controls.Add(this.scrtyQstn);

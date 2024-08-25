@@ -86,10 +86,10 @@
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.BackColor = System.Drawing.Color.RosyBrown;
-            this.lblHeading.Font = new System.Drawing.Font("Sans Serif Collection", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.Location = new System.Drawing.Point(115, 69);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(329, 39);
+            this.lblHeading.Size = new System.Drawing.Size(210, 20);
             this.lblHeading.TabIndex = 3;
             this.lblHeading.Text = "Welcome to the Love Bot";
             // 
@@ -196,7 +196,7 @@
             // 
             // API
             // 
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(628, 717);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);

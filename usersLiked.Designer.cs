@@ -46,12 +46,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(529, 132);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(525, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
@@ -65,21 +66,23 @@
             // 
             // btnSignOut
             // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
             this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
             this.btnSignOut.Location = new System.Drawing.Point(12, 12);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(90, 75);
             this.btnSignOut.TabIndex = 8;
-            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.UseVisualStyleBackColor = false;
             // 
             // btnFilter
             // 
+            this.btnFilter.BackColor = System.Drawing.Color.White;
             this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
             this.btnFilter.Location = new System.Drawing.Point(525, 12);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(90, 75);
             this.btnFilter.TabIndex = 7;
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.UseVisualStyleBackColor = false;
             // 
             // tabList
             // 
@@ -92,23 +95,23 @@
             this.tabList.Controls.Add(this.tabSearchPage);
             this.tabList.ImageList = this.imageSearchList;
             this.tabList.ItemSize = new System.Drawing.Size(122, 120);
-            this.tabList.Location = new System.Drawing.Point(0, -1);
+            this.tabList.Location = new System.Drawing.Point(-5, 595);
             this.tabList.Name = "tabList";
             this.tabList.SelectedIndex = 0;
-            this.tabList.Size = new System.Drawing.Size(629, 718);
+            this.tabList.Size = new System.Drawing.Size(634, 122);
             this.tabList.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabList.TabIndex = 9;
             this.tabList.Tag = "";
             // 
             // tabPageProfile
             // 
+            this.tabPageProfile.BackColor = System.Drawing.Color.White;
             this.tabPageProfile.ImageIndex = 0;
             this.tabPageProfile.Location = new System.Drawing.Point(4, 4);
             this.tabPageProfile.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageProfile.Name = "tabPageProfile";
-            this.tabPageProfile.Size = new System.Drawing.Size(621, 0);
+            this.tabPageProfile.Size = new System.Drawing.Size(626, 0);
             this.tabPageProfile.TabIndex = 0;
-            this.tabPageProfile.UseVisualStyleBackColor = true;
             // 
             // tabChatPage
             // 
@@ -116,7 +119,7 @@
             this.tabChatPage.Location = new System.Drawing.Point(4, 4);
             this.tabChatPage.Margin = new System.Windows.Forms.Padding(0);
             this.tabChatPage.Name = "tabChatPage";
-            this.tabChatPage.Size = new System.Drawing.Size(621, 0);
+            this.tabChatPage.Size = new System.Drawing.Size(626, 0);
             this.tabChatPage.TabIndex = 1;
             this.tabChatPage.UseVisualStyleBackColor = true;
             // 
@@ -126,7 +129,7 @@
             this.tabSwipePage.Location = new System.Drawing.Point(4, 4);
             this.tabSwipePage.Margin = new System.Windows.Forms.Padding(0);
             this.tabSwipePage.Name = "tabSwipePage";
-            this.tabSwipePage.Size = new System.Drawing.Size(621, 0);
+            this.tabSwipePage.Size = new System.Drawing.Size(626, 0);
             this.tabSwipePage.TabIndex = 2;
             this.tabSwipePage.UseVisualStyleBackColor = true;
             // 
@@ -136,7 +139,7 @@
             this.tabChatBotPage.Location = new System.Drawing.Point(4, 4);
             this.tabChatBotPage.Margin = new System.Windows.Forms.Padding(0);
             this.tabChatBotPage.Name = "tabChatBotPage";
-            this.tabChatBotPage.Size = new System.Drawing.Size(621, 0);
+            this.tabChatBotPage.Size = new System.Drawing.Size(626, 0);
             this.tabChatBotPage.TabIndex = 3;
             this.tabChatBotPage.UseVisualStyleBackColor = true;
             // 
@@ -147,7 +150,7 @@
             this.tabSearchPage.Location = new System.Drawing.Point(4, 4);
             this.tabSearchPage.Margin = new System.Windows.Forms.Padding(0);
             this.tabSearchPage.Name = "tabSearchPage";
-            this.tabSearchPage.Size = new System.Drawing.Size(621, 0);
+            this.tabSearchPage.Size = new System.Drawing.Size(626, 0);
             this.tabSearchPage.TabIndex = 4;
             this.tabSearchPage.UseVisualStyleBackColor = true;
             // 
@@ -165,6 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(628, 717);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);

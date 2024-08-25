@@ -22,6 +22,9 @@ namespace PRG281_Project
 
             // Add specific users to the group (e.g., users older than 30)
 
+            TabControl tab = new TabControl();
+            TabPage page = new TabPage();   
+            tab.BackColor = System.Drawing.Color.Pink;
 
         }
 

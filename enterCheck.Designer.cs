@@ -36,44 +36,43 @@
             // head
             // 
             this.head.AutoSize = true;
-            this.head.Location = new System.Drawing.Point(307, 140);
-            this.head.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.head.Location = new System.Drawing.Point(230, 114);
             this.head.Name = "head";
-            this.head.Size = new System.Drawing.Size(140, 16);
+            this.head.Size = new System.Drawing.Size(125, 13);
             this.head.TabIndex = 0;
-            this.head.Text = "what do you wish to do";
+            this.head.Text = "What do you wish to do?";
             // 
             // login
             // 
-            this.login.Location = new System.Drawing.Point(457, 226);
-            this.login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.login.BackColor = System.Drawing.Color.White;
+            this.login.Location = new System.Drawing.Point(343, 184);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(137, 42);
+            this.login.Size = new System.Drawing.Size(103, 34);
             this.login.TabIndex = 1;
             this.login.Text = "Log In";
-            this.login.UseVisualStyleBackColor = true;
+            this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.button1_Click);
             // 
             // signUp
             // 
-            this.signUp.Location = new System.Drawing.Point(159, 226);
-            this.signUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signUp.BackColor = System.Drawing.Color.White;
+            this.signUp.Location = new System.Drawing.Point(119, 184);
             this.signUp.Name = "signUp";
-            this.signUp.Size = new System.Drawing.Size(153, 42);
+            this.signUp.Size = new System.Drawing.Size(115, 34);
             this.signUp.TabIndex = 2;
             this.signUp.Text = "Sign Up";
-            this.signUp.UseVisualStyleBackColor = true;
+            this.signUp.UseVisualStyleBackColor = false;
             this.signUp.Click += new System.EventHandler(this.button2_Click);
             // 
             // enterCheck
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 388);
+            this.BackColor = System.Drawing.Color.Pink;
+            this.ClientSize = new System.Drawing.Size(632, 315);
             this.Controls.Add(this.signUp);
             this.Controls.Add(this.login);
             this.Controls.Add(this.head);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "enterCheck";
             this.Text = "enterCheck";
             this.ResumeLayout(false);
