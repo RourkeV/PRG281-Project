@@ -22,9 +22,7 @@ namespace PRG281_Project
         public string userEmail;
         public string userPass;
 
-        
-        
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
             userEmail = txtEmail.Text;
