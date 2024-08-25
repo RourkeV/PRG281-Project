@@ -96,7 +96,7 @@ namespace PRG281_Project
                 if (number == 3)
 
                 {
-                    match = true;
+                    //match = true;
                     //matchedUsers.Add("Calvin", "Nijenhuis", 21);
 
                     //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol

@@ -37,6 +37,7 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblBio = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.userPicture = new System.Windows.Forms.PictureBox();
             this.tabList = new System.Windows.Forms.TabControl();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
             this.tabChatPage = new System.Windows.Forms.TabPage();
@@ -46,10 +47,9 @@
             this.imageMainList = new System.Windows.Forms.ImageList(this.components);
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
-            this.userPicture = new System.Windows.Forms.PictureBox();
             this.userCard.SuspendLayout();
-            this.tabList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
+            this.tabList.SuspendLayout();
             this.SuspendLayout();
             // 
             // userCard
@@ -74,7 +74,7 @@
             this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewBio.Location = new System.Drawing.Point(44, 371);
             this.lblViewBio.Name = "lblViewBio";
-            this.lblViewBio.Size = new System.Drawing.Size(29, 13);
+            this.lblViewBio.Size = new System.Drawing.Size(36, 17);
             this.lblViewBio.TabIndex = 9;
             this.lblViewBio.Text = "Bio:";
             // 
@@ -83,7 +83,7 @@
             this.lblViewAge.AutoSize = true;
             this.lblViewAge.Location = new System.Drawing.Point(292, 341);
             this.lblViewAge.Name = "lblViewAge";
-            this.lblViewAge.Size = new System.Drawing.Size(51, 13);
+            this.lblViewAge.Size = new System.Drawing.Size(64, 16);
             this.lblViewAge.TabIndex = 8;
             this.lblViewAge.Text = "User Age";
             // 
@@ -92,7 +92,7 @@
             this.lblSearchName.AutoSize = true;
             this.lblSearchName.Location = new System.Drawing.Point(138, 341);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(55, 13);
+            this.lblSearchName.Size = new System.Drawing.Size(70, 16);
             this.lblSearchName.TabIndex = 7;
             this.lblSearchName.Text = "Username";
             // 
@@ -103,7 +103,7 @@
             this.lblAge.Location = new System.Drawing.Point(258, 337);
             this.lblAge.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(37, 18);
+            this.lblAge.Size = new System.Drawing.Size(50, 24);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Age:";
             // 
@@ -124,7 +124,7 @@
             this.lblUsername.Location = new System.Drawing.Point(40, 337);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(87, 20);
+            this.lblUsername.Size = new System.Drawing.Size(108, 25);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username:";
             // 
@@ -137,30 +137,6 @@
             this.userPicture.Size = new System.Drawing.Size(330, 298);
             this.userPicture.TabIndex = 0;
             this.userPicture.TabStop = false;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackColor = System.Drawing.Color.White;
-            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
-            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
-            this.btnSignOut.TabIndex = 5;
-            this.btnSignOut.UseVisualStyleBackColor = false;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.BackColor = System.Drawing.Color.White;
-            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
-            this.btnFilter.Location = new System.Drawing.Point(525, 12);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(90, 75);
-            this.btnFilter.TabIndex = 4;
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabList
             // 
@@ -248,6 +224,7 @@
             // 
             // btnSignOut
             // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
             this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
             this.btnSignOut.Location = new System.Drawing.Point(12, 12);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
@@ -259,6 +236,7 @@
             // 
             // btnFilter
             // 
+            this.btnFilter.BackColor = System.Drawing.Color.White;
             this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
             this.btnFilter.Location = new System.Drawing.Point(525, 12);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
@@ -267,16 +245,6 @@
             this.btnFilter.TabIndex = 4;
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // userPicture
-            // 
-            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
-            this.userPicture.Location = new System.Drawing.Point(30, 28);
-            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
-            this.userPicture.Name = "userPicture";
-            this.userPicture.Size = new System.Drawing.Size(330, 298);
-            this.userPicture.TabIndex = 0;
-            this.userPicture.TabStop = false;
             // 
             // HomePage
             // 
@@ -290,12 +258,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "HomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.userCard.ResumeLayout(false);
             this.userCard.PerformLayout();
-            this.tabList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
+            this.tabList.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
