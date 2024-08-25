@@ -20,6 +20,7 @@ namespace PRG281_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //add validation for empty fields
             UserSignUp userSignUp = new UserSignUp();
             string email = userSignUp.userEmail;
             string passw = userSignUp.userPass;
@@ -27,17 +28,21 @@ namespace PRG281_Project
             string last = txtLast.Text;
             string fullName = $"{first} {last}";
             decimal age = numAge.Value;
+            string gend = cmboGender.Text;
+            string bio = rchBio.Text;
             string security = scrtyQstn.Text;
             string secAns = scrtyAnswer.Text;
+
+            
             FullUserList userUserList = new FullUserList();
 
-            userUserList.addUser(fullName, email, passw, age, security, secAns);
+            userUserList.addUser(fullName, email, passw,gend, age, security, secAns, bio);
             signCheck = true;
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
             System.Threading.Thread.Sleep(1000);
-            HomePage homePage = new HomePage();
-            homePage.Show();
-            Visible = false;
+            loadingBar load = new loadingBar();
+            load.Show();
+            this.Hide();
             //loadingBar load = new loadingBar();
             //load.Show(); --> go to loading bar
 
