@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.userCard = new System.Windows.Forms.Panel();
+            this.lblViewBio = new System.Windows.Forms.Label();
+            this.lblViewAge = new System.Windows.Forms.Label();
+            this.lblSearchName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblBio = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -44,9 +47,6 @@
             this.tabChatBotPage = new System.Windows.Forms.TabPage();
             this.tabSearchPage = new System.Windows.Forms.TabPage();
             this.imageMainList = new System.Windows.Forms.ImageList(this.components);
-            this.lblSearchName = new System.Windows.Forms.Label();
-            this.lblViewAge = new System.Windows.Forms.Label();
-            this.lblViewBio = new System.Windows.Forms.Label();
             this.userCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabList.SuspendLayout();
@@ -54,14 +54,10 @@
             // 
             // userCard
             // 
-
             this.userCard.BackColor = System.Drawing.Color.White;
-
-            this.userCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(225)))));
             this.userCard.Controls.Add(this.lblViewBio);
             this.userCard.Controls.Add(this.lblViewAge);
             this.userCard.Controls.Add(this.lblSearchName);
-
             this.userCard.Controls.Add(this.lblAge);
             this.userCard.Controls.Add(this.lblBio);
             this.userCard.Controls.Add(this.lblUsername);
@@ -71,6 +67,34 @@
             this.userCard.Name = "userCard";
             this.userCard.Size = new System.Drawing.Size(389, 465);
             this.userCard.TabIndex = 1;
+            // 
+            // lblViewBio
+            // 
+            this.lblViewBio.AutoSize = true;
+            this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewBio.Location = new System.Drawing.Point(44, 371);
+            this.lblViewBio.Name = "lblViewBio";
+            this.lblViewBio.Size = new System.Drawing.Size(29, 13);
+            this.lblViewBio.TabIndex = 9;
+            this.lblViewBio.Text = "Bio:";
+            // 
+            // lblViewAge
+            // 
+            this.lblViewAge.AutoSize = true;
+            this.lblViewAge.Location = new System.Drawing.Point(292, 341);
+            this.lblViewAge.Name = "lblViewAge";
+            this.lblViewAge.Size = new System.Drawing.Size(51, 13);
+            this.lblViewAge.TabIndex = 8;
+            this.lblViewAge.Text = "User Age";
+            // 
+            // lblSearchName
+            // 
+            this.lblSearchName.AutoSize = true;
+            this.lblSearchName.Location = new System.Drawing.Point(138, 341);
+            this.lblSearchName.Name = "lblSearchName";
+            this.lblSearchName.Size = new System.Drawing.Size(55, 13);
+            this.lblSearchName.TabIndex = 7;
+            this.lblSearchName.Text = "Username";
             // 
             // lblAge
             // 
@@ -220,34 +244,6 @@
             this.imageMainList.Images.SetKeyName(2, "Swipe_Icon.png");
             this.imageMainList.Images.SetKeyName(3, "ChatBot_Icon1.png");
             this.imageMainList.Images.SetKeyName(4, "Search_Icon.png");
-            // 
-            // lblSearchName
-            // 
-            this.lblSearchName.AutoSize = true;
-            this.lblSearchName.Location = new System.Drawing.Point(138, 341);
-            this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(55, 13);
-            this.lblSearchName.TabIndex = 7;
-            this.lblSearchName.Text = "Username";
-            // 
-            // lblViewAge
-            // 
-            this.lblViewAge.AutoSize = true;
-            this.lblViewAge.Location = new System.Drawing.Point(292, 341);
-            this.lblViewAge.Name = "lblViewAge";
-            this.lblViewAge.Size = new System.Drawing.Size(51, 13);
-            this.lblViewAge.TabIndex = 8;
-            this.lblViewAge.Text = "User Age";
-            // 
-            // lblViewBio
-            // 
-            this.lblViewBio.AutoSize = true;
-            this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewBio.Location = new System.Drawing.Point(44, 371);
-            this.lblViewBio.Name = "lblViewBio";
-            this.lblViewBio.Size = new System.Drawing.Size(29, 13);
-            this.lblViewBio.TabIndex = 9;
-            this.lblViewBio.Text = "Bio:";
             // 
             // HomePage
             // 

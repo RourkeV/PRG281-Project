@@ -85,7 +85,7 @@
             // lblHeading
             // 
             this.lblHeading.AutoSize = true;
-            this.lblHeading.BackColor = System.Drawing.Color.RosyBrown;
+            this.lblHeading.BackColor = System.Drawing.Color.Transparent;
             this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.Location = new System.Drawing.Point(115, 69);
             this.lblHeading.Name = "lblHeading";
