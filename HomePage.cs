@@ -14,19 +14,14 @@ namespace PRG281_Project
 {
     public partial class HomePage : Form
     {
+
         private Point _startPoint;
         private bool _isDragging = false;
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
 
         public HomePage()
-        {
-
-            List<MatchedUsers> matchedUsers = new List<MatchedUsers>
-            {
-                
-            }
-
+        {                  
             InitializeComponent();
 
             System.Drawing.Image SignOutImg;
@@ -80,10 +75,10 @@ namespace PRG281_Project
         private void userCard_MouseUp(object sender, MouseEventArgs e)
         {
             _isDragging = false;
+            likedUsers matchedUsers = new likedUsers();
 
             if (userCard.Left > this.Width / 1.7)
             {
-                bool match = false;
                 Random random = new Random();
                 int number = 0;
                 // Swiped right
@@ -94,14 +89,14 @@ namespace PRG281_Project
                 number = random.Next(1, 4);
 
                 if (number == 3)
-                {
-                    match = true;
-                    matchedUsers.Add("Calvin", "Nijenhuis", 21);
+                {       
+                    matchedUsers.AddUser("Calvin","Nijenhuis");
                     //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
                     //nextUser()
                 }
                 else
                 {
+                    matchedUsers.AddUser("Bob", "stone");
                     //nextUser();                  
                 }
 

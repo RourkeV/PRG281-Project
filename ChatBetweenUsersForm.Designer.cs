@@ -38,6 +38,7 @@
             this.tabSearchPage = new System.Windows.Forms.TabPage();
             this.imgChatBetweenUsersList = new System.Windows.Forms.ImageList(this.components);
             this.btnSignOut = new System.Windows.Forms.Button();
+            this.flowLayoutMessage = new System.Windows.Forms.FlowLayoutPanel();
             this.tabList.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,14 +132,27 @@
             this.btnSignOut.TabIndex = 10;
             this.btnSignOut.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutMessage
+            // 
+            this.flowLayoutMessage.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutMessage.Location = new System.Drawing.Point(12, 541);
+            this.flowLayoutMessage.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutMessage.Name = "flowLayoutMessage";
+            this.flowLayoutMessage.Size = new System.Drawing.Size(10, 10);
+            this.flowLayoutMessage.TabIndex = 11;
+            this.flowLayoutMessage.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMessage_Paint);
+            // 
             // ChatBetweenUsersForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(628, 717);
+            this.BackColor = System.Drawing.Color.LightCoral;
+            this.ClientSize = new System.Drawing.Size(905, 717);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.tabList);
+            this.Controls.Add(this.flowLayoutMessage);
             this.Name = "ChatBetweenUsersForm";
             this.Text = "ChatBetweenUsersForm";
+            this.Load += new System.EventHandler(this.ChatBetweenUsersForm_Load);
             this.tabList.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -154,5 +168,6 @@
         private System.Windows.Forms.TabPage tabSearchPage;
         private System.Windows.Forms.ImageList imgChatBetweenUsersList;
         private System.Windows.Forms.Button btnSignOut;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutMessage;
     }
 }
