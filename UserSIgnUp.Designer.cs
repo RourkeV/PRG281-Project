@@ -67,6 +67,7 @@
             this.txtPass.BackColor = System.Drawing.Color.Gainsboro;
             this.txtPass.Location = new System.Drawing.Point(50, 201);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(194, 20);
             this.txtPass.TabIndex = 2;
             // 
@@ -102,6 +103,7 @@
             this.txtPassCon.BackColor = System.Drawing.Color.Gainsboro;
             this.txtPassCon.Location = new System.Drawing.Point(50, 270);
             this.txtPassCon.Name = "txtPassCon";
+            this.txtPassCon.PasswordChar = '*';
             this.txtPassCon.Size = new System.Drawing.Size(194, 20);
             this.txtPassCon.TabIndex = 5;
             // 
