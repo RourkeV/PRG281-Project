@@ -54,7 +54,7 @@
             // 
             // userCard
             // 
-            this.userCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(225)))));
+            this.userCard.BackColor = System.Drawing.Color.White;
             this.userCard.Controls.Add(this.lblAge);
             this.userCard.Controls.Add(this.lblHobbyTwo);
             this.userCard.Controls.Add(this.lblHobbyThree);
@@ -148,24 +148,26 @@
             // 
             // btnSignOut
             // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
             this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
             this.btnSignOut.Location = new System.Drawing.Point(12, 12);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(90, 75);
             this.btnSignOut.TabIndex = 5;
-            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.UseVisualStyleBackColor = false;
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // btnFilter
             // 
+            this.btnFilter.BackColor = System.Drawing.Color.White;
             this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
             this.btnFilter.Location = new System.Drawing.Point(525, 12);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(90, 75);
             this.btnFilter.TabIndex = 4;
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabList
@@ -190,13 +192,15 @@
             // 
             // tabPageProfile
             // 
-            this.tabPageProfile.ImageKey = "Profile_Icon1.png";
+            this.tabPageProfile.BackColor = System.Drawing.Color.Pink;
+            this.tabPageProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPageProfile.ImageIndex = 0;
             this.tabPageProfile.Location = new System.Drawing.Point(4, 4);
             this.tabPageProfile.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageProfile.Name = "tabPageProfile";
+            this.tabPageProfile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPageProfile.Size = new System.Drawing.Size(621, 0);
             this.tabPageProfile.TabIndex = 0;
-            this.tabPageProfile.UseVisualStyleBackColor = true;
             // 
             // tabChatPage
             // 
@@ -242,7 +246,7 @@
             // imageMainList
             // 
             this.imageMainList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageMainList.ImageStream")));
-            this.imageMainList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageMainList.TransparentColor = System.Drawing.Color.Pink;
             this.imageMainList.Images.SetKeyName(0, "Profile_Icon1.png");
             this.imageMainList.Images.SetKeyName(1, "Chat_Icon.png");
             this.imageMainList.Images.SetKeyName(2, "Swipe_Icon.png");
@@ -252,11 +256,13 @@
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(628, 717);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.userCard);
             this.Controls.Add(this.tabList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "HomePage";
             this.Text = "HomePage";

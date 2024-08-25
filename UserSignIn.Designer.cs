@@ -67,22 +67,24 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(34, 147);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(205, 20);
             this.txtEmail.TabIndex = 6;
             // 
             // btnSubmit
             // 
+            this.btnSubmit.BackColor = System.Drawing.Color.White;
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.Location = new System.Drawing.Point(98, 311);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(80, 34);
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // chkBxShow
@@ -112,7 +114,8 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogin.Location = new System.Drawing.Point(84, 456);
+            this.lblLogin.ForeColor = System.Drawing.Color.Crimson;
+            this.lblLogin.Location = new System.Drawing.Point(81, 455);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(105, 13);
             this.lblLogin.TabIndex = 13;
@@ -122,8 +125,8 @@
             // lblMovePage
             // 
             this.lblMovePage.AutoSize = true;
-            this.lblMovePage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblMovePage.Location = new System.Drawing.Point(77, 429);
+            this.lblMovePage.ForeColor = System.Drawing.Color.Black;
+            this.lblMovePage.Location = new System.Drawing.Point(65, 429);
             this.lblMovePage.Name = "lblMovePage";
             this.lblMovePage.Size = new System.Drawing.Size(135, 13);
             this.lblMovePage.TabIndex = 12;
@@ -133,6 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(285, 506);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblMovePage);
@@ -144,7 +148,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserSignIn";
