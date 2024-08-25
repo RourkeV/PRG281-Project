@@ -28,7 +28,7 @@ namespace PRG281_Project
 
             InitializeComponent();
 
-            tabList.SelectedIndexChanged += new EventHandler(tabList_SelectedIndexChanged);
+            
             System.Drawing.Image SignOutImg;
             SignOutImg = btnSignOut.Image;
             System.Drawing.Image resizedImage = new Bitmap(SignOutImg, new Size(64, 64));
@@ -291,73 +291,23 @@ namespace PRG281_Project
 
         private void tabList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabList.SelectedTab == tabChatBotPage)
-            {
-                TransferControlsFromAPI();
-            }
-        }
-
-        private void TransferControlsFromAPI()
-        {
-            API embeddedForm = new API();
-
-            embeddedForm.Load += (sender, args) =>
-            {
-                this.Controls.Clear();
-
-                foreach (Control c in embeddedForm.Controls.Cast<Control>().ToList())
-                {
-                    this.Controls.Add(c);
-                    this.BackColor = Color.Pink;
-                   
-                    switch (c.Name)
-                    {
-                        case "richTextBox":
-                            SetControlProperties(c, 370, 354, new Point(122, 111));
-                            break;
-                        case "textBox":
-                            SetControlProperties(c, 268, 46, new Point(122, 486));
-                            c.Visible = true;
-                            c.BringToFront();
-                            break;
-                        case "submitBtn":
-                            SetControlProperties(c, 95, 46, new Point(405, 486));
-                            break;
-                        case "lblHeading":
-                            SetControlProperties(c, 329, 39, new Point(115, 69));
-                            break;
-                        case "btnSignOut":
-                            SetControlProperties(c, 90, 75, new Point(12, 12));
-                            break;
-                        case "btnFilter":
-                            SetControlProperties(c, 90, 75, new Point(525, 12));
-                            break;
-                        case "tabList":
-                            SetControlProperties(c, 629, 124, new Point(0, 593));
-                            ((TabControl)c).ImageList = imageMainList;
-                            ((TabControl)c).BackColor = Color.Pink;
-                            break;
-                    }
-                }
-
-                embeddedForm.Close();
-            };
-
-            embeddedForm.Show(); 
-            embeddedForm.Hide(); 
-        }
-
-        private void SetControlProperties(Control control, int width, int height, Point location)
-        {
-            control.Width = width;
-            control.Height = height;
-            control.Location = location;
+            
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             ReportForm report = new ReportForm();
             report.Show();
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
