@@ -21,6 +21,12 @@ namespace PRG281_Project
 
         public HomePage()
         {
+
+            List<MatchedUsers> matchedUsers = new List<MatchedUsers>
+            {
+                
+            }
+
             InitializeComponent();
 
             System.Drawing.Image SignOutImg;
@@ -77,12 +83,29 @@ namespace PRG281_Project
 
             if (userCard.Left > this.Width / 1.7)
             {
+                bool match = false;
+                Random random = new Random();
+                int number = 0;
                 // Swiped right
                 MessageBox.Show("Swiped Right!");
 
                 //add user to possible match if other user(maybe a randomiser) also swipes right its a match
 
-                //nextUser();
+                number = random.Next(1, 4);
+
+                if (number == 3)
+                {
+                    match = true;
+                    matchedUsers.Add("Calvin", "Nijenhuis", 21);
+                    //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
+                    //nextUser()
+                }
+                else
+                {
+                    //nextUser();                  
+                }
+
+
 
 
             }
