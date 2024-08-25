@@ -222,6 +222,7 @@ namespace PRG281_Project
             this.Controls.Add(this.txtFirst);
             this.Controls.Add(this.label1);
             this.Name = "AddingDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddingDetails";
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();
             this.ResumeLayout(false);

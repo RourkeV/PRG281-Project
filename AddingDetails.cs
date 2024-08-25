@@ -40,7 +40,7 @@ namespace PRG281_Project
             signCheck = true;
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
             System.Threading.Thread.Sleep(1000);
-            loadingBar load = new loadingBar();
+            HomePage load = new HomePage();
             load.Show();
             this.Hide();
             //loadingBar load = new loadingBar();

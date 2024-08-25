@@ -21,9 +21,9 @@ namespace PRG281_Project
         private void loadingBar_Load(object sender, EventArgs e)
         {
             Thread.Sleep(3000);
-            HomePage homePage = new HomePage();
-            homePage.Show();
-            this.Hide();
+            //HomePage homePage = new HomePage();
+            //homePage.Show();
+            //this.Hide();
         }
     }
 }
