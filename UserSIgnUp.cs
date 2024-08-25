@@ -22,12 +22,28 @@ namespace PRG281_Project
         public string userEmail;
         public string userPass;
 
-        public void button1_Click(object sender, EventArgs e)
+        
+        public bool valid = true;
+        private void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
-            userEmail = txtEmail.Text;
-            userPass = txtPass.Text;
-            newPage();
+            
+            
+            emailCheck();
+            if (valid == true)
+            {
+                userEmail = txtEmail.Text;
+                userPass = txtPass.Text;
+                newPage();
+            }
+            else 
+            {
+                txtPass.Text = "";
+                //figure out how to change border style
+                //create error message that email in use
+            }
+
+            
 
         }
         public virtual void newPage()
@@ -36,6 +52,19 @@ namespace PRG281_Project
             detailPage.Show();
             Visible = false;
             txtEmail.Clear();
+        }
+        public void emailCheck()
+        {
+            FullUserList fullUserList = new FullUserList();
+            List<UserDetails> list = new List<UserDetails>();
+            list = fullUserList.AllUsers;
+            foreach (UserDetails user in list)
+            {
+                if (user.email1 == txtEmail.Text)
+                {
+                    valid = false;
+                }
+            }
         }
     }
 }

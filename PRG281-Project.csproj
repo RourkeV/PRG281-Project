@@ -91,7 +91,6 @@
     <Compile Include="API.Designer.cs">
       <DependentUpon>API.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurrentUser.cs" />
     <Compile Include="enterCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +103,25 @@
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="likedUsers.cs" />
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileEdit.Designer.cs">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loading bar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading bar.Designer.cs">
+      <DependentUpon>loading bar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,12 +137,6 @@
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="UserDetails.cs" />
-    <Compile Include="UserLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserLogin.Designer.cs">
-      <DependentUpon>UserLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </Compile>
     <Compile Include="UserSignUp.Designer.cs">
       <DependentUpon>UserSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersLiked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usersLiked.Designer.cs">
+      <DependentUpon>usersLiked.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +173,12 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileEdit.resx">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -163,14 +187,14 @@
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserLogin.resx">
-      <DependentUpon>UserLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserSignIn.resx">
       <DependentUpon>UserSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignUp.resx">
       <DependentUpon>UserSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersLiked.resx">
+      <DependentUpon>usersLiked.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +211,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ChatBot_Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walter_white.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign_Out_Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
