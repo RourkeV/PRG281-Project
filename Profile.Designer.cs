@@ -36,6 +36,8 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblAgeHead = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBio = new System.Windows.Forms.Label();
+            this.rchTxtBio = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             // 
             this.lblNameHead.AutoSize = true;
             this.lblNameHead.Font = new System.Drawing.Font("Noto Sans", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameHead.Location = new System.Drawing.Point(165, 352);
+            this.lblNameHead.Location = new System.Drawing.Point(160, 346);
             this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameHead.Name = "lblNameHead";
             this.lblNameHead.Size = new System.Drawing.Size(58, 20);
@@ -54,7 +56,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(289, 355);
+            this.lblName.Location = new System.Drawing.Point(284, 349);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(54, 15);
             this.lblName.TabIndex = 1;
@@ -74,7 +76,7 @@
             // 
             this.lblEmailHead.AutoSize = true;
             this.lblEmailHead.Font = new System.Drawing.Font("Noto Sans", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailHead.Location = new System.Drawing.Point(166, 377);
+            this.lblEmailHead.Location = new System.Drawing.Point(161, 371);
             this.lblEmailHead.Name = "lblEmailHead";
             this.lblEmailHead.Size = new System.Drawing.Size(57, 20);
             this.lblEmailHead.TabIndex = 3;
@@ -84,7 +86,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(289, 382);
+            this.lblEmail.Location = new System.Drawing.Point(284, 376);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(54, 15);
             this.lblEmail.TabIndex = 4;
@@ -94,7 +96,7 @@
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Noto Sans", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(289, 407);
+            this.lblAge.Location = new System.Drawing.Point(284, 401);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(44, 15);
             this.lblAge.TabIndex = 6;
@@ -105,7 +107,7 @@
             // 
             this.lblAgeHead.AutoSize = true;
             this.lblAgeHead.Font = new System.Drawing.Font("Noto Sans", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgeHead.Location = new System.Drawing.Point(182, 402);
+            this.lblAgeHead.Location = new System.Drawing.Point(177, 396);
             this.lblAgeHead.Name = "lblAgeHead";
             this.lblAgeHead.Size = new System.Drawing.Size(41, 20);
             this.lblAgeHead.TabIndex = 5;
@@ -113,17 +115,37 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(126, 118);
+            this.pictureBox1.Location = new System.Drawing.Point(125, 91);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 222);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblBio
+            // 
+            this.lblBio.AutoSize = true;
+            this.lblBio.Font = new System.Drawing.Font("Noto Sans", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBio.Location = new System.Drawing.Point(31, 448);
+            this.lblBio.Name = "lblBio";
+            this.lblBio.Size = new System.Drawing.Size(38, 20);
+            this.lblBio.TabIndex = 8;
+            this.lblBio.Text = "Bio:";
+            // 
+            // rchTxtBio
+            // 
+            this.rchTxtBio.Location = new System.Drawing.Point(22, 471);
+            this.rchTxtBio.Name = "rchTxtBio";
+            this.rchTxtBio.Size = new System.Drawing.Size(477, 96);
+            this.rchTxtBio.TabIndex = 9;
+            this.rchTxtBio.Text = "";
             // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 596);
+            this.Controls.Add(this.rchTxtBio);
+            this.Controls.Add(this.lblBio);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblAgeHead);
@@ -153,5 +175,7 @@
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblAgeHead;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblBio;
+        private System.Windows.Forms.RichTextBox rchTxtBio;
     }
 }

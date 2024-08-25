@@ -143,7 +143,8 @@ namespace PRG281_Project
         public string curPass;
         public decimal curAge;
         public string curSecurity;
-        public string curSecAns;        
+        public string curSecAns;
+        public string curBio;
         
         public void signInOrUp()
         {
@@ -184,6 +185,7 @@ namespace PRG281_Project
                         curAge = item.age1;
                         curSecurity = item.Security;
                         curSecAns = item.SecAnswer;
+                        //curBio = item.
                     }
                 }
             }
