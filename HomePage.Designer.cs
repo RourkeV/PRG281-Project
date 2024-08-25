@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.userCard = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblViewBio = new System.Windows.Forms.Label();
             this.lblViewAge = new System.Windows.Forms.Label();
             this.lblSearchName = new System.Windows.Forms.Label();
@@ -38,8 +39,6 @@
             this.lblBio = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.userPicture = new System.Windows.Forms.PictureBox();
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.btnFilter = new System.Windows.Forms.Button();
             this.tabList = new System.Windows.Forms.TabControl();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
             this.tabChatPage = new System.Windows.Forms.TabPage();
@@ -47,6 +46,8 @@
             this.tabChatBotPage = new System.Windows.Forms.TabPage();
             this.tabSearchPage = new System.Windows.Forms.TabPage();
             this.imageMainList = new System.Windows.Forms.ImageList(this.components);
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.userCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabList.SuspendLayout();
@@ -55,6 +56,7 @@
             // userCard
             // 
             this.userCard.BackColor = System.Drawing.Color.White;
+            this.userCard.Controls.Add(this.button1);
             this.userCard.Controls.Add(this.lblViewBio);
             this.userCard.Controls.Add(this.lblViewAge);
             this.userCard.Controls.Add(this.lblSearchName);
@@ -67,6 +69,17 @@
             this.userCard.Name = "userCard";
             this.userCard.Size = new System.Drawing.Size(389, 465);
             this.userCard.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(334, 412);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(41, 38);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // lblViewBio
             // 
@@ -130,37 +143,12 @@
             // 
             // userPicture
             // 
-            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
             this.userPicture.Location = new System.Drawing.Point(30, 28);
             this.userPicture.Margin = new System.Windows.Forms.Padding(7);
             this.userPicture.Name = "userPicture";
             this.userPicture.Size = new System.Drawing.Size(330, 298);
             this.userPicture.TabIndex = 0;
             this.userPicture.TabStop = false;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackColor = System.Drawing.Color.White;
-            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
-            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
-            this.btnSignOut.TabIndex = 5;
-            this.btnSignOut.UseVisualStyleBackColor = false;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.BackColor = System.Drawing.Color.White;
-            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
-            this.btnFilter.Location = new System.Drawing.Point(525, 12);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(90, 75);
-            this.btnFilter.TabIndex = 4;
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabList
             // 
@@ -245,6 +233,28 @@
             this.imageMainList.Images.SetKeyName(3, "ChatBot_Icon1.png");
             this.imageMainList.Images.SetKeyName(4, "Search_Icon.png");
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.White;
+            this.btnFilter.Location = new System.Drawing.Point(525, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(90, 75);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -285,5 +295,6 @@
         private System.Windows.Forms.Label lblSearchName;
         private System.Windows.Forms.Label lblViewAge;
         private System.Windows.Forms.Label lblViewBio;
+        private System.Windows.Forms.Button button1;
     }
 }

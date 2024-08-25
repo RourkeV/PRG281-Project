@@ -18,6 +18,7 @@ namespace PRG281_Project
         private bool _isDragging = false;
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
+        ReportForm report = new ReportForm();
 
         public HomePage()
         {            
@@ -128,7 +129,7 @@ namespace PRG281_Project
 
         static FullUserList fullUserList = new FullUserList();
         static List<UserDetails> userDetails = new List<UserDetails>();
-        static int viewCount = 0;
+        public int viewCount = 0;
         private void HomePage_Load(object sender, EventArgs e)
         {//now we have the current user depedning on if the signed in or signed up ***nbnbnb still need to do a full system test
             signInOrUp();
@@ -278,6 +279,11 @@ namespace PRG281_Project
         private void lblHobbyThree_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            report.Show();
         }
     }
 }
