@@ -179,6 +179,7 @@ namespace PRG281_Project
             UserSignUp userSignUp = new UserSignUp();
             AddingDetails details = new AddingDetails();
             UserSignIn userSignIn = new UserSignIn();
+            
             string email;
             string pass;
             if (details.signCheck == true)
@@ -353,5 +354,10 @@ namespace PRG281_Project
             control.Location = location;
         }
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            ReportForm report = new ReportForm();
+            report.Show();
+        }
     }
 }
