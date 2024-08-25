@@ -36,11 +36,13 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.imgProfileEditList = new System.Windows.Forms.ImageList(this.components);
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnFilter = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.imgProfileEditList = new System.Windows.Forms.ImageList(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControlProfileEdit.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlProfileEdit
@@ -63,6 +65,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.ImageIndex = 0;
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
@@ -111,6 +114,16 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // imgProfileEditList
+            // 
+            this.imgProfileEditList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgProfileEditList.ImageStream")));
+            this.imgProfileEditList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgProfileEditList.Images.SetKeyName(0, "Profile_Icon1.png");
+            this.imgProfileEditList.Images.SetKeyName(1, "Chat_Icon.png");
+            this.imgProfileEditList.Images.SetKeyName(2, "Swipe_Icon.png");
+            this.imgProfileEditList.Images.SetKeyName(3, "ChatBot_Icon1.png");
+            this.imgProfileEditList.Images.SetKeyName(4, "Search_Icon.png");
+            // 
             // btnSignOut
             // 
             this.btnSignOut.BackColor = System.Drawing.Color.White;
@@ -141,15 +154,14 @@
             this.button1.TabIndex = 12;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // imgProfileEditList
+            // label1
             // 
-            this.imgProfileEditList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgProfileEditList.ImageStream")));
-            this.imgProfileEditList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgProfileEditList.Images.SetKeyName(0, "Profile_Icon1.png");
-            this.imgProfileEditList.Images.SetKeyName(1, "Chat_Icon.png");
-            this.imgProfileEditList.Images.SetKeyName(2, "Swipe_Icon.png");
-            this.imgProfileEditList.Images.SetKeyName(3, "ChatBot_Icon1.png");
-            this.imgProfileEditList.Images.SetKeyName(4, "Search_Icon.png");
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // ProfileEdit
             // 
@@ -163,6 +175,8 @@
             this.Name = "ProfileEdit";
             this.Text = "ProfileEdit";
             this.tabControlProfileEdit.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -178,5 +192,6 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList imgProfileEditList;
+        private System.Windows.Forms.Label label1;
     }
 }

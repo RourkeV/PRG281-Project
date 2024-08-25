@@ -20,12 +20,17 @@ namespace PRG281_Project
         private void Profile_Load(object sender, EventArgs e)
         {
             HomePage user = new HomePage();
+            decimal curAge = user.curAge;
+            string v = curAge.ToString();
+            lblName.Text = user.curName;
+            lblEmail.Text = user.curEmail;
+            lblAge.Text = v;
             //user.curName
             //user.curEmail
             //user.curPass
             //user.curAge
-            //user.curSecurity
-            //user.curSecAns
         }
+
+        
     }
 }
