@@ -20,12 +20,7 @@ namespace PRG281_Project
         usersLiked likedUsers = new usersLiked();
 
         public HomePage()
-        {
-
-            List<MatchedUsers> matchedUsers = new List<MatchedUsers>
-            {
-                
-            }
+        {            
 
             InitializeComponent();
 
@@ -96,7 +91,7 @@ namespace PRG281_Project
                 if (number == 3)
                 {
                     match = true;
-                    matchedUsers.Add("Calvin", "Nijenhuis", 21);
+                    //matchedUsers.Add("Calvin", "Nijenhuis", 21);
                     //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
                     //nextUser()
                 }
@@ -104,6 +99,8 @@ namespace PRG281_Project
                 {
                     //nextUser();                  
                 }
+
+                displayNew(viewCount);
 
 
 
@@ -117,6 +114,7 @@ namespace PRG281_Project
                 // Dont store user
 
                 //nextUser();
+                displayNew(viewCount);
             }
 
             // Reset the card position
@@ -128,10 +126,32 @@ namespace PRG281_Project
 
         }
 
+        static FullUserList fullUserList = new FullUserList();
+        static List<UserDetails> userDetails = new List<UserDetails>();
+        static int viewCount = 0;
         private void HomePage_Load(object sender, EventArgs e)
         {//now we have the current user depedning on if the signed in or signed up ***nbnbnb still need to do a full system test
             signInOrUp();
+            userDetails = fullUserList.AllUsers;
             
+            displayNew(viewCount);
+            
+            
+        }
+        public void displayNew(int i)
+        {
+            string viewName;
+            decimal viewAge;
+            string viewBio;
+            viewName = userDetails[i].name1;
+            viewAge = userDetails[i].age1;
+            viewBio = userDetails[i].Bio;
+
+            lblSearchName.Text = viewName;
+            lblBio.Text = viewBio;
+            lblViewAge.Text = viewAge.ToString();
+
+            viewCount++;
         }
         
         
