@@ -32,14 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.userCard = new System.Windows.Forms.Panel();
             this.lblAge = new System.Windows.Forms.Label();
-            this.lblHobbyTwo = new System.Windows.Forms.Label();
-            this.lblHobbyThree = new System.Windows.Forms.Label();
-            this.lblHobbyOne = new System.Windows.Forms.Label();
             this.lblBio = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.userPicture = new System.Windows.Forms.PictureBox();
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.btnFilter = new System.Windows.Forms.Button();
             this.tabList = new System.Windows.Forms.TabControl();
             this.tabPageProfile = new System.Windows.Forms.TabPage();
             this.tabChatPage = new System.Windows.Forms.TabPage();
@@ -47,22 +41,22 @@
             this.tabChatBotPage = new System.Windows.Forms.TabPage();
             this.tabSearchPage = new System.Windows.Forms.TabPage();
             this.imageMainList = new System.Windows.Forms.ImageList(this.components);
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.userPicture = new System.Windows.Forms.PictureBox();
             this.userCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // userCard
             // 
             this.userCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(225)))));
             this.userCard.Controls.Add(this.lblAge);
-            this.userCard.Controls.Add(this.lblHobbyTwo);
-            this.userCard.Controls.Add(this.lblHobbyThree);
-            this.userCard.Controls.Add(this.lblHobbyOne);
             this.userCard.Controls.Add(this.lblBio);
             this.userCard.Controls.Add(this.lblUsername);
             this.userCard.Controls.Add(this.userPicture);
-            this.userCard.Location = new System.Drawing.Point(111, 98);
+            this.userCard.Location = new System.Drawing.Point(118, 97);
             this.userCard.Margin = new System.Windows.Forms.Padding(7);
             this.userCard.Name = "userCard";
             this.userCard.Size = new System.Drawing.Size(389, 465);
@@ -78,39 +72,6 @@
             this.lblAge.Size = new System.Drawing.Size(61, 18);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Age:  50";
-            // 
-            // lblHobbyTwo
-            // 
-            this.lblHobbyTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHobbyTwo.Location = new System.Drawing.Point(231, 396);
-            this.lblHobbyTwo.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.lblHobbyTwo.Name = "lblHobbyTwo";
-            this.lblHobbyTwo.Size = new System.Drawing.Size(112, 20);
-            this.lblHobbyTwo.TabIndex = 5;
-            this.lblHobbyTwo.Text = "Hobby 2: Music";
-            this.lblHobbyTwo.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblHobbyThree
-            // 
-            this.lblHobbyThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHobbyThree.Location = new System.Drawing.Point(231, 416);
-            this.lblHobbyThree.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.lblHobbyThree.Name = "lblHobbyThree";
-            this.lblHobbyThree.Size = new System.Drawing.Size(107, 23);
-            this.lblHobbyThree.TabIndex = 4;
-            this.lblHobbyThree.Text = "Hobby 3: Meth";
-            this.lblHobbyThree.Click += new System.EventHandler(this.lblHobbyThree_Click);
-            // 
-            // lblHobbyOne
-            // 
-            this.lblHobbyOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHobbyOne.Location = new System.Drawing.Point(224, 374);
-            this.lblHobbyOne.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.lblHobbyOne.Name = "lblHobbyOne";
-            this.lblHobbyOne.Size = new System.Drawing.Size(158, 22);
-            this.lblHobbyOne.TabIndex = 3;
-            this.lblHobbyOne.Text = "Hobby 1: Making Meth";
-            this.lblHobbyOne.Click += new System.EventHandler(this.lblHobbyOne_Click);
             // 
             // lblBio
             // 
@@ -136,38 +97,6 @@
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username: Walter White";
             // 
-            // userPicture
-            // 
-            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
-            this.userPicture.Location = new System.Drawing.Point(30, 28);
-            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
-            this.userPicture.Name = "userPicture";
-            this.userPicture.Size = new System.Drawing.Size(330, 298);
-            this.userPicture.TabIndex = 0;
-            this.userPicture.TabStop = false;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
-            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
-            this.btnSignOut.TabIndex = 5;
-            this.btnSignOut.UseVisualStyleBackColor = true;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
-            this.btnFilter.Location = new System.Drawing.Point(525, 12);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(90, 75);
-            this.btnFilter.TabIndex = 4;
-            this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // tabList
             // 
             this.tabList.Alignment = System.Windows.Forms.TabAlignment.Bottom;
@@ -187,6 +116,7 @@
             this.tabList.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabList.TabIndex = 6;
             this.tabList.Tag = "";
+            this.tabList.SelectedIndexChanged += new System.EventHandler(this.tabList_SelectedIndexChanged);
             // 
             // tabPageProfile
             // 
@@ -249,6 +179,38 @@
             this.imageMainList.Images.SetKeyName(3, "ChatBot_Icon1.png");
             this.imageMainList.Images.SetKeyName(4, "Search_Icon.png");
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
+            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
+            this.btnFilter.Location = new System.Drawing.Point(525, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(90, 75);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // userPicture
+            // 
+            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
+            this.userPicture.Location = new System.Drawing.Point(30, 28);
+            this.userPicture.Margin = new System.Windows.Forms.Padding(7);
+            this.userPicture.Name = "userPicture";
+            this.userPicture.Size = new System.Drawing.Size(330, 298);
+            this.userPicture.TabIndex = 0;
+            this.userPicture.TabStop = false;
+            // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -263,8 +225,8 @@
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.userCard.ResumeLayout(false);
             this.userCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.tabList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,9 +236,6 @@
         private System.Windows.Forms.PictureBox userPicture;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblBio;
-        private System.Windows.Forms.Label lblHobbyTwo;
-        private System.Windows.Forms.Label lblHobbyThree;
-        private System.Windows.Forms.Label lblHobbyOne;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button btnSignOut;
