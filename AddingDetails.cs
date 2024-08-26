@@ -16,14 +16,13 @@ namespace PRG281_Project
         {
             InitializeComponent();
         }
-        public bool signCheck = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
             //add validation for empty fields
-            UserSignUp userSignUp = new UserSignUp();
-            string email = userSignUp.userEmail;
-            string passw = userSignUp.userPass;
+            HomePage homePage = new HomePage();
+            string email = homePage.curEmail;
+            string passw = homePage.curPass;
             string first = txtFirst.Text;
             string last = txtLast.Text;
             string fullName = $"{first} {last}";
@@ -37,15 +36,19 @@ namespace PRG281_Project
             FullUserList userUserList = new FullUserList();
 
             userUserList.addUser(fullName, email, passw, gend, age, security, secAns, bio);
-            signCheck = true;
+            
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
-            System.Threading.Thread.Sleep(1000);
             HomePage load = new HomePage();
             load.Show();
             this.Hide();
             //loadingBar load = new loadingBar();
             //load.Show(); --> go to loading bar
 
+        }
+
+        private void scrtyAnswer_TextClick(object sender, EventArgs e)
+        {
+            scrtyAnswer.Text = "";
         }
     }
 }

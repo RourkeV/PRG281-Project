@@ -18,8 +18,7 @@ namespace PRG281_Project
             InitializeComponent();
         }
 
-        public string userEmail;
-        public string userPass;
+        
 
         public virtual void newPage()
         {
@@ -41,12 +40,11 @@ namespace PRG281_Project
                 }
             }
         }
-
         public bool valid = true;
         private void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
-
+            HomePage homePage = new HomePage();
             if (txtEmail.Text == "" && txtPass.Text == "" && txtPassCon.Text == "")
             {
                 MessageBox.Show("A username and password must be provided", "registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -58,8 +56,8 @@ namespace PRG281_Project
                     emailCheck();
                     if (valid == true)
                     {
-                        userEmail = txtEmail.Text;
-                        userPass = txtPass.Text;
+                        homePage.curEmail = txtEmail.Text;
+                        homePage.curPass = txtPass.Text;
                         newPage();
                         MessageBox.Show("Your account has Successfully been Created", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

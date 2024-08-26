@@ -17,7 +17,7 @@ namespace PRG281_Project
             Console.WriteLine("hellos");
             Console.WriteLine("hell yes");
 
-            Application.Run(new HomePage());
+            Application.Run(new UserSignUp());
 
 
             likedUsers liked = new likedUsers();

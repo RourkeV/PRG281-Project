@@ -97,12 +97,6 @@
     <Compile Include="ChatBetweenUsersForm.Designer.cs">
       <DependentUpon>ChatBetweenUsersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="enterCheck.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="enterCheck.Designer.cs">
-      <DependentUpon>enterCheck.cs</DependentUpon>
-    </Compile>
     <Compile Include="FixedTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -147,12 +141,6 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,9 +181,6 @@
     <EmbeddedResource Include="ChatBetweenUsersForm.resx">
       <DependentUpon>ChatBetweenUsersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="enterCheck.resx">
-      <DependentUpon>enterCheck.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -216,9 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignIn.resx">
       <DependentUpon>UserSignIn.cs</DependentUpon>
