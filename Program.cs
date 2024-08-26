@@ -16,12 +16,17 @@ namespace PRG281_Project
 
             Console.WriteLine("hellos");
             Console.WriteLine("hell yes");
-            Application.Run(new UserSignIn());
+
+            Application.Run(new HomePage());
+
 
             likedUsers liked = new likedUsers();
 
             // Add specific users to the group (e.g., users older than 30)
 
+            TabControl tab = new TabControl();
+            TabPage page = new TabPage();   
+            tab.BackColor = System.Drawing.Color.Pink;
 
         }
 
