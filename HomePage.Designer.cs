@@ -44,9 +44,6 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.rchTxtBio = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,12 +54,25 @@
             this.lblHeading = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblNameHead = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnAPIProfile = new System.Windows.Forms.Button();
+            this.lblChatBot = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAPIChat = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnAPISwipe = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnAPISearch = new System.Windows.Forms.Button();
             this.userCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // userCard
@@ -220,6 +230,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblChatBot);
+            this.tabPage1.Controls.Add(this.btnAPIProfile);
             this.tabPage1.Controls.Add(this.rchTxtBio);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -238,8 +250,110 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // rchTxtBio
+            // 
+            this.rchTxtBio.Location = new System.Drawing.Point(47, 240);
+            this.rchTxtBio.Name = "rchTxtBio";
+            this.rchTxtBio.Size = new System.Drawing.Size(143, 61);
+            this.rchTxtBio.TabIndex = 19;
+            this.rchTxtBio.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(39, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Bio:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(302, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 222);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(163, 182);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "userage";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblAgeHead
+            // 
+            this.lblAgeHead.AutoSize = true;
+            this.lblAgeHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeHead.Location = new System.Drawing.Point(39, 177);
+            this.lblAgeHead.Name = "lblAgeHead";
+            this.lblAgeHead.Size = new System.Drawing.Size(41, 18);
+            this.lblAgeHead.TabIndex = 15;
+            this.lblAgeHead.Text = "Age:";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(163, 157);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 13);
+            this.lblEmail.TabIndex = 14;
+            this.lblEmail.Text = "useremail";
+            // 
+            // lblEmailHead
+            // 
+            this.lblEmailHead.AutoSize = true;
+            this.lblEmailHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailHead.Location = new System.Drawing.Point(39, 153);
+            this.lblEmailHead.Name = "lblEmailHead";
+            this.lblEmailHead.Size = new System.Drawing.Size(55, 18);
+            this.lblEmailHead.TabIndex = 13;
+            this.lblEmailHead.Text = "Email:";
+            // 
+            // lblHeading
+            // 
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(467, 95);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(90, 29);
+            this.lblHeading.TabIndex = 12;
+            this.lblHeading.Text = "Profile";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(163, 130);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(53, 13);
+            this.lblName.TabIndex = 11;
+            this.lblName.Text = "username";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
+            // 
+            // lblNameHead
+            // 
+            this.lblNameHead.AutoSize = true;
+            this.lblNameHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameHead.Location = new System.Drawing.Point(39, 127);
+            this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNameHead.Name = "lblNameHead";
+            this.lblNameHead.Size = new System.Drawing.Size(57, 18);
+            this.lblNameHead.TabIndex = 10;
+            this.lblNameHead.Text = "Name:";
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.btnAPIChat);
             this.tabPage2.ImageKey = "Chat_Icon.png";
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
@@ -251,6 +365,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Pink;
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.btnAPISwipe);
             this.tabPage3.Controls.Add(this.userCard);
             this.tabPage3.ImageKey = "Swipe_Icon.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
@@ -261,6 +377,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Controls.Add(this.btnAPISearch);
             this.tabPage4.ImageKey = "Search_Icon.png";
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
@@ -269,105 +387,82 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // rchTxtBio
+            // btnAPIProfile
             // 
-            this.rchTxtBio.Location = new System.Drawing.Point(58, 407);
-            this.rchTxtBio.Name = "rchTxtBio";
-            this.rchTxtBio.Size = new System.Drawing.Size(477, 96);
-            this.rchTxtBio.TabIndex = 19;
-            this.rchTxtBio.Text = "";
+            this.btnAPIProfile.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
+            this.btnAPIProfile.Location = new System.Drawing.Point(236, 404);
+            this.btnAPIProfile.Name = "btnAPIProfile";
+            this.btnAPIProfile.Size = new System.Drawing.Size(75, 75);
+            this.btnAPIProfile.TabIndex = 20;
+            this.btnAPIProfile.UseVisualStyleBackColor = true;
+            this.btnAPIProfile.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
-            // label1
+            // lblChatBot
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 388);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 18);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Bio:";
+            this.lblChatBot.AutoSize = true;
+            this.lblChatBot.Location = new System.Drawing.Point(229, 388);
+            this.lblChatBot.Name = "lblChatBot";
+            this.lblChatBot.Size = new System.Drawing.Size(93, 13);
+            this.lblChatBot.TabIndex = 21;
+            this.lblChatBot.Text = "Need Assistance?";
+            this.lblChatBot.Click += new System.EventHandler(this.lblChatBot_Click);
             // 
-            // pictureBox1
+            // label3
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(161, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 222);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(493, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Need Assistance?";
             // 
-            // label2
+            // btnAPIChat
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(320, 361);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "userage";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAPIChat.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
+            this.btnAPIChat.Location = new System.Drawing.Point(500, 19);
+            this.btnAPIChat.Name = "btnAPIChat";
+            this.btnAPIChat.Size = new System.Drawing.Size(75, 75);
+            this.btnAPIChat.TabIndex = 22;
+            this.btnAPIChat.UseVisualStyleBackColor = true;
+            this.btnAPIChat.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
-            // lblAgeHead
+            // label4
             // 
-            this.lblAgeHead.AutoSize = true;
-            this.lblAgeHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgeHead.Location = new System.Drawing.Point(213, 356);
-            this.lblAgeHead.Name = "lblAgeHead";
-            this.lblAgeHead.Size = new System.Drawing.Size(41, 18);
-            this.lblAgeHead.TabIndex = 15;
-            this.lblAgeHead.Text = "Age:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(496, 415);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Need Assistance?";
             // 
-            // lblEmail
+            // btnAPISwipe
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(320, 336);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 13);
-            this.lblEmail.TabIndex = 14;
-            this.lblEmail.Text = "useremail";
+            this.btnAPISwipe.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
+            this.btnAPISwipe.Location = new System.Drawing.Point(514, 431);
+            this.btnAPISwipe.Name = "btnAPISwipe";
+            this.btnAPISwipe.Size = new System.Drawing.Size(75, 75);
+            this.btnAPISwipe.TabIndex = 22;
+            this.btnAPISwipe.UseVisualStyleBackColor = true;
+            this.btnAPISwipe.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
-            // lblEmailHead
+            // label5
             // 
-            this.lblEmailHead.AutoSize = true;
-            this.lblEmailHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailHead.Location = new System.Drawing.Point(197, 331);
-            this.lblEmailHead.Name = "lblEmailHead";
-            this.lblEmailHead.Size = new System.Drawing.Size(55, 18);
-            this.lblEmailHead.TabIndex = 13;
-            this.lblEmailHead.Text = "Email:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(493, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Need Assistance?";
             // 
-            // lblHeading
+            // btnAPISearch
             // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(242, 0);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(90, 29);
-            this.lblHeading.TabIndex = 12;
-            this.lblHeading.Text = "Profile";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(320, 309);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(53, 13);
-            this.lblName.TabIndex = 11;
-            this.lblName.Text = "username";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
-            // 
-            // lblNameHead
-            // 
-            this.lblNameHead.AutoSize = true;
-            this.lblNameHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameHead.Location = new System.Drawing.Point(196, 306);
-            this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNameHead.Name = "lblNameHead";
-            this.lblNameHead.Size = new System.Drawing.Size(57, 18);
-            this.lblNameHead.TabIndex = 10;
-            this.lblNameHead.Text = "Name:";
+            this.btnAPISearch.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
+            this.btnAPISearch.Location = new System.Drawing.Point(500, 24);
+            this.btnAPISearch.Name = "btnAPISearch";
+            this.btnAPISearch.Size = new System.Drawing.Size(75, 75);
+            this.btnAPISearch.TabIndex = 22;
+            this.btnAPISearch.UseVisualStyleBackColor = true;
+            this.btnAPISearch.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
             // HomePage
             // 
@@ -389,8 +484,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -423,5 +523,13 @@
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblNameHead;
+        private System.Windows.Forms.Button btnAPIProfile;
+        private System.Windows.Forms.Label lblChatBot;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnAPIChat;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnAPISwipe;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnAPISearch;
     }
 }
