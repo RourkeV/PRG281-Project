@@ -16,36 +16,62 @@ namespace PRG281_Project
         {
             InitializeComponent();
         }
-        public bool signCheck = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
             //add validation for empty fields
+            HomePage homePage = new HomePage();
+            FullUserList userUserList = new FullUserList();
             UserSignUp userSignUp = new UserSignUp();
-            string email = userSignUp.userEmail;
-            string passw = userSignUp.userPass;
+
+            //curEmail remains blank
+            string email = userSignUp.email;
+            string password = userSignUp.password;
+
+            homePage.curEmail = email;
+            homePage.curPass = password;
+
+            scrtyLbl.Text = homePage.curEmail;
+
+
             string first = txtFirst.Text;
             string last = txtLast.Text;
             string fullName = $"{first} {last}";
+            homePage.curName = fullName;
+
             decimal age = numAge.Value;
+            homePage.curAge = numAge.Value;
             string gend = cmboGender.Text;
             string bio = rchBio.Text;
+            homePage.curBio = rchBio.Text;
             string security = scrtyQstn.Text;
             string secAns = scrtyAnswer.Text;
 
             
-            FullUserList userUserList = new FullUserList();
+            
 
-            userUserList.addUser(fullName, email, passw, gend, age, security, secAns, bio);
-            signCheck = true;
+            userUserList.addUser(fullName, email, password, gend, age, security, secAns, bio);
+            
             //to add new details UserDetails class needs to be edited (adding new fields), adjust the constructor, and add to newUser
-            System.Threading.Thread.Sleep(1000);
-            HomePage load = new HomePage();
-            load.Show();
+            
+
+            homePage.Show();
             this.Hide();
+
             //loadingBar load = new loadingBar();
             //load.Show(); --> go to loading bar
 
+        }
+
+        private void scrtyAnswer_TextClick(object sender, EventArgs e)
+        {
+            scrtyAnswer.Text = "";
+        }
+
+        private void AddingDetails_Load(object sender, EventArgs e)
+        {
+            HomePage homePage = new HomePage();
+            rchBio.Text = homePage.curEmail;
         }
     }
 }
