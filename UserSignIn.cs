@@ -24,34 +24,37 @@ namespace PRG281_Project
             users = fullUserList.AllUsers;
         }
 
-        public string inEmail;
-        public string inPassword;
-        public bool inCheck = false;
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {           
            
+            bool check = false;
             foreach (UserDetails item in fullUserList.AllUsers)
             {
-                if (item.email1 == txtEmail.Text)
+                //works
+                if (txtEmail.Text == item.email1)
                 {
+                    
                     if (item.password1 == txtPass.Text)
                     {
-                        inEmail = txtEmail.Text;
-                        inPassword = txtPass.Text;
-                        inCheck = true;
                         HomePage homePage = new HomePage();
+                        homePage.curEmail = txtEmail.Text;
+                        homePage.curPass = txtPass.Text;
+                        check = true;
                         homePage.Show();
                         this.Hide();
                     }
                 }
-                else
-                {
-                    MessageBox.Show("invalid email, please try again", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtEmail.Text = "";
-                    txtPass.Text = "";
-                }
-            } 
+                
+                
+            }
+            if (check == false)
+            {
+                MessageBox.Show("invalid email, please try again", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Text = "";
+                txtPass.Text = "";
+            }
+            
+            
             //need to create user alert if login details arent valid
         }
 

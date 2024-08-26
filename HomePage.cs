@@ -21,11 +21,14 @@ namespace PRG281_Project
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
 
+
+
         public HomePage()
         {
             InitializeComponent();
+            AddUsersFromList();
 
-            
+
             System.Drawing.Image SignOutImg;
             SignOutImg = btnSignOut.Image;
             System.Drawing.Image resizedImage = new Bitmap(SignOutImg, new Size(64, 64));
@@ -73,11 +76,12 @@ namespace PRG281_Project
                 userCard.Top = currentPos.Y - _startPoint.Y;
             }
         }
+        likedUsers matchedUsers = new likedUsers();
 
         private void userCard_MouseUp(object sender, MouseEventArgs e)
         {
             _isDragging = false;
-            likedUsers matchedUsers = new likedUsers();
+
 
             if (userCard.Left > this.Width / 1.7)
             {
@@ -88,20 +92,23 @@ namespace PRG281_Project
 
                 //add user to possible match if other user(maybe a randomiser) also swipes right its a match
 
-                number = random.Next(1, 4);
+                number = random.Next(1, 3);
 
-                if (number == 3)
+                if (number == 2)
 
                 {
                     //match = true;
-                    //matchedUsers.Add("Calvin", "Nijenhuis", 21);
-
+                    matchedUsers.AddUser("Calvin", "Nijenhuis");
+                    flowLayoutMessage.Controls.Clear();
+                    AddUsersFromList();
                     //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
                     //nextUser()
                 }
                 else
                 {
                     matchedUsers.AddUser("Bob", "stone");
+                    flowLayoutMessage.Controls.Clear();
+                    AddUsersFromList();
                     //nextUser();                  
                 }
 
@@ -136,15 +143,16 @@ namespace PRG281_Project
         static int viewCount = 0;
         private void HomePage_Load(object sender, EventArgs e)
         {//now we have the current user depedning on if the signed in or signed up ***nbnbnb still need to do a full system test
-            signInOrUp();
+
             userDetails = fullUserList.AllUsers;
-            lblName.Text = curName;
-            lblEmail.Text = curEmail;
-            lblAgeProf.Text = curAge.ToString();
+            findUser(curEmail, curPass);
+            txtName.Text = curName;
+            txtAge.Text = curAge.ToString();
+            rchTxtBio.Text = curBio;
             //for user photo we need to figure out how to store images or just use random images
             displayNew(viewCount);
-            
-            
+
+
         }
         public void displayNew(int i)
         {
@@ -161,11 +169,11 @@ namespace PRG281_Project
 
             viewCount++;
         }
-        
-        
-        
-//current user
-        
+
+
+
+        //current user
+
         public string curName;
         public string curEmail;
         public string curPass;
@@ -173,29 +181,8 @@ namespace PRG281_Project
         public string curSecurity;
         public string curSecAns;
         public string curBio;
-        
-        public void signInOrUp()
-        {
-            UserSignUp userSignUp = new UserSignUp();
-            AddingDetails details = new AddingDetails();
-            UserSignIn userSignIn = new UserSignIn();
-            
-            string email;
-            string pass;
-            if (details.signCheck == true)
-            {
-                //if user signed up
-                email = userSignUp.userEmail;
-                pass = userSignUp.userPass;
-                findUser(email, pass);
-            }
-            if (userSignIn.inCheck == true)
-            {
-                email = userSignIn.inEmail;
-                pass = userSignIn.inEmail;
-                findUser(email, pass);
-            }
-        }
+
+
 
         public void findUser(string email, string password)
         {
@@ -214,7 +201,7 @@ namespace PRG281_Project
                         curAge = item.age1;
                         curSecurity = item.Security;
                         curSecAns = item.SecAnswer;
-                        //curBio = item.
+                        curBio = item.Bio;
                     }
                 }
             }
@@ -248,7 +235,7 @@ namespace PRG281_Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+
             likedUsers.Show();
         }
 
@@ -291,7 +278,7 @@ namespace PRG281_Project
 
         private void tabList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -317,6 +304,50 @@ namespace PRG281_Project
         }
 
         private void lblChatBot_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void AddUsersFromList()
+        {
+            foreach (var user in matchedUsers.MatchedUsers)
+            {
+                AddUser($"{user.Item1} {user.Item2}", matchedUsers.MatchedUsers.IndexOf(user));
+            }
+        }
+
+        private void AddUser(string userName, int userId)
+        {
+            // Create a new Button for the user
+            System.Windows.Forms.Button userButton = new System.Windows.Forms.Button
+            {
+                Text = userName,
+                BackColor = Color.White,
+                Padding = new Padding(3),
+                Margin = new Padding(3),
+                Width = flowLayoutMessage.Width - 20, // Adjust button width based on panel's size
+                Height = 50,
+                Parent = flowLayoutMessage,
+                Tag = userId
+            };
+
+            userButton.Click += UserButton_Click;
+
+            // Add the button to the FlowLayoutPanel
+            flowLayoutMessage.Controls.Add(userButton);
+            flowLayoutMessage.Invalidate();  // Invalidate the panel to trigger a redraw
+            flowLayoutMessage.PerformLayout();
+        }
+
+        private void UserButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button clickedButton = sender as System.Windows.Forms.Button;
+            int userId = (int)clickedButton.Tag;
+
+            // Open chat for the selected user
+            //MessageBox.Show($"Opening chat for {clickedButton.Text}");
+        }
+
+        private void flowLayoutMessage_Paint(object sender, PaintEventArgs e)
         {
 
         }
