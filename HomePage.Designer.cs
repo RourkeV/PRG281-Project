@@ -47,13 +47,14 @@
             this.rchTxtBio = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAgeProf = new System.Windows.Forms.Label();
             this.lblAgeHead = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblEmailHead = new System.Windows.Forms.Label();
             this.lblHeading = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblNameHead = new System.Windows.Forms.Label();
+
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -110,7 +111,7 @@
             this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewBio.Location = new System.Drawing.Point(27, 373);
             this.lblViewBio.Name = "lblViewBio";
-            this.lblViewBio.Size = new System.Drawing.Size(29, 13);
+            this.lblViewBio.Size = new System.Drawing.Size(36, 17);
             this.lblViewBio.TabIndex = 9;
             this.lblViewBio.Text = "Bio:";
             // 
@@ -120,7 +121,7 @@
             this.lblViewAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewAge.Location = new System.Drawing.Point(273, 333);
             this.lblViewAge.Name = "lblViewAge";
-            this.lblViewAge.Size = new System.Drawing.Size(76, 20);
+            this.lblViewAge.Size = new System.Drawing.Size(94, 25);
             this.lblViewAge.TabIndex = 8;
             this.lblViewAge.Text = "User Age";
             // 
@@ -130,7 +131,7 @@
             this.lblSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchName.Location = new System.Drawing.Point(111, 333);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(83, 20);
+            this.lblSearchName.Size = new System.Drawing.Size(102, 25);
             this.lblSearchName.TabIndex = 7;
             this.lblSearchName.Text = "Username";
             // 
@@ -141,7 +142,7 @@
             this.lblAge.Location = new System.Drawing.Point(237, 333);
             this.lblAge.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(37, 18);
+            this.lblAge.Size = new System.Drawing.Size(50, 24);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Age:";
             // 
@@ -162,7 +163,7 @@
             this.lblUsername.Location = new System.Drawing.Point(26, 333);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(87, 20);
+            this.lblUsername.Size = new System.Drawing.Size(108, 25);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username:";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
@@ -235,7 +236,7 @@
             this.tabPage1.Controls.Add(this.rchTxtBio);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lblAgeProf);
             this.tabPage1.Controls.Add(this.lblAgeHead);
             this.tabPage1.Controls.Add(this.lblEmail);
             this.tabPage1.Controls.Add(this.lblEmailHead);
@@ -264,7 +265,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(39, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 18);
+            this.label1.Size = new System.Drawing.Size(46, 24);
             this.label1.TabIndex = 18;
             this.label1.Text = "Bio:";
             // 
@@ -277,7 +278,7 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblAgeProf
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,7 +295,7 @@
             this.lblAgeHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeHead.Location = new System.Drawing.Point(39, 177);
             this.lblAgeHead.Name = "lblAgeHead";
-            this.lblAgeHead.Size = new System.Drawing.Size(41, 18);
+            this.lblAgeHead.Size = new System.Drawing.Size(54, 24);
             this.lblAgeHead.TabIndex = 15;
             this.lblAgeHead.Text = "Age:";
             // 
@@ -304,7 +305,7 @@
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(163, 157);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 13);
+            this.lblEmail.Size = new System.Drawing.Size(69, 17);
             this.lblEmail.TabIndex = 14;
             this.lblEmail.Text = "useremail";
             // 
@@ -314,7 +315,7 @@
             this.lblEmailHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailHead.Location = new System.Drawing.Point(39, 153);
             this.lblEmailHead.Name = "lblEmailHead";
-            this.lblEmailHead.Size = new System.Drawing.Size(55, 18);
+            this.lblEmailHead.Size = new System.Drawing.Size(68, 24);
             this.lblEmailHead.TabIndex = 13;
             this.lblEmailHead.Text = "Email:";
             // 
@@ -324,7 +325,7 @@
             this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.Location = new System.Drawing.Point(467, 95);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(90, 29);
+            this.lblHeading.Size = new System.Drawing.Size(107, 36);
             this.lblHeading.TabIndex = 12;
             this.lblHeading.Text = "Profile";
             // 
@@ -334,7 +335,7 @@
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(163, 130);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(53, 13);
+            this.lblName.Size = new System.Drawing.Size(71, 17);
             this.lblName.TabIndex = 11;
             this.lblName.Text = "username";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
@@ -346,7 +347,7 @@
             this.lblNameHead.Location = new System.Drawing.Point(39, 127);
             this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameHead.Name = "lblNameHead";
-            this.lblNameHead.Size = new System.Drawing.Size(57, 18);
+            this.lblNameHead.Size = new System.Drawing.Size(71, 24);
             this.lblNameHead.TabIndex = 10;
             this.lblNameHead.Text = "Name:";
             // 
@@ -516,7 +517,7 @@
         private System.Windows.Forms.RichTextBox rchTxtBio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAgeProf;
         private System.Windows.Forms.Label lblAgeHead;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblEmailHead;

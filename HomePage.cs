@@ -138,7 +138,10 @@ namespace PRG281_Project
         {//now we have the current user depedning on if the signed in or signed up ***nbnbnb still need to do a full system test
             signInOrUp();
             userDetails = fullUserList.AllUsers;
-            
+            lblName.Text = curName;
+            lblEmail.Text = curEmail;
+            lblAgeProf.Text = curAge.ToString();
+            //for user photo we need to figure out how to store images or just use random images
             displayNew(viewCount);
             
             
