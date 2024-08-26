@@ -21,14 +21,12 @@ namespace PRG281_Project
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
 
+
+
         public HomePage()
         {
             InitializeComponent();
-
-            matchedUsers = new likedUsers();
-
-            AddUsersFromList();             // Step 3: Add users to the FlowLayoutPanel
-
+            AddUsersFromList();
 
 
             System.Drawing.Image SignOutImg;
@@ -83,7 +81,7 @@ namespace PRG281_Project
         private void userCard_MouseUp(object sender, MouseEventArgs e)
         {
             _isDragging = false;
-            
+
 
             if (userCard.Left > this.Width / 1.7)
             {
@@ -94,26 +92,23 @@ namespace PRG281_Project
 
                 //add user to possible match if other user(maybe a randomiser) also swipes right its a match
 
-                number = random.Next(1, 4);
+                number = random.Next(1, 3);
 
-                if (number == 3)
+                if (number == 2)
 
                 {
-                    //match = true;                                
-                    
+                    //match = true;
                     matchedUsers.AddUser("Calvin", "Nijenhuis");
-
                     flowLayoutMessage.Controls.Clear();
                     AddUsersFromList();
-
+                    //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
                     //nextUser()
                 }
                 else
                 {
-                    //matchedUsers.AddUser("Bob", "stone");
-
-                    //flowLayoutMessage.Controls.Clear();
-                    //AddUsersFromList();
+                    matchedUsers.AddUser("Bob", "stone");
+                    flowLayoutMessage.Controls.Clear();
+                    AddUsersFromList();
                     //nextUser();                  
                 }
 
@@ -143,40 +138,22 @@ namespace PRG281_Project
 
         }
 
-
-
-
-
-
-
-
         static FullUserList fullUserList = new FullUserList();
         static List<UserDetails> userDetails = new List<UserDetails>();
         static int viewCount = 0;
         private void HomePage_Load(object sender, EventArgs e)
-        {//now we have the current user depending on if the signed in or signed up ***nbnbnb still need to do a full system test
-            
-            
-            //txtName.Text = curName;
-            findUser(curEmail, curPass);
-            txtName.Text = curName;
-            txtAge.Text = curAge.ToString();
-            rchTxtBio.Text = curBio;
+        {//now we have the current user depedning on if the signed in or signed up ***nbnbnb still need to do a full system test
+
+            userDetails = fullUserList.AllUsers;
+
+            lblAgeProf.Text = curAge.ToString();
             //for user photo we need to figure out how to store images or just use random images
             displayNew(viewCount);
+
+
         }
-
-
-
-
-
-
-
-
-
         public void displayNew(int i)
         {
-            userDetails = fullUserList.AllUsers;
             string viewName;
             decimal viewAge;
             string viewBio;
@@ -190,27 +167,26 @@ namespace PRG281_Project
 
             viewCount++;
         }
-        
-        
-        
-//current user
-        
-        public string curName;
 
-        //current users email & password saved here
+
+
+        //current user
+
+        public string curName;
         public string curEmail;
         public string curPass;
-
         public decimal curAge;
         public string curSecurity;
         public string curSecAns;
         public string curBio;
 
 
+
         public void findUser(string email, string password)
         {
-            
-            userDetails = fullUserList.AllUsers;
+            FullUserList userList = new FullUserList();
+            List<UserDetails> userDetails = new List<UserDetails>();
+            userDetails = userList.AllUsers;
             foreach (UserDetails item in userDetails)
             {
                 if (email == item.email1)
@@ -223,7 +199,7 @@ namespace PRG281_Project
                         curAge = item.age1;
                         curSecurity = item.Security;
                         curSecAns = item.SecAnswer;
-                        curBio = item.Bio;
+                        //curBio = item.
                     }
                 }
             }
@@ -257,7 +233,7 @@ namespace PRG281_Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+
             likedUsers.Show();
         }
 
@@ -300,7 +276,7 @@ namespace PRG281_Project
 
         private void tabList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -329,7 +305,6 @@ namespace PRG281_Project
         {
 
         }
-
         private void AddUsersFromList()
         {
             foreach (var user in matchedUsers.MatchedUsers)
