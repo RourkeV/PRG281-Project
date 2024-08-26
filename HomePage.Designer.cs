@@ -57,6 +57,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblNameHead = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.flowLayoutMessage = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAPIChat = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -65,6 +66,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAPISearch = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.userCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -73,6 +75,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // userCard
@@ -302,7 +305,7 @@
             this.lblAgeProf.AutoSize = true;
             this.lblAgeProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeProf.Location = new System.Drawing.Point(163, 182);
-            this.lblAgeProf.Name = "label2";
+            this.lblAgeProf.Name = "lblAgeProf";
             this.lblAgeProf.Size = new System.Drawing.Size(45, 13);
             this.lblAgeProf.TabIndex = 16;
             this.lblAgeProf.Text = "userage";
@@ -372,6 +375,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.flowLayoutMessage);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.btnAPIChat);
             this.tabPage2.ImageKey = "Chat_Icon.png";
@@ -381,6 +385,15 @@
             this.tabPage2.Size = new System.Drawing.Size(592, 512);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutMessage
+            // 
+            this.flowLayoutMessage.AutoScroll = true;
+            this.flowLayoutMessage.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutMessage.Name = "flowLayoutMessage";
+            this.flowLayoutMessage.Size = new System.Drawing.Size(234, 512);
+            this.flowLayoutMessage.TabIndex = 24;
+            this.flowLayoutMessage.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMessage_Paint);
             // 
             // label3
             // 
@@ -464,6 +477,11 @@
             this.btnAPISearch.UseVisualStyleBackColor = true;
             this.btnAPISearch.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -491,6 +509,7 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -531,5 +550,7 @@
         private System.Windows.Forms.Button btnAPISwipe;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAPISearch;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutMessage;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
