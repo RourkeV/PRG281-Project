@@ -26,7 +26,7 @@ namespace PRG281_Project
         {
             
             MessageBox.Show("Report has been submitted");
-            
+            this.Hide();
 
             HarrassmentBox.Checked = false;
             ExplicitBox.Checked = false;

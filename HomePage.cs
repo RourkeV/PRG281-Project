@@ -22,10 +22,7 @@ namespace PRG281_Project
         usersLiked likedUsers = new usersLiked();
 
         public HomePage()
-
-        {            
-
-
+        {
             InitializeComponent();
 
             
@@ -309,6 +306,17 @@ namespace PRG281_Project
         }
 
         private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAPIProfile_Click(object sender, EventArgs e)
+        {
+            API displayAPI = new API();
+            displayAPI.Show();
+        }
+
+        private void lblChatBot_Click(object sender, EventArgs e)
         {
 
         }
