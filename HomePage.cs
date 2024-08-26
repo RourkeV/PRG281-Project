@@ -25,7 +25,12 @@ namespace PRG281_Project
         {
             InitializeComponent();
 
-            
+            matchedUsers = new likedUsers();
+
+            AddUsersFromList();             // Step 3: Add users to the FlowLayoutPanel
+
+
+
             System.Drawing.Image SignOutImg;
             SignOutImg = btnSignOut.Image;
             System.Drawing.Image resizedImage = new Bitmap(SignOutImg, new Size(64, 64));
@@ -73,11 +78,12 @@ namespace PRG281_Project
                 userCard.Top = currentPos.Y - _startPoint.Y;
             }
         }
+        likedUsers matchedUsers = new likedUsers();
 
         private void userCard_MouseUp(object sender, MouseEventArgs e)
         {
             _isDragging = false;
-            likedUsers matchedUsers = new likedUsers();
+            
 
             if (userCard.Left > this.Width / 1.7)
             {
@@ -93,15 +99,21 @@ namespace PRG281_Project
                 if (number == 3)
 
                 {
-                    //match = true;
-                    //matchedUsers.Add("Calvin", "Nijenhuis", 21);
+                    //match = true;                                
+                    
+                    matchedUsers.AddUser("Calvin", "Nijenhuis");
 
-                    //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
+                    flowLayoutMessage.Controls.Clear();
+                    AddUsersFromList();
+
                     //nextUser()
                 }
                 else
                 {
-                    matchedUsers.AddUser("Bob", "stone");
+                    //matchedUsers.AddUser("Bob", "stone");
+
+                    //flowLayoutMessage.Controls.Clear();
+                    //AddUsersFromList();
                     //nextUser();                  
                 }
 
@@ -314,6 +326,51 @@ namespace PRG281_Project
         }
 
         private void lblChatBot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddUsersFromList()
+        {
+            foreach (var user in matchedUsers.MatchedUsers)
+            {
+                AddUser($"{user.Item1} {user.Item2}", matchedUsers.MatchedUsers.IndexOf(user));
+            }
+        }
+
+        private void AddUser(string userName, int userId)
+        {
+            // Create a new Button for the user
+            System.Windows.Forms.Button userButton = new System.Windows.Forms.Button
+            {
+                Text = userName,
+                BackColor = Color.White,
+                Padding = new Padding(3),
+                Margin = new Padding(3),
+                Width = flowLayoutMessage.Width - 20, // Adjust button width based on panel's size
+                Height = 50,
+                Parent = flowLayoutMessage,
+                Tag = userId
+            };
+
+            userButton.Click += UserButton_Click;
+
+            // Add the button to the FlowLayoutPanel
+            flowLayoutMessage.Controls.Add(userButton);
+            flowLayoutMessage.Invalidate();  // Invalidate the panel to trigger a redraw
+            flowLayoutMessage.PerformLayout();
+        }
+
+        private void UserButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button clickedButton = sender as System.Windows.Forms.Button;
+            int userId = (int)clickedButton.Tag;
+
+            // Open chat for the selected user
+            //MessageBox.Show($"Opening chat for {clickedButton.Text}");
+        }
+
+        private void flowLayoutMessage_Paint(object sender, PaintEventArgs e)
         {
 
         }
