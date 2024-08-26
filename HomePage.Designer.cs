@@ -65,6 +65,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAPISearch = new System.Windows.Forms.Button();
+            this.btnCommit = new System.Windows.Forms.Button();
             this.userCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -230,6 +231,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnCommit);
             this.tabPage1.Controls.Add(this.txtAge);
             this.tabPage1.Controls.Add(this.txtName);
             this.tabPage1.Controls.Add(this.btnEdit);
@@ -253,6 +255,7 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(95, 159);
             this.txtAge.Name = "txtAge";
+            this.txtAge.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(100, 20);
             this.txtAge.TabIndex = 25;
             // 
@@ -260,17 +263,19 @@
             // 
             this.txtName.Location = new System.Drawing.Point(95, 120);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 24;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(41, 354);
+            this.btnEdit.Location = new System.Drawing.Point(41, 375);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 23;
             this.btnEdit.Text = "Edit Profile";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblChatBot
             // 
@@ -296,6 +301,7 @@
             // 
             this.rchTxtBio.Location = new System.Drawing.Point(41, 222);
             this.rchTxtBio.Name = "rchTxtBio";
+            this.rchTxtBio.ReadOnly = true;
             this.rchTxtBio.Size = new System.Drawing.Size(241, 111);
             this.rchTxtBio.TabIndex = 19;
             this.rchTxtBio.Text = "";
@@ -454,6 +460,17 @@
             this.btnAPISearch.UseVisualStyleBackColor = true;
             this.btnAPISearch.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
+            // btnCommit
+            // 
+            this.btnCommit.Location = new System.Drawing.Point(192, 375);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(90, 23);
+            this.btnCommit.TabIndex = 26;
+            this.btnCommit.Text = "Save changes";
+            this.btnCommit.UseVisualStyleBackColor = true;
+            this.btnCommit.Visible = false;
+            this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -524,6 +541,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtName;
-
+        private System.Windows.Forms.Button btnCommit;
     }
 }

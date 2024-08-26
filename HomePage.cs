@@ -351,5 +351,21 @@ namespace PRG281_Project
         {
 
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            txtName.ReadOnly = false;
+            txtAge.ReadOnly = false;
+            rchTxtBio.ReadOnly = false;
+            btnCommit.Visible = true;
+        }
+
+        private void btnCommit_Click(object sender, EventArgs e)
+        {
+            curName = txtName.Text;
+            curAge = int.Parse(txtAge.Text);
+            curBio = rchTxtBio.Text;
+            btnCommit.Visible = false;
+        }
     }
 }
