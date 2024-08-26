@@ -299,10 +299,14 @@
             // 
             // lblAgeProf
             // 
-            this.lblAgeProf.Location = new System.Drawing.Point(0, 0);
-            this.lblAgeProf.Name = "lblAgeProf";
-            this.lblAgeProf.Size = new System.Drawing.Size(100, 23);
-            this.lblAgeProf.TabIndex = 22;
+            this.lblAgeProf.AutoSize = true;
+            this.lblAgeProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeProf.Location = new System.Drawing.Point(163, 182);
+            this.lblAgeProf.Name = "label2";
+            this.lblAgeProf.Size = new System.Drawing.Size(45, 13);
+            this.lblAgeProf.TabIndex = 16;
+            this.lblAgeProf.Text = "userage";
+            this.lblAgeProf.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblAgeHead
             // 
