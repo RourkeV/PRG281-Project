@@ -312,5 +312,10 @@ namespace PRG281_Project
         {
 
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            //think of function for user info edit
+        }
     }
 }

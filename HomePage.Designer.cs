@@ -57,6 +57,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.userCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -100,7 +101,7 @@
             this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewBio.Location = new System.Drawing.Point(27, 373);
             this.lblViewBio.Name = "lblViewBio";
-            this.lblViewBio.Size = new System.Drawing.Size(36, 17);
+            this.lblViewBio.Size = new System.Drawing.Size(29, 13);
             this.lblViewBio.TabIndex = 9;
             this.lblViewBio.Text = "Bio:";
             // 
@@ -110,7 +111,7 @@
             this.lblViewAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewAge.Location = new System.Drawing.Point(273, 333);
             this.lblViewAge.Name = "lblViewAge";
-            this.lblViewAge.Size = new System.Drawing.Size(94, 25);
+            this.lblViewAge.Size = new System.Drawing.Size(76, 20);
             this.lblViewAge.TabIndex = 8;
             this.lblViewAge.Text = "User Age";
             // 
@@ -120,7 +121,7 @@
             this.lblSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchName.Location = new System.Drawing.Point(111, 333);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(102, 25);
+            this.lblSearchName.Size = new System.Drawing.Size(83, 20);
             this.lblSearchName.TabIndex = 7;
             this.lblSearchName.Text = "Username";
             // 
@@ -131,7 +132,7 @@
             this.lblAge.Location = new System.Drawing.Point(237, 333);
             this.lblAge.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(50, 24);
+            this.lblAge.Size = new System.Drawing.Size(37, 18);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Age:";
             // 
@@ -152,7 +153,7 @@
             this.lblUsername.Location = new System.Drawing.Point(26, 333);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(108, 25);
+            this.lblUsername.Size = new System.Drawing.Size(87, 20);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username:";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
@@ -220,6 +221,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnEdit);
             this.tabPage1.Controls.Add(this.rchTxtBio);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -252,7 +254,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(67, 388);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 24);
+            this.label1.Size = new System.Drawing.Size(38, 18);
             this.label1.TabIndex = 18;
             this.label1.Text = "Bio:";
             // 
@@ -271,7 +273,7 @@
             this.lblAgeProf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeProf.Location = new System.Drawing.Point(303, 340);
             this.lblAgeProf.Name = "lblAgeProf";
-            this.lblAgeProf.Size = new System.Drawing.Size(60, 17);
+            this.lblAgeProf.Size = new System.Drawing.Size(45, 13);
             this.lblAgeProf.TabIndex = 16;
             this.lblAgeProf.Text = "userage";
             this.lblAgeProf.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -282,7 +284,7 @@
             this.lblAgeHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeHead.Location = new System.Drawing.Point(196, 335);
             this.lblAgeHead.Name = "lblAgeHead";
-            this.lblAgeHead.Size = new System.Drawing.Size(54, 24);
+            this.lblAgeHead.Size = new System.Drawing.Size(41, 18);
             this.lblAgeHead.TabIndex = 15;
             this.lblAgeHead.Text = "Age:";
             // 
@@ -292,7 +294,7 @@
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(466, 340);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(69, 17);
+            this.lblEmail.Size = new System.Drawing.Size(51, 13);
             this.lblEmail.TabIndex = 14;
             this.lblEmail.Text = "useremail";
             // 
@@ -302,7 +304,7 @@
             this.lblEmailHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailHead.Location = new System.Drawing.Point(467, 302);
             this.lblEmailHead.Name = "lblEmailHead";
-            this.lblEmailHead.Size = new System.Drawing.Size(68, 24);
+            this.lblEmailHead.Size = new System.Drawing.Size(55, 18);
             this.lblEmailHead.TabIndex = 13;
             this.lblEmailHead.Text = "Email:";
             // 
@@ -312,7 +314,7 @@
             this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.Location = new System.Drawing.Point(242, 0);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(107, 36);
+            this.lblHeading.Size = new System.Drawing.Size(90, 29);
             this.lblHeading.TabIndex = 12;
             this.lblHeading.Text = "Profile";
             // 
@@ -322,7 +324,7 @@
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(303, 300);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(71, 17);
+            this.lblName.Size = new System.Drawing.Size(53, 13);
             this.lblName.TabIndex = 11;
             this.lblName.Text = "username";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
@@ -334,7 +336,7 @@
             this.lblNameHead.Location = new System.Drawing.Point(179, 297);
             this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameHead.Name = "lblNameHead";
-            this.lblNameHead.Size = new System.Drawing.Size(71, 24);
+            this.lblNameHead.Size = new System.Drawing.Size(57, 18);
             this.lblNameHead.TabIndex = 10;
             this.lblNameHead.Text = "Name:";
             // 
@@ -368,6 +370,16 @@
             this.tabPage4.Size = new System.Drawing.Size(592, 512);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(496, 21);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 20;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // HomePage
             // 
@@ -423,5 +435,6 @@
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblNameHead;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
