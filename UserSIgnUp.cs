@@ -20,31 +20,14 @@ namespace PRG281_Project
 
         
 
-        public virtual void newPage()
-        {
-            AddingDetails detailPage = new AddingDetails();
-            detailPage.Show();
-            Visible = false;
-            txtEmail.Clear();
-        }
-        public void emailCheck()
-        {
-            FullUserList fullUserList = new FullUserList();
-            List<UserDetails> list = new List<UserDetails>();
-            list = fullUserList.AllUsers;
-            foreach (UserDetails user in list)
-            {
-                if (user.email1 == txtEmail.Text)
-                {
-                    valid = false;
-                }
-            }
-        }
+        
+        
         public bool valid = true;
+        public string email;
+        public string password;
         private void button1_Click(object sender, EventArgs e)
         {
             //need to add validation
-            HomePage homePage = new HomePage();
             if (txtEmail.Text == "" && txtPass.Text == "" && txtPassCon.Text == "")
             {
                 MessageBox.Show("A username and password must be provided", "registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,8 +39,8 @@ namespace PRG281_Project
                     emailCheck();
                     if (valid == true)
                     {
-                        homePage.curEmail = txtEmail.Text;
-                        homePage.curPass = txtPass.Text;
+                        email = txtEmail.Text;
+                        password = txtPass.Text;
                         newPage();
                         MessageBox.Show("Your account has Successfully been Created", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -81,6 +64,29 @@ namespace PRG281_Project
             }
         }
 
+
+
+
+
+        public void emailCheck()
+        {
+            FullUserList fullUserList = new FullUserList();
+            List<UserDetails> list = new List<UserDetails>();
+            list = fullUserList.AllUsers;
+            foreach (UserDetails user in list)
+            {
+                if (user.email1 == txtEmail.Text)
+                {
+                    valid = false;
+                }
+            }
+        }
+        public virtual void newPage()
+        {
+            AddingDetails detailPage = new AddingDetails();
+            detailPage.Show();
+            this.Hide();
+        }
         private void chkBxShow_CheckedChanged(object sender, EventArgs e)
         {
             if (chkBxShow.Checked)

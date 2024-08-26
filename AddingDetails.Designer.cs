@@ -217,6 +217,7 @@ namespace PRG281_Project
             this.Name = "AddingDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddingDetails";
+            this.Load += new System.EventHandler(this.AddingDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

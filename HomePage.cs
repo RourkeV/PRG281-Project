@@ -131,13 +131,20 @@ namespace PRG281_Project
 
         }
 
+
+
+
+
+
+
+
         static FullUserList fullUserList = new FullUserList();
         static List<UserDetails> userDetails = new List<UserDetails>();
         static int viewCount = 0;
         private void HomePage_Load(object sender, EventArgs e)
         {//now we have the current user depending on if the signed in or signed up ***nbnbnb still need to do a full system test
             
-            userDetails = fullUserList.AllUsers;
+            
             //txtName.Text = curName;
             findUser(curEmail, curPass);
             txtName.Text = curName;
@@ -145,11 +152,19 @@ namespace PRG281_Project
             rchTxtBio.Text = curBio;
             //for user photo we need to figure out how to store images or just use random images
             displayNew(viewCount);
-            
-            
         }
+
+
+
+
+
+
+
+
+
         public void displayNew(int i)
         {
+            userDetails = fullUserList.AllUsers;
             string viewName;
             decimal viewAge;
             string viewBio;
@@ -170,7 +185,7 @@ namespace PRG281_Project
         
         public string curName;
 
-        //current users email @ password saved here
+        //current users email & password saved here
         public string curEmail;
         public string curPass;
 
@@ -179,11 +194,11 @@ namespace PRG281_Project
         public string curSecAns;
         public string curBio;
 
+
         public void findUser(string email, string password)
         {
-            FullUserList userList = new FullUserList();
-            List<UserDetails> userDetails = new List<UserDetails>();
-            userDetails = userList.AllUsers;
+            
+            userDetails = fullUserList.AllUsers;
             foreach (UserDetails item in userDetails)
             {
                 if (email == item.email1)
