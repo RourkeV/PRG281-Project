@@ -91,6 +91,7 @@
     <Compile Include="API.Designer.cs">
       <DependentUpon>API.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events.cs" />
     <Compile Include="FixedTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -116,7 +117,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Report.cs" />
     <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>

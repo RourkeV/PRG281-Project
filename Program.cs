@@ -7,12 +7,20 @@ using System.Windows.Forms;
 
 namespace PRG281_Project
 {
+
+    interface IUser
+    {
+        void addUser(string name, string email, string password, string gender, decimal age, string security, string secAns, string bio);
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
 
+            HomePage home = new HomePage();
+            Events Event = new Events();
 
+            
 
             Console.WriteLine("hellos");
             Console.WriteLine("hell yes");

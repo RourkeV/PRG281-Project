@@ -29,6 +29,10 @@ namespace PRG281_Project
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
 
+        public event GenerateRandomNumHandler GenerateRandomNum;
+
+        public delegate void GenerateRandomNumHandler();
+
         public HomePage()
         {
             InitializeComponent();
