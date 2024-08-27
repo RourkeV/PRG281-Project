@@ -103,18 +103,6 @@
     </Compile>
     <Compile Include="likedUsers.cs" />
     <Compile Include="LikeObject.cs" />
-    <Compile Include="Profile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Profile.Designer.cs">
-      <DependentUpon>Profile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProfileEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProfileEdit.Designer.cs">
-      <DependentUpon>ProfileEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="loading bar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,12 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="loading bar.resx">
       <DependentUpon>loading bar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Profile.resx">
-      <DependentUpon>Profile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProfileEdit.resx">
-      <DependentUpon>ProfileEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
