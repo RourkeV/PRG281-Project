@@ -20,7 +20,7 @@ namespace PRG281_Project
         private bool _isDragging = false;
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
-
+        public bool hasFilter = false;
 
 
         public HomePage()
@@ -111,8 +111,15 @@ namespace PRG281_Project
                     AddUsersFromList();
                     //nextUser();                  
                 }
+                if (hasFilter == true)
+                {
+                    filter();
+                }
 
                 displayNew(viewCount);
+          
+
+               
 
 
 
@@ -126,7 +133,14 @@ namespace PRG281_Project
                 // Dont store user
 
                 //nextUser();
+                if (hasFilter == true)
+                {
+                    filter();
+                }
+
                 displayNew(viewCount);
+
+
             }
 
             // Reset the card position
@@ -163,11 +177,51 @@ namespace PRG281_Project
             viewAge = userDetails[i].age1;
             viewBio = userDetails[i].Bio;
 
+            
             lblSearchName.Text = viewName;
             lblBio.Text = viewBio;
             lblViewAge.Text = viewAge.ToString();
 
             viewCount++;
+        }
+
+        static void filter()
+        {          
+            decimal viewAge;
+            string viewGender;        
+         
+            HomePage homePage = new HomePage();
+
+            decimal minAge = homePage.numMin.Value;
+            string gender = homePage.cbGender.Text;
+
+          
+
+
+            while (true)
+            {
+                viewAge = userDetails[viewCount].age1;
+                viewGender = userDetails[viewCount].Gender;
+                if (viewAge >= minAge) 
+                {
+                    if (viewGender == gender)
+                    {
+
+                        break;
+                    }
+                    else { viewCount++; }
+                    break;                    
+                }
+                else { viewCount++; }
+            }
+
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            pnlFilter.Visible = false;
+            hasFilter = true;
+            displayNew(viewCount);
         }
 
 
@@ -264,6 +318,9 @@ namespace PRG281_Project
         private void button1_Click_1(object sender, EventArgs e)
         {
             //https://www.flaticon.com/free-icons/filter to attribute freepik incase of hassle
+            pnlFilter.Visible = true;
+            
+
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -377,5 +434,32 @@ namespace PRG281_Project
             curBio = rchTxtBio.Text;
             btnCommit.Visible = false;
         }
+
+        private void btnAccept_Click(object sender, EventArgs e, int i)
+        {
+            string viewName;
+            decimal viewAge;
+            string gender;
+            string viewBio;
+            viewName = userDetails[i].name1;
+            viewAge = userDetails[i].age1;
+            gender = userDetails[i].Gender;
+            viewBio = userDetails[i].Bio;
+
+            lblSearchName.Text = viewName;
+            lblBio.Text = viewBio;
+            lblViewAge.Text = viewAge.ToString();
+
+            viewCount++;
+
+            pnlFilter.Visible = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            pnlFilter.Visible = false;
+        }
+
+
     }
 }
