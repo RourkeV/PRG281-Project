@@ -50,16 +50,12 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.userPicture = new System.Windows.Forms.PictureBox();
             this.imageMainList = new System.Windows.Forms.ImageList(this.components);
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.btnFilter = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnCommit = new System.Windows.Forms.Button();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.lblChatBot = new System.Windows.Forms.Label();
-            this.btnAPIProfile = new System.Windows.Forms.Button();
             this.rchTxtBio = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -78,11 +74,8 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAPISwipe = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnAPISearch = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnAPIChat = new System.Windows.Forms.Button();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.userCard.SuspendLayout();
             this.pnlFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMax)).BeginInit();
@@ -94,7 +87,6 @@
             this.tabPage2.SuspendLayout();
             this.panelChatBot.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // userCard
@@ -127,9 +119,9 @@
             this.pnlFilter.Controls.Add(this.numMin);
             this.pnlFilter.Controls.Add(this.label6);
             this.pnlFilter.Controls.Add(this.lblfilterAge);
-            this.pnlFilter.Location = new System.Drawing.Point(69, 28);
+            this.pnlFilter.Location = new System.Drawing.Point(53, 28);
             this.pnlFilter.Name = "pnlFilter";
-            this.pnlFilter.Size = new System.Drawing.Size(251, 249);
+            this.pnlFilter.Size = new System.Drawing.Size(267, 249);
             this.pnlFilter.TabIndex = 11;
             this.pnlFilter.Visible = false;
             // 
@@ -141,7 +133,7 @@
             "female"});
             this.cmbGender.Location = new System.Drawing.Point(81, 126);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(121, 24);
+            this.cmbGender.Size = new System.Drawing.Size(121, 21);
             this.cmbGender.TabIndex = 9;
             // 
             // btnCancel
@@ -169,7 +161,7 @@
             this.lblMax.AutoSize = true;
             this.lblMax.Location = new System.Drawing.Point(159, 49);
             this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(32, 16);
+            this.lblMax.Size = new System.Drawing.Size(27, 13);
             this.lblMax.TabIndex = 6;
             this.lblMax.Text = "Max";
             // 
@@ -178,7 +170,7 @@
             this.lblMin.AutoSize = true;
             this.lblMin.Location = new System.Drawing.Point(73, 49);
             this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(28, 16);
+            this.lblMin.Size = new System.Drawing.Size(24, 13);
             this.lblMin.TabIndex = 5;
             this.lblMin.Text = "Min";
             // 
@@ -191,7 +183,7 @@
             0,
             0});
             this.numMax.Name = "numMax";
-            this.numMax.Size = new System.Drawing.Size(45, 22);
+            this.numMax.Size = new System.Drawing.Size(45, 20);
             this.numMax.TabIndex = 4;
             this.numMax.Tag = "";
             this.numMax.Value = new decimal(new int[] {
@@ -209,7 +201,7 @@
             0,
             0});
             this.numMin.Name = "numMin";
-            this.numMin.Size = new System.Drawing.Size(44, 22);
+            this.numMin.Size = new System.Drawing.Size(44, 20);
             this.numMin.TabIndex = 3;
             this.numMin.Value = new decimal(new int[] {
             18,
@@ -223,7 +215,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(109, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 16);
+            this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Gender";
             // 
@@ -232,7 +224,7 @@
             this.lblfilterAge.AutoSize = true;
             this.lblfilterAge.Location = new System.Drawing.Point(85, 32);
             this.lblfilterAge.Name = "lblfilterAge";
-            this.lblfilterAge.Size = new System.Drawing.Size(137, 16);
+            this.lblfilterAge.Size = new System.Drawing.Size(109, 13);
             this.lblfilterAge.TabIndex = 0;
             this.lblfilterAge.Text = "Choose an age range";
             // 
@@ -241,7 +233,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImage = global::PRG281_Project.Properties.Resources.caution;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(336, 417);
+            this.button1.Location = new System.Drawing.Point(322, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 33);
             this.button1.TabIndex = 10;
@@ -251,10 +243,10 @@
             // lblViewBio
             // 
             this.lblViewBio.AutoSize = true;
-            this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewBio.Location = new System.Drawing.Point(27, 373);
+            this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblViewBio.Location = new System.Drawing.Point(26, 327);
             this.lblViewBio.Name = "lblViewBio";
-            this.lblViewBio.Size = new System.Drawing.Size(36, 17);
+            this.lblViewBio.Size = new System.Drawing.Size(36, 20);
             this.lblViewBio.TabIndex = 9;
             this.lblViewBio.Text = "Bio:";
             // 
@@ -262,9 +254,9 @@
             // 
             this.lblViewAge.AutoSize = true;
             this.lblViewAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblViewAge.Location = new System.Drawing.Point(273, 333);
+            this.lblViewAge.Location = new System.Drawing.Point(284, 266);
             this.lblViewAge.Name = "lblViewAge";
-            this.lblViewAge.Size = new System.Drawing.Size(94, 25);
+            this.lblViewAge.Size = new System.Drawing.Size(76, 20);
             this.lblViewAge.TabIndex = 8;
             this.lblViewAge.Text = "User Age";
             // 
@@ -272,30 +264,30 @@
             // 
             this.lblSearchName.AutoSize = true;
             this.lblSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchName.Location = new System.Drawing.Point(111, 333);
+            this.lblSearchName.Location = new System.Drawing.Point(111, 266);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(102, 25);
+            this.lblSearchName.Size = new System.Drawing.Size(83, 20);
             this.lblSearchName.TabIndex = 7;
             this.lblSearchName.Text = "Username";
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(237, 333);
+            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(237, 266);
             this.lblAge.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(50, 24);
+            this.lblAge.Size = new System.Drawing.Size(42, 20);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Age:";
             // 
             // lblBio
             // 
             this.lblBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBio.Location = new System.Drawing.Point(66, 362);
+            this.lblBio.Location = new System.Drawing.Point(66, 330);
             this.lblBio.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblBio.Name = "lblBio";
-            this.lblBio.Size = new System.Drawing.Size(220, 79);
+            this.lblBio.Size = new System.Drawing.Size(294, 79);
             this.lblBio.TabIndex = 2;
             this.lblBio.Click += new System.EventHandler(this.lblBio_Click);
             // 
@@ -303,21 +295,21 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(26, 333);
+            this.lblUsername.Location = new System.Drawing.Point(26, 266);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(108, 25);
+            this.lblUsername.Size = new System.Drawing.Size(87, 20);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username:";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // userPicture
             // 
-            this.userPicture.Image = global::PRG281_Project.Properties.Resources.walter_white;
+            this.userPicture.Image = global::PRG281_Project.Properties.Resources.DefaultProfilePic2;
             this.userPicture.Location = new System.Drawing.Point(30, 28);
             this.userPicture.Margin = new System.Windows.Forms.Padding(7);
             this.userPicture.Name = "userPicture";
-            this.userPicture.Size = new System.Drawing.Size(330, 298);
+            this.userPicture.Size = new System.Drawing.Size(330, 212);
             this.userPicture.TabIndex = 0;
             this.userPicture.TabStop = false;
             // 
@@ -331,6 +323,7 @@
             this.imageMainList.Images.SetKeyName(3, "ChatBot_Icon1.png");
             this.imageMainList.Images.SetKeyName(4, "Search_Icon.png");
             // 
+
             // btnSignOut
             // 
             this.btnSignOut.BackColor = System.Drawing.Color.White;
@@ -355,15 +348,15 @@
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click_1);
             // 
+
             // tabControl1
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.ImageList = this.imageMainList;
-            this.tabControl1.ItemSize = new System.Drawing.Size(149, 80);
+            this.tabControl1.ItemSize = new System.Drawing.Size(199, 80);
             this.tabControl1.Location = new System.Drawing.Point(12, 97);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
@@ -374,12 +367,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Pink;
             this.tabPage1.Controls.Add(this.btnCommit);
             this.tabPage1.Controls.Add(this.txtAge);
             this.tabPage1.Controls.Add(this.txtName);
             this.tabPage1.Controls.Add(this.btnEdit);
-            this.tabPage1.Controls.Add(this.lblChatBot);
-            this.tabPage1.Controls.Add(this.btnAPIProfile);
             this.tabPage1.Controls.Add(this.rchTxtBio);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -392,71 +384,52 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(592, 512);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnCommit
             // 
-            this.btnCommit.Location = new System.Drawing.Point(192, 375);
+            this.btnCommit.BackColor = System.Drawing.Color.White;
+            this.btnCommit.Location = new System.Drawing.Point(315, 365);
             this.btnCommit.Name = "btnCommit";
-            this.btnCommit.Size = new System.Drawing.Size(90, 23);
+            this.btnCommit.Size = new System.Drawing.Size(80, 45);
             this.btnCommit.TabIndex = 26;
             this.btnCommit.Text = "Save changes";
-            this.btnCommit.UseVisualStyleBackColor = true;
+            this.btnCommit.UseVisualStyleBackColor = false;
             this.btnCommit.Visible = false;
             this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(95, 159);
+            this.txtAge.Location = new System.Drawing.Point(93, 136);
             this.txtAge.Name = "txtAge";
             this.txtAge.ReadOnly = true;
-            this.txtAge.Size = new System.Drawing.Size(100, 22);
+            this.txtAge.Size = new System.Drawing.Size(189, 20);
             this.txtAge.TabIndex = 25;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(95, 120);
+            this.txtName.Location = new System.Drawing.Point(93, 76);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(100, 22);
+            this.txtName.Size = new System.Drawing.Size(189, 20);
             this.txtName.TabIndex = 24;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(41, 375);
+            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(202, 365);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(80, 45);
             this.btnEdit.TabIndex = 23;
             this.btnEdit.Text = "Edit Profile";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // lblChatBot
-            // 
-            this.lblChatBot.AutoSize = true;
-            this.lblChatBot.Location = new System.Drawing.Point(473, 404);
-            this.lblChatBot.Name = "lblChatBot";
-            this.lblChatBot.Size = new System.Drawing.Size(117, 16);
-            this.lblChatBot.TabIndex = 21;
-            this.lblChatBot.Text = "Need Assistance?";
-            this.lblChatBot.Click += new System.EventHandler(this.lblChatBot_Click);
-            // 
-            // btnAPIProfile
-            // 
-            this.btnAPIProfile.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
-            this.btnAPIProfile.Location = new System.Drawing.Point(480, 420);
-            this.btnAPIProfile.Name = "btnAPIProfile";
-            this.btnAPIProfile.Size = new System.Drawing.Size(75, 75);
-            this.btnAPIProfile.TabIndex = 20;
-            this.btnAPIProfile.UseVisualStyleBackColor = true;
-            this.btnAPIProfile.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
             // rchTxtBio
             // 
-            this.rchTxtBio.Location = new System.Drawing.Point(41, 222);
+            this.rchTxtBio.Location = new System.Drawing.Point(31, 220);
             this.rchTxtBio.Name = "rchTxtBio";
             this.rchTxtBio.ReadOnly = true;
-            this.rchTxtBio.Size = new System.Drawing.Size(241, 111);
+            this.rchTxtBio.Size = new System.Drawing.Size(250, 73);
             this.rchTxtBio.TabIndex = 19;
             this.rchTxtBio.Text = "";
             // 
@@ -464,16 +437,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 201);
+            this.label1.Location = new System.Drawing.Point(28, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 24);
+            this.label1.Size = new System.Drawing.Size(38, 18);
             this.label1.TabIndex = 18;
             this.label1.Text = "Bio:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(310, 111);
+            this.pictureBox1.Image = global::PRG281_Project.Properties.Resources.DefaultProfilePic;
+            this.pictureBox1.Location = new System.Drawing.Point(315, 71);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 222);
             this.pictureBox1.TabIndex = 17;
@@ -483,9 +457,9 @@
             // 
             this.lblAgeHead.AutoSize = true;
             this.lblAgeHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgeHead.Location = new System.Drawing.Point(42, 159);
+            this.lblAgeHead.Location = new System.Drawing.Point(29, 135);
             this.lblAgeHead.Name = "lblAgeHead";
-            this.lblAgeHead.Size = new System.Drawing.Size(54, 24);
+            this.lblAgeHead.Size = new System.Drawing.Size(41, 18);
             this.lblAgeHead.TabIndex = 15;
             this.lblAgeHead.Text = "Age:";
             // 
@@ -493,20 +467,20 @@
             // 
             this.lblHeading.AutoSize = true;
             this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(243, 24);
+            this.lblHeading.Location = new System.Drawing.Point(218, 17);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(107, 36);
+            this.lblHeading.Size = new System.Drawing.Size(152, 29);
             this.lblHeading.TabIndex = 12;
-            this.lblHeading.Text = "Profile";
+            this.lblHeading.Text = "Your Profile";
             // 
             // lblNameHead
             // 
             this.lblNameHead.AutoSize = true;
             this.lblNameHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameHead.Location = new System.Drawing.Point(30, 122);
+            this.lblNameHead.Location = new System.Drawing.Point(29, 75);
             this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameHead.Name = "lblNameHead";
-            this.lblNameHead.Size = new System.Drawing.Size(71, 24);
+            this.lblNameHead.Size = new System.Drawing.Size(57, 18);
             this.lblNameHead.TabIndex = 10;
             this.lblNameHead.Text = "Name:";
             // 
@@ -533,160 +507,6 @@
             this.flowLayoutMessage.Size = new System.Drawing.Size(234, 512);
             this.flowLayoutMessage.TabIndex = 24;
             this.flowLayoutMessage.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMessage_Paint);
-            // 
-            // label2
-            // 
-
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Need Assistance?";
-
-            // 
-            // submitBtnUserChat
-            // 
-
-            this.submitBtnUserChat.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.submitBtnUserChat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.submitBtnUserChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitBtnUserChat.Location = new System.Drawing.Point(509, 441);
-            this.submitBtnUserChat.Name = "submitBtnUserChat";
-            this.submitBtnUserChat.Size = new System.Drawing.Size(66, 47);
-            this.submitBtnUserChat.TabIndex = 27;
-            this.submitBtnUserChat.Text = "Ask";
-            this.submitBtnUserChat.UseVisualStyleBackColor = false;
-            this.submitBtnUserChat.Visible = false;
-            // 
-            // textBoxUserChat
-            // 
-            this.textBoxUserChat.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxUserChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUserChat.Location = new System.Drawing.Point(255, 448);
-            this.textBoxUserChat.Multiline = true;
-            this.textBoxUserChat.Name = "textBoxUserChat";
-            this.textBoxUserChat.Size = new System.Drawing.Size(210, 40);
-            this.textBoxUserChat.TabIndex = 25;
-            this.textBoxUserChat.Text = "Ask me for any dating advice...";
-            this.textBoxUserChat.Visible = false;
-            // 
-            // panelChatBot
-            // 
-            this.panelChatBot.Controls.Add(this.lblUserNameChat);
-            this.panelChatBot.Controls.Add(this.richTextBox);
-            this.panelChatBot.Controls.Add(this.lblChatUser);
-            this.panelChatBot.Location = new System.Drawing.Point(240, 6);
-            this.panelChatBot.Name = "panelChatBot";
-            this.panelChatBot.Size = new System.Drawing.Size(346, 500);
-            this.panelChatBot.TabIndex = 29;
-            this.panelChatBot.Visible = false;
-            // 
-            // lblUserNameChat
-            // 
-            this.lblUserNameChat.AutoSize = true;
-            this.lblUserNameChat.Location = new System.Drawing.Point(174, 29);
-            this.lblUserNameChat.Name = "lblUserNameChat";
-            this.lblUserNameChat.Size = new System.Drawing.Size(114, 16);
-            this.lblUserNameChat.TabIndex = 27;
-            this.lblUserNameChat.Text = "example example";
-            // 
-            // richTextBox
-            // 
-            this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox.Location = new System.Drawing.Point(15, 56);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.ReadOnly = true;
-            this.richTextBox.Size = new System.Drawing.Size(320, 373);
-            this.richTextBox.TabIndex = 26;
-            this.richTextBox.Text = "Your conversation will appear here...";
-            // 
-            // lblChatUser
-            // 
-            this.lblChatUser.AutoSize = true;
-            this.lblChatUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChatUser.Location = new System.Drawing.Point(11, 24);
-            this.lblChatUser.Name = "lblChatUser";
-            this.lblChatUser.Size = new System.Drawing.Size(208, 25);
-            this.lblChatUser.TabIndex = 0;
-            this.lblChatUser.Text = "Welcome to chat with: ";
-
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Pink;
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.btnAPISwipe);
-            this.tabPage3.Controls.Add(this.userCard);
-            this.tabPage3.ImageKey = "Swipe_Icon.png";
-            this.tabPage3.Location = new System.Drawing.Point(4, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(592, 512);
-            this.tabPage3.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(496, 415);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 16);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Need Assistance?";
-            // 
-            // btnAPISwipe
-            // 
-            this.btnAPISwipe.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
-            this.btnAPISwipe.Location = new System.Drawing.Point(514, 431);
-            this.btnAPISwipe.Name = "btnAPISwipe";
-            this.btnAPISwipe.Size = new System.Drawing.Size(75, 75);
-            this.btnAPISwipe.TabIndex = 22;
-            this.btnAPISwipe.UseVisualStyleBackColor = true;
-            this.btnAPISwipe.Click += new System.EventHandler(this.btnAPIProfile_Click);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.btnAPISearch);
-            this.tabPage4.ImageKey = "Search_Icon.png";
-            this.tabPage4.Location = new System.Drawing.Point(4, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(592, 512);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(493, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 16);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Need Assistance?";
-            // 
-            // btnAPISearch
-            // 
-            this.btnAPISearch.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
-            this.btnAPISearch.Location = new System.Drawing.Point(500, 24);
-            this.btnAPISearch.Name = "btnAPISearch";
-            this.btnAPISearch.Size = new System.Drawing.Size(75, 75);
-            this.btnAPISearch.TabIndex = 22;
-            this.btnAPISearch.UseVisualStyleBackColor = true;
-            this.btnAPISearch.Click += new System.EventHandler(this.btnAPIProfile_Click);
-            // 
-
-            // richTextBox
-            // 
-            this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox.Location = new System.Drawing.Point(15, 99);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.ReadOnly = true;
-            this.richTextBox.Size = new System.Drawing.Size(320, 330);
-            this.richTextBox.TabIndex = 26;
-            this.richTextBox.Text = "Your conversation will appear here...";
             // 
             // label2
             // 
@@ -726,10 +546,8 @@
             // 
             // panelChatBot
             // 
-            this.panelChatBot.Controls.Add(this.btnAPIChat);
             this.panelChatBot.Controls.Add(this.lblUserNameChat);
             this.panelChatBot.Controls.Add(this.richTextBox);
-            this.panelChatBot.Controls.Add(this.label3);
             this.panelChatBot.Controls.Add(this.lblChatUser);
             this.panelChatBot.Location = new System.Drawing.Point(240, 6);
             this.panelChatBot.Name = "panelChatBot";
@@ -737,20 +555,8 @@
             this.panelChatBot.TabIndex = 29;
             this.panelChatBot.Visible = false;
             // 
-            // lblChatUser
+            // lblUserNameChat
             // 
-            this.lblChatUser.AutoSize = true;
-            this.lblChatUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChatUser.Location = new System.Drawing.Point(11, 45);
-            this.lblChatUser.Name = "lblChatUser";
-            this.lblChatUser.Size = new System.Drawing.Size(164, 20);
-            this.lblChatUser.TabIndex = 0;
-            this.lblChatUser.Text = "Welcome to chat with:";
-
-            // 
-            // btnAPIChat
-            // 
-
             this.lblUserNameChat.AutoSize = true;
             this.lblUserNameChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserNameChat.Location = new System.Drawing.Point(173, 45);
@@ -758,13 +564,89 @@
             this.lblUserNameChat.Size = new System.Drawing.Size(72, 20);
             this.lblUserNameChat.TabIndex = 27;
             this.lblUserNameChat.Text = "example ";
-
+            // 
+            // richTextBox
+            // 
+            this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox.Location = new System.Drawing.Point(15, 99);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.ReadOnly = true;
+            this.richTextBox.Size = new System.Drawing.Size(320, 330);
+            this.richTextBox.TabIndex = 26;
+            this.richTextBox.Text = "Your conversation will appear here...";
+            // 
+            // lblChatUser
+            // 
+            this.lblChatUser.AutoSize = true;
+            this.lblChatUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChatUser.Location = new System.Drawing.Point(11, 41);
+            this.lblChatUser.Name = "lblChatUser";
+            this.lblChatUser.Size = new System.Drawing.Size(185, 20);
+            this.lblChatUser.TabIndex = 0;
+            this.lblChatUser.Text = "Welcome to chat with:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Pink;
+            this.tabPage3.Controls.Add(this.userCard);
+            this.tabPage3.ImageKey = "Swipe_Icon.png";
+            this.tabPage3.Location = new System.Drawing.Point(4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(592, 512);
+            this.tabPage3.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(265, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Need Assistance?";
+            // 
+            // btnAPISwipe
+            // 
+            this.btnAPISwipe.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
+            this.btnAPISwipe.Location = new System.Drawing.Point(274, 12);
+            this.btnAPISwipe.Name = "btnAPISwipe";
+            this.btnAPISwipe.Size = new System.Drawing.Size(75, 75);
+            this.btnAPISwipe.TabIndex = 22;
+            this.btnAPISwipe.UseVisualStyleBackColor = true;
+            this.btnAPISwipe.Click += new System.EventHandler(this.btnAPIProfile_Click);
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
+            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
+            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.White;
+            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
+            this.btnFilter.Location = new System.Drawing.Point(522, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(90, 75);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // HomePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(628, 717);
+            this.ClientSize = new System.Drawing.Size(625, 717);
+            this.Controls.Add(this.btnAPISwipe);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
@@ -790,10 +672,8 @@
             this.panelChatBot.ResumeLayout(false);
             this.panelChatBot.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -814,21 +694,14 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.RichTextBox rchTxtBio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblAgeHead;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label lblNameHead;
-        private System.Windows.Forms.Button btnAPIProfile;
-        private System.Windows.Forms.Label lblChatBot;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAPIChat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAPISwipe;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAPISearch;
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutMessage;
         private System.IO.FileSystemWatcher fileSystemWatcher1;

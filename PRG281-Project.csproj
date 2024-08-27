@@ -224,5 +224,11 @@
   <ItemGroup>
     <None Include="Resources\SplashScreen.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultProfilePic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultProfilePic2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,13 +43,14 @@ namespace PRG281_Project
             this.lblBio = new System.Windows.Forms.Label();
             this.rchBio = new System.Windows.Forms.RichTextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblCreateProfileHeading = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 33);
+            this.label1.Location = new System.Drawing.Point(58, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
@@ -57,14 +58,14 @@ namespace PRG281_Project
             // 
             // txtFirst
             // 
-            this.txtFirst.Location = new System.Drawing.Point(51, 62);
+            this.txtFirst.Location = new System.Drawing.Point(61, 118);
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(158, 20);
             this.txtFirst.TabIndex = 1;
             // 
             // txtLast
             // 
-            this.txtLast.Location = new System.Drawing.Point(51, 143);
+            this.txtLast.Location = new System.Drawing.Point(61, 184);
             this.txtLast.Name = "txtLast";
             this.txtLast.Size = new System.Drawing.Size(158, 20);
             this.txtLast.TabIndex = 3;
@@ -72,7 +73,7 @@ namespace PRG281_Project
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 114);
+            this.label2.Location = new System.Drawing.Point(58, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 2;
@@ -81,7 +82,7 @@ namespace PRG281_Project
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 186);
+            this.label3.Location = new System.Drawing.Point(58, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 4;
@@ -89,9 +90,9 @@ namespace PRG281_Project
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(48, 553);
+            this.btnSubmit.Location = new System.Drawing.Point(237, 435);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(87, 39);
             this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -99,7 +100,7 @@ namespace PRG281_Project
             // 
             // numAge
             // 
-            this.numAge.Location = new System.Drawing.Point(51, 210);
+            this.numAge.Location = new System.Drawing.Point(61, 260);
             this.numAge.Margin = new System.Windows.Forms.Padding(2);
             this.numAge.Maximum = new decimal(new int[] {
             150,
@@ -134,7 +135,7 @@ namespace PRG281_Project
             "What is the name of your favorite childhood friend?",
             "What is the middle name of your oldest sibling?",
             "What was the name of your first employer?"});
-            this.scrtyQstn.Location = new System.Drawing.Point(48, 477);
+            this.scrtyQstn.Location = new System.Drawing.Point(202, 343);
             this.scrtyQstn.Name = "scrtyQstn";
             this.scrtyQstn.Size = new System.Drawing.Size(158, 21);
             this.scrtyQstn.TabIndex = 8;
@@ -142,7 +143,7 @@ namespace PRG281_Project
             // scrtyLbl
             // 
             this.scrtyLbl.AutoSize = true;
-            this.scrtyLbl.Location = new System.Drawing.Point(49, 458);
+            this.scrtyLbl.Location = new System.Drawing.Point(234, 327);
             this.scrtyLbl.Name = "scrtyLbl";
             this.scrtyLbl.Size = new System.Drawing.Size(90, 13);
             this.scrtyLbl.TabIndex = 9;
@@ -150,7 +151,7 @@ namespace PRG281_Project
             // 
             // scrtyAnswer
             // 
-            this.scrtyAnswer.Location = new System.Drawing.Point(48, 519);
+            this.scrtyAnswer.Location = new System.Drawing.Point(202, 385);
             this.scrtyAnswer.Name = "scrtyAnswer";
             this.scrtyAnswer.Size = new System.Drawing.Size(158, 20);
             this.scrtyAnswer.TabIndex = 10;
@@ -160,7 +161,7 @@ namespace PRG281_Project
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(49, 254);
+            this.lblGender.Location = new System.Drawing.Point(282, 89);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(42, 13);
             this.lblGender.TabIndex = 11;
@@ -173,15 +174,15 @@ namespace PRG281_Project
             "Male",
             "Female",
             "Other"});
-            this.cmboGender.Location = new System.Drawing.Point(48, 279);
+            this.cmboGender.Location = new System.Drawing.Point(285, 118);
             this.cmboGender.Name = "cmboGender";
-            this.cmboGender.Size = new System.Drawing.Size(158, 21);
+            this.cmboGender.Size = new System.Drawing.Size(215, 21);
             this.cmboGender.TabIndex = 12;
             // 
             // lblBio
             // 
             this.lblBio.AutoSize = true;
-            this.lblBio.Location = new System.Drawing.Point(49, 329);
+            this.lblBio.Location = new System.Drawing.Point(282, 160);
             this.lblBio.Name = "lblBio";
             this.lblBio.Size = new System.Drawing.Size(22, 13);
             this.lblBio.TabIndex = 13;
@@ -189,16 +190,16 @@ namespace PRG281_Project
             // 
             // rchBio
             // 
-            this.rchBio.Location = new System.Drawing.Point(48, 346);
+            this.rchBio.Location = new System.Drawing.Point(285, 184);
             this.rchBio.Name = "rchBio";
-            this.rchBio.Size = new System.Drawing.Size(340, 96);
+            this.rchBio.Size = new System.Drawing.Size(215, 96);
             this.rchBio.TabIndex = 14;
             this.rchBio.Text = "";
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(350, 13);
+            this.btnExit.Location = new System.Drawing.Point(717, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(38, 33);
             this.btnExit.TabIndex = 15;
@@ -206,12 +207,23 @@ namespace PRG281_Project
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblCreateProfileHeading
+            // 
+            this.lblCreateProfileHeading.AutoSize = true;
+            this.lblCreateProfileHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateProfileHeading.Location = new System.Drawing.Point(55, 24);
+            this.lblCreateProfileHeading.Name = "lblCreateProfileHeading";
+            this.lblCreateProfileHeading.Size = new System.Drawing.Size(291, 33);
+            this.lblCreateProfileHeading.TabIndex = 16;
+            this.lblCreateProfileHeading.Text = "Create Your Profile!";
+            // 
             // AddingDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(420, 622);
+            this.ClientSize = new System.Drawing.Size(554, 518);
+            this.Controls.Add(this.lblCreateProfileHeading);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.rchBio);
             this.Controls.Add(this.lblBio);
@@ -254,5 +266,6 @@ namespace PRG281_Project
         private System.Windows.Forms.Label lblBio;
         private System.Windows.Forms.RichTextBox rchBio;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblCreateProfileHeading;
     }
 }
