@@ -42,6 +42,7 @@ namespace PRG281_Project
             this.cmboGender = new System.Windows.Forms.ComboBox();
             this.lblBio = new System.Windows.Forms.Label();
             this.rchBio = new System.Windows.Forms.RichTextBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,12 +195,24 @@ namespace PRG281_Project
             this.rchBio.TabIndex = 14;
             this.rchBio.Text = "";
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(350, 13);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(38, 33);
+            this.btnExit.TabIndex = 15;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // AddingDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(420, 622);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.rchBio);
             this.Controls.Add(this.lblBio);
             this.Controls.Add(this.cmboGender);
@@ -240,5 +253,6 @@ namespace PRG281_Project
         private System.Windows.Forms.ComboBox cmboGender;
         private System.Windows.Forms.Label lblBio;
         private System.Windows.Forms.RichTextBox rchBio;
+        private System.Windows.Forms.Button btnExit;
     }
 }
