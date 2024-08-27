@@ -24,9 +24,11 @@ namespace PRG281_Project
 
             Console.WriteLine("hellos");
             Console.WriteLine("hell yes");
+
             Application.Run(new Splash_Screen());
             Application.Run(new UserSignUp());
             
+
             likedUsers liked = new likedUsers();
 
             // Add specific users to the group (e.g., users older than 30)
