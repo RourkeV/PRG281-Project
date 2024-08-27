@@ -39,6 +39,7 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.lblMovePage = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -160,12 +161,24 @@
             this.lblLogin.Text = "LOGIN";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(235, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(38, 33);
+            this.btnExit.TabIndex = 16;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // UserSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(285, 506);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.lblMovePage);
             this.Controls.Add(this.lblHeader);
@@ -201,5 +214,6 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Label lblMovePage;
         private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Button btnExit;
     }
 }

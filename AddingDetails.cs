@@ -73,5 +73,10 @@ namespace PRG281_Project
             HomePage homePage = new HomePage();
             rchBio.Text = homePage.curEmail;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
