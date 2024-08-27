@@ -128,6 +128,7 @@
             this.Controls.Add(this.textBox);
             this.Name = "API";
             this.Text = "Love Bot";
+            this.Load += new System.EventHandler(this.API_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

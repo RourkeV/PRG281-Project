@@ -88,15 +88,15 @@ namespace PRG281_Project
                 Random random = new Random();
                 int number = 0;
                 // Swiped right
-                MessageBox.Show("Swiped Right!");
+                //MessageBox.Show("Swiped Right!");
 
                 //add user to possible match if other user(maybe a randomiser) also swipes right its a match
 
                 number = random.Next(1, 3);
 
                 if (number == 2)
-
                 {
+                    MessageBox.Show("You have matched!");
                     //match = true;
                     matchedUsers.AddUser("Calvin", "Nijenhuis");
                     flowLayoutMessage.Controls.Clear();
@@ -121,7 +121,7 @@ namespace PRG281_Project
             else if (userCard.Left < -this.Width / 9092)
             {
                 // Swiped left
-                MessageBox.Show("Swiped Left!");
+                //MessageBox.Show("Swiped Left!");
 
                 // Dont store user
 
@@ -343,8 +343,18 @@ namespace PRG281_Project
             System.Windows.Forms.Button clickedButton = sender as System.Windows.Forms.Button;
             int userId = (int)clickedButton.Tag;
 
-            // Open chat for the selected user
-            //MessageBox.Show($"Opening chat for {clickedButton.Text}");
+            // Assuming you have some way to retrieve user details like Name and Bio
+            string userName = clickedButton.Text;
+            string userBio = "This is the bio of " + userName; // Example bio, replace with actual data retrieval
+
+            API chatBetweenUsers = new API();
+            panelChatBot.Visible = true;
+            lblChatUser.Visible = true;
+            lblUserNameChat.Visible = true;
+            textBoxUserChat.Visible = true;
+            submitBtnUserChat.Visible = true;
+
+
         }
 
         private void flowLayoutMessage_Paint(object sender, PaintEventArgs e)

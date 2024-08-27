@@ -44,6 +44,7 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnCommit = new System.Windows.Forms.Button();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -65,7 +66,13 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAPISearch = new System.Windows.Forms.Button();
-            this.btnCommit = new System.Windows.Forms.Button();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.submitBtnUserChat = new System.Windows.Forms.Button();
+            this.textBoxUserChat = new System.Windows.Forms.TextBox();
+            this.panelChatBot = new System.Windows.Forms.Panel();
+            this.lblChatUser = new System.Windows.Forms.Label();
+            this.lblUserNameChat = new System.Windows.Forms.Label();
             this.userCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicture)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -74,6 +81,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panelChatBot.SuspendLayout();
             this.SuspendLayout();
             // 
             // userCard
@@ -251,6 +259,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnCommit
+            // 
+            this.btnCommit.Location = new System.Drawing.Point(192, 375);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(90, 23);
+            this.btnCommit.TabIndex = 26;
+            this.btnCommit.Text = "Save changes";
+            this.btnCommit.UseVisualStyleBackColor = true;
+            this.btnCommit.Visible = false;
+            this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
+            // 
             // txtAge
             // 
             this.txtAge.Location = new System.Drawing.Point(95, 159);
@@ -359,8 +378,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.flowLayoutMessage);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.btnAPIChat);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.submitBtnUserChat);
+            this.tabPage2.Controls.Add(this.textBoxUserChat);
+            this.tabPage2.Controls.Add(this.panelChatBot);
             this.tabPage2.ImageKey = "Chat_Icon.png";
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
@@ -381,7 +402,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(493, 3);
+            this.label3.Location = new System.Drawing.Point(263, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 23;
@@ -390,7 +411,7 @@
             // btnAPIChat
             // 
             this.btnAPIChat.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
-            this.btnAPIChat.Location = new System.Drawing.Point(500, 19);
+            this.btnAPIChat.Location = new System.Drawing.Point(271, 12);
             this.btnAPIChat.Name = "btnAPIChat";
             this.btnAPIChat.Size = new System.Drawing.Size(75, 75);
             this.btnAPIChat.TabIndex = 22;
@@ -460,16 +481,82 @@
             this.btnAPISearch.UseVisualStyleBackColor = true;
             this.btnAPISearch.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
-            // btnCommit
+            // richTextBox
             // 
-            this.btnCommit.Location = new System.Drawing.Point(192, 375);
-            this.btnCommit.Name = "btnCommit";
-            this.btnCommit.Size = new System.Drawing.Size(90, 23);
-            this.btnCommit.TabIndex = 26;
-            this.btnCommit.Text = "Save changes";
-            this.btnCommit.UseVisualStyleBackColor = true;
-            this.btnCommit.Visible = false;
-            this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
+            this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox.Location = new System.Drawing.Point(15, 56);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.ReadOnly = true;
+            this.richTextBox.Size = new System.Drawing.Size(320, 373);
+            this.richTextBox.TabIndex = 26;
+            this.richTextBox.Text = "Your conversation will appear here...";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(251, -69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(210, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Welcome to the Love Bot";
+            // 
+            // submitBtnUserChat
+            // 
+            this.submitBtnUserChat.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.submitBtnUserChat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitBtnUserChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtnUserChat.Location = new System.Drawing.Point(509, 441);
+            this.submitBtnUserChat.Name = "submitBtnUserChat";
+            this.submitBtnUserChat.Size = new System.Drawing.Size(66, 47);
+            this.submitBtnUserChat.TabIndex = 27;
+            this.submitBtnUserChat.Text = "Ask";
+            this.submitBtnUserChat.UseVisualStyleBackColor = false;
+            this.submitBtnUserChat.Visible = false;
+            // 
+            // textBoxUserChat
+            // 
+            this.textBoxUserChat.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxUserChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUserChat.Location = new System.Drawing.Point(255, 448);
+            this.textBoxUserChat.Multiline = true;
+            this.textBoxUserChat.Name = "textBoxUserChat";
+            this.textBoxUserChat.Size = new System.Drawing.Size(210, 40);
+            this.textBoxUserChat.TabIndex = 25;
+            this.textBoxUserChat.Text = "Ask me for any dating advice...";
+            this.textBoxUserChat.Visible = false;
+            // 
+            // panelChatBot
+            // 
+            this.panelChatBot.Controls.Add(this.lblUserNameChat);
+            this.panelChatBot.Controls.Add(this.richTextBox);
+            this.panelChatBot.Controls.Add(this.lblChatUser);
+            this.panelChatBot.Location = new System.Drawing.Point(240, 6);
+            this.panelChatBot.Name = "panelChatBot";
+            this.panelChatBot.Size = new System.Drawing.Size(346, 500);
+            this.panelChatBot.TabIndex = 29;
+            this.panelChatBot.Visible = false;
+            // 
+            // lblChatUser
+            // 
+            this.lblChatUser.AutoSize = true;
+            this.lblChatUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChatUser.Location = new System.Drawing.Point(11, 24);
+            this.lblChatUser.Name = "lblChatUser";
+            this.lblChatUser.Size = new System.Drawing.Size(168, 20);
+            this.lblChatUser.TabIndex = 0;
+            this.lblChatUser.Text = "Welcome to chat with: ";
+            // 
+            // lblUserNameChat
+            // 
+            this.lblUserNameChat.AutoSize = true;
+            this.lblUserNameChat.Location = new System.Drawing.Point(174, 29);
+            this.lblUserNameChat.Name = "lblUserNameChat";
+            this.lblUserNameChat.Size = new System.Drawing.Size(88, 13);
+            this.lblUserNameChat.TabIndex = 27;
+            this.lblUserNameChat.Text = "example example";
             // 
             // HomePage
             // 
@@ -479,6 +566,8 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnAPIChat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "HomePage";
@@ -498,7 +587,10 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panelChatBot.ResumeLayout(false);
+            this.panelChatBot.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -542,5 +634,12 @@
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnCommit;
+        private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button submitBtnUserChat;
+        private System.Windows.Forms.TextBox textBoxUserChat;
+        private System.Windows.Forms.Panel panelChatBot;
+        private System.Windows.Forms.Label lblChatUser;
+        private System.Windows.Forms.Label lblUserNameChat;
     }
 }

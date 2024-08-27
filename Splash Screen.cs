@@ -33,6 +33,7 @@ namespace PRG281_Project
             {
                 prgBarSplash.Value += 1;
                 lblProgressAmount.Text = prgBarSplash.Value.ToString() + "%";
+
                 lblAppName.Location = new Point(x, 120);
                 x -= 10;
             }
