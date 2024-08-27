@@ -536,17 +536,18 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(251, -69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 25);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Welcome to the Love Bot";
+
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(242, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Need Assistance?";
+
             // 
             // submitBtnUserChat
             // 
+
             this.submitBtnUserChat.BackColor = System.Drawing.Color.WhiteSmoke;
             this.submitBtnUserChat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitBtnUserChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -610,6 +611,7 @@
             this.lblChatUser.Size = new System.Drawing.Size(208, 25);
             this.lblChatUser.TabIndex = 0;
             this.lblChatUser.Text = "Welcome to chat with: ";
+
             // 
             // tabPage3
             // 
@@ -674,24 +676,89 @@
             this.btnAPISearch.UseVisualStyleBackColor = true;
             this.btnAPISearch.Click += new System.EventHandler(this.btnAPIProfile_Click);
             // 
-            // label3
+
+            // richTextBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(263, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 16);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Need Assistance?";
+            this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox.Location = new System.Drawing.Point(15, 99);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.ReadOnly = true;
+            this.richTextBox.Size = new System.Drawing.Size(320, 330);
+            this.richTextBox.TabIndex = 26;
+            this.richTextBox.Text = "Your conversation will appear here...";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(251, -69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(210, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Welcome to the Love Bot";
+            // 
+            // submitBtnUserChat
+            // 
+            this.submitBtnUserChat.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.submitBtnUserChat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitBtnUserChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtnUserChat.Location = new System.Drawing.Point(499, 441);
+            this.submitBtnUserChat.Name = "submitBtnUserChat";
+            this.submitBtnUserChat.Size = new System.Drawing.Size(76, 47);
+            this.submitBtnUserChat.TabIndex = 27;
+            this.submitBtnUserChat.Text = "Ask";
+            this.submitBtnUserChat.UseVisualStyleBackColor = false;
+            this.submitBtnUserChat.Visible = false;
+            // 
+            // textBoxUserChat
+            // 
+            this.textBoxUserChat.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxUserChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUserChat.Location = new System.Drawing.Point(255, 441);
+            this.textBoxUserChat.Multiline = true;
+            this.textBoxUserChat.Name = "textBoxUserChat";
+            this.textBoxUserChat.Size = new System.Drawing.Size(230, 47);
+            this.textBoxUserChat.TabIndex = 25;
+            this.textBoxUserChat.Text = "Type a message...";
+            this.textBoxUserChat.Visible = false;
+            // 
+            // panelChatBot
+            // 
+            this.panelChatBot.Controls.Add(this.btnAPIChat);
+            this.panelChatBot.Controls.Add(this.lblUserNameChat);
+            this.panelChatBot.Controls.Add(this.richTextBox);
+            this.panelChatBot.Controls.Add(this.label3);
+            this.panelChatBot.Controls.Add(this.lblChatUser);
+            this.panelChatBot.Location = new System.Drawing.Point(240, 6);
+            this.panelChatBot.Name = "panelChatBot";
+            this.panelChatBot.Size = new System.Drawing.Size(346, 500);
+            this.panelChatBot.TabIndex = 29;
+            this.panelChatBot.Visible = false;
+            // 
+            // lblChatUser
+            // 
+            this.lblChatUser.AutoSize = true;
+            this.lblChatUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChatUser.Location = new System.Drawing.Point(11, 45);
+            this.lblChatUser.Name = "lblChatUser";
+            this.lblChatUser.Size = new System.Drawing.Size(164, 20);
+            this.lblChatUser.TabIndex = 0;
+            this.lblChatUser.Text = "Welcome to chat with:";
+
             // 
             // btnAPIChat
             // 
-            this.btnAPIChat.Image = global::PRG281_Project.Properties.Resources.ChatBot_Icon1;
-            this.btnAPIChat.Location = new System.Drawing.Point(271, 12);
-            this.btnAPIChat.Name = "btnAPIChat";
-            this.btnAPIChat.Size = new System.Drawing.Size(75, 75);
-            this.btnAPIChat.TabIndex = 22;
-            this.btnAPIChat.UseVisualStyleBackColor = true;
-            this.btnAPIChat.Click += new System.EventHandler(this.btnAPIProfile_Click);
+
+            this.lblUserNameChat.AutoSize = true;
+            this.lblUserNameChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNameChat.Location = new System.Drawing.Point(173, 45);
+            this.lblUserNameChat.Name = "lblUserNameChat";
+            this.lblUserNameChat.Size = new System.Drawing.Size(72, 20);
+            this.lblUserNameChat.TabIndex = 27;
+            this.lblUserNameChat.Text = "example ";
+
             // 
             // HomePage
             // 
@@ -701,8 +768,6 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.btnFilter);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnAPIChat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "HomePage";
@@ -729,7 +794,6 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
