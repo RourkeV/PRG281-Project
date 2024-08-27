@@ -6,6 +6,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+
+using System.Runtime.Remoting.Messaging;
+
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -29,7 +32,11 @@ namespace PRG281_Project
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
 
+        public bool hasFilter = false;
+
+
         public event GenerateRandomNumHandler GenerateRandomNum;
+
 
         public delegate void GenerateRandomNumHandler();
 
@@ -122,7 +129,9 @@ namespace PRG281_Project
                     //nextUser();                  
                 }
 
+
                 displayNew(viewCount);
+
             }
             else if (userCard.Left < -this.Width / 9092)
             {
@@ -132,11 +141,95 @@ namespace PRG281_Project
                 // Dont store user
 
                 //nextUser();
+
                 displayNew(viewCount);
+
+
             }
 
             // Reset the card position
             userCard.Location = _initialPosition;
+        }
+
+        public void displayNew(int i)
+        {
+            string viewName;
+            decimal viewAge;
+            string viewBio;
+
+            if (hasFilter == true)
+            {
+                filter(i);
+            }
+
+
+            viewName = userDetails[viewCount].name1;
+            viewAge = userDetails[viewCount].age1;
+            viewBio = userDetails[viewCount].Bio;
+
+
+            lblSearchName.Text = viewName;
+            lblBio.Text = viewBio;
+            lblViewAge.Text = viewAge.ToString();
+
+            viewCount++;
+        }
+
+        static HomePage homePage = new HomePage();
+        
+        
+        public void filter(int userCount)
+        {
+            decimal viewAge;
+            string viewGender;
+
+            viewAge = userDetails[userCount].age1;
+            viewGender = userDetails[userCount].Gender;
+
+            decimal minAge = numMin.Value;
+            decimal maxAge = numMax.Value;
+            string gender = cmbGender.Text;
+
+
+
+
+            while (true)
+            {
+                
+                viewAge = userDetails[viewCount].age1;
+                viewGender = userDetails[viewCount].Gender;
+                MessageBox.Show(minAge.ToString());
+                MessageBox.Show(gender);
+                MessageBox.Show(viewAge.ToString());
+                MessageBox.Show(viewGender);
+
+                if (viewAge >= minAge && viewAge <= maxAge)
+                {
+
+                    if (viewGender == gender)
+                    {
+
+                        break;
+                    }
+                    else 
+                    { 
+                        viewCount++; 
+                    }
+                }
+                else 
+                { 
+                    viewCount++;
+                }
+            }
+
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            pnlFilter.Visible = false;
+            hasFilter = true;
+
+            displayNew(viewCount);
         }
 
         private void SwipeForm_Load(object sender, EventArgs e)
@@ -174,12 +267,9 @@ namespace PRG281_Project
             viewAge = userDetails[i].age1;
             viewBio = userDetails[i].Bio;
 
-            lblSearchName.Text = viewName;
-            lblBio.Text = viewBio;
-            lblViewAge.Text = viewAge.ToString();
 
-            viewCount++;
-        }
+
+
 
 
 
@@ -275,6 +365,9 @@ namespace PRG281_Project
         private void button1_Click_1(object sender, EventArgs e)
         {
             //https://www.flaticon.com/free-icons/filter to attribute freepik incase of hassle
+            pnlFilter.Visible = true;
+            
+
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -498,6 +591,36 @@ namespace PRG281_Project
             curAge = int.Parse(txtAge.Text);
             curBio = rchTxtBio.Text;
             btnCommit.Visible = false;
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e, int i)
+        {
+            string viewName;
+            decimal viewAge;
+            string gender;
+            string viewBio;
+            viewName = userDetails[i].name1;
+            viewAge = userDetails[i].age1;
+            gender = userDetails[i].Gender;
+            viewBio = userDetails[i].Bio;
+
+            lblSearchName.Text = viewName;
+            lblBio.Text = viewBio;
+            lblViewAge.Text = viewAge.ToString();
+
+            viewCount++;
+
+            pnlFilter.Visible = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            pnlFilter.Visible = false;
+        }
+
+        private void numMin_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
