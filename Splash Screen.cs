@@ -17,7 +17,7 @@ namespace PRG281_Project
             InitializeComponent();
         }
 
-        int x = 650;
+        
 
         private void Splash_Screen_Load(object sender, EventArgs e)
         {
@@ -34,8 +34,6 @@ namespace PRG281_Project
                 prgBarSplash.Value += 5;
                 lblProgressAmount.Text = prgBarSplash.Value.ToString() + "%";
 
-                lblAppName.Location = new Point(x, 120);
-                x -= 20;
             }
             else
             {

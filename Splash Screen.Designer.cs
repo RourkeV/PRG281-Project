@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblProgressAmount = new System.Windows.Forms.Label();
             this.lblAppName = new System.Windows.Forms.Label();
+            this.lblSubName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCreators
@@ -92,11 +93,22 @@
             this.lblAppName.AutoSize = true;
             this.lblAppName.BackColor = System.Drawing.Color.Transparent;
             this.lblAppName.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppName.Location = new System.Drawing.Point(634, 120);
+            this.lblAppName.Location = new System.Drawing.Point(28, 113);
             this.lblAppName.Name = "lblAppName";
             this.lblAppName.Size = new System.Drawing.Size(327, 108);
             this.lblAppName.TabIndex = 4;
             this.lblAppName.Text = "Amore";
+            // 
+            // lblSubName
+            // 
+            this.lblSubName.AutoSize = true;
+            this.lblSubName.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubName.Location = new System.Drawing.Point(42, 211);
+            this.lblSubName.Name = "lblSubName";
+            this.lblSubName.Size = new System.Drawing.Size(138, 20);
+            this.lblSubName.TabIndex = 5;
+            this.lblSubName.Text = "Dating Application";
             // 
             // Splash_Screen
             // 
@@ -104,6 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PRG281_Project.Properties.Resources.SplashScreen;
             this.ClientSize = new System.Drawing.Size(634, 411);
+            this.Controls.Add(this.lblSubName);
             this.Controls.Add(this.lblAppName);
             this.Controls.Add(this.lblProgressAmount);
             this.Controls.Add(this.label1);
@@ -126,5 +139,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblProgressAmount;
         private System.Windows.Forms.Label lblAppName;
+        private System.Windows.Forms.Label lblSubName;
     }
 }
