@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PRG281_Project
 {
-    internal class FullUserList
+    internal class FullUserList : IUser
     {       
 
         private List<UserDetails> allUsers = new List<UserDetails>{
@@ -47,7 +47,7 @@ namespace PRG281_Project
 
         public List<UserDetails> AllUsers { get => allUsers; set => allUsers = value; }
 
-        public void addUser(string name, string email, string password, string gender, decimal age, string security, string secAns, string bio)
+        public virtual void addUser(string name, string email, string password, string gender, decimal age, string security, string secAns, string bio)
         {
             UserDetails newUser = new UserDetails(name, email, password, gender, age, security, secAns, bio);
             allUsers.Add(newUser);
