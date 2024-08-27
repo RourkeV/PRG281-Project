@@ -146,11 +146,14 @@ namespace PRG281_Project
             userCard.Location = _initialPosition;
         }
 
+        public bool hasFilter = false;
+
         public void displayNew(int i)
         {
             string viewName;
             decimal viewAge;
             string viewBio;
+
 
             if (hasFilter == true)
             {
@@ -193,10 +196,7 @@ namespace PRG281_Project
                 
                 viewAge = userDetails[viewCount].age1;
                 viewGender = userDetails[viewCount].Gender;
-                MessageBox.Show(minAge.ToString());
-                MessageBox.Show(gender);
-                MessageBox.Show(viewAge.ToString());
-                MessageBox.Show(viewGender);
+                MessageBox.Show("Results have been filtered!");
 
                 if (viewAge >= minAge && viewAge <= maxAge)
                 {

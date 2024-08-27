@@ -638,7 +638,7 @@
             this.btnFilter.Size = new System.Drawing.Size(90, 75);
             this.btnFilter.TabIndex = 4;
             this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click_1);
             // 
             // HomePage
             // 
