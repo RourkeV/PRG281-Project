@@ -81,5 +81,10 @@ namespace PRG281_Project
         {
             this.Close();
         }
+
+        private void lblMovePage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -63,7 +63,7 @@
             this.txtPass.Location = new System.Drawing.Point(34, 222);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(205, 20);
+            this.txtPass.Size = new System.Drawing.Size(215, 20);
             this.txtPass.TabIndex = 7;
             // 
             // txtEmail
@@ -72,7 +72,7 @@
             this.txtEmail.Location = new System.Drawing.Point(34, 147);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(205, 20);
+            this.txtEmail.Size = new System.Drawing.Size(215, 20);
             this.txtEmail.TabIndex = 6;
             // 
             // btnSubmit
@@ -126,12 +126,14 @@
             // lblMovePage
             // 
             this.lblMovePage.AutoSize = true;
+            this.lblMovePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMovePage.ForeColor = System.Drawing.Color.Black;
-            this.lblMovePage.Location = new System.Drawing.Point(65, 429);
+            this.lblMovePage.Location = new System.Drawing.Point(73, 437);
             this.lblMovePage.Name = "lblMovePage";
-            this.lblMovePage.Size = new System.Drawing.Size(135, 13);
+            this.lblMovePage.Size = new System.Drawing.Size(123, 16);
             this.lblMovePage.TabIndex = 12;
-            this.lblMovePage.Text = "Wish to Create an Account";
+            this.lblMovePage.Text = "Create an Account?";
+            this.lblMovePage.Click += new System.EventHandler(this.lblMovePage_Click);
             // 
             // btnExit
             // 

@@ -35,15 +35,13 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.lblHeading = new System.Windows.Forms.Label();
             this.imageChatBotList = new System.Windows.Forms.ImageList(this.components);
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.btnFilter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox
             // 
             this.textBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(122, 604);
+            this.textBox.Location = new System.Drawing.Point(41, 577);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(268, 46);
@@ -55,7 +53,7 @@
             // 
             this.richTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox.Location = new System.Drawing.Point(122, 111);
+            this.richTextBox.Location = new System.Drawing.Point(41, 71);
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.ReadOnly = true;
             this.richTextBox.Size = new System.Drawing.Size(378, 487);
@@ -67,7 +65,7 @@
             this.submitBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitBtn.Location = new System.Drawing.Point(405, 604);
+            this.submitBtn.Location = new System.Drawing.Point(324, 577);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(95, 46);
             this.submitBtn.TabIndex = 2;
@@ -80,7 +78,7 @@
             this.lblHeading.AutoSize = true;
             this.lblHeading.BackColor = System.Drawing.Color.Transparent;
             this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(118, 79);
+            this.lblHeading.Location = new System.Drawing.Point(37, 38);
             this.lblHeading.Name = "lblHeading";
             this.lblHeading.Size = new System.Drawing.Size(210, 20);
             this.lblHeading.TabIndex = 3;
@@ -96,32 +94,10 @@
             this.imageChatBotList.Images.SetKeyName(3, "ChatBot_Icon1.png");
             this.imageChatBotList.Images.SetKeyName(4, "Search_Icon.png");
             // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackColor = System.Drawing.Color.White;
-            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
-            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
-            this.btnSignOut.TabIndex = 9;
-            this.btnSignOut.UseVisualStyleBackColor = false;
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.BackColor = System.Drawing.Color.White;
-            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
-            this.btnFilter.Location = new System.Drawing.Point(525, 12);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(90, 75);
-            this.btnFilter.TabIndex = 8;
-            this.btnFilter.UseVisualStyleBackColor = false;
-            // 
             // API
             // 
             this.BackColor = System.Drawing.Color.Pink;
-            this.ClientSize = new System.Drawing.Size(628, 717);
-            this.Controls.Add(this.btnSignOut);
-            this.Controls.Add(this.btnFilter);
+            this.ClientSize = new System.Drawing.Size(467, 674);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.submitBtn);
@@ -141,7 +117,5 @@
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.ImageList imageChatBotList;
-        private System.Windows.Forms.Button btnSignOut;
-        private System.Windows.Forms.Button btnFilter;
     }
 }
