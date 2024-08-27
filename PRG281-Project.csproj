@@ -91,6 +91,7 @@
     <Compile Include="API.Designer.cs">
       <DependentUpon>API.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events.cs" />
     <Compile Include="FixedTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -128,7 +129,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Report.cs" />
     <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,12 +140,6 @@
     </Compile>
     <Compile Include="Splash Screen.Designer.cs">
       <DependentUpon>Splash Screen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -183,6 +177,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="API.resx">
       <DependentUpon>API.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -207,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Splash Screen.resx">
       <DependentUpon>Splash Screen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSignIn.resx">
       <DependentUpon>UserSignIn.cs</DependentUpon>

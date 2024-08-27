@@ -51,7 +51,7 @@
             // timerSplash
             // 
             this.timerSplash.Enabled = true;
-            this.timerSplash.Interval = 20;
+            this.timerSplash.Interval = 75;
             this.timerSplash.Tick += new System.EventHandler(this.timerSplash_Tick);
             // 
             // prgBarSplash
@@ -61,7 +61,6 @@
             this.prgBarSplash.Location = new System.Drawing.Point(46, 376);
             this.prgBarSplash.Name = "prgBarSplash";
             this.prgBarSplash.Size = new System.Drawing.Size(539, 23);
-            this.prgBarSplash.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.prgBarSplash.TabIndex = 1;
             this.prgBarSplash.Click += new System.EventHandler(this.progressBar1_Click);
             // 
