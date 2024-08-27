@@ -116,6 +116,7 @@ namespace PRG281_Project
                 if (number == 2)
                 {
                     MessageBox.Show("You have matched!");
+                    userChatName = lblSearchName.Text;
                     //match = true;
                     matchedUsers.AddUser(userChatName, userSur);
                     flowLayoutMessage.Controls.Clear();

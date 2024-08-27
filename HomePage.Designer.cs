@@ -533,7 +533,7 @@
             // 
             this.lblUserNameChat.AutoSize = true;
             this.lblUserNameChat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserNameChat.Location = new System.Drawing.Point(173, 45);
+            this.lblUserNameChat.Location = new System.Drawing.Point(193, 41);
             this.lblUserNameChat.Name = "lblUserNameChat";
             this.lblUserNameChat.Size = new System.Drawing.Size(72, 20);
             this.lblUserNameChat.TabIndex = 27;
