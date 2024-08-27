@@ -11,17 +11,6 @@ namespace PRG281_Project
        
         
        
-        public int Random()
-        {
-            Random random = new Random();
-            int number = 0;
-            // Swiped right
-            //MessageBox.Show("Swiped Right!");
-
-            //add user to possible match if other user(maybe a randomiser) also swipes right its a match
-
-            number = random.Next(1, 3);
-            return number;
-        }
+        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,19 +15,21 @@ namespace PRG281_Project
     }
     internal class Program
     {
+
+        public event DisplayAppHandler DisplayApp;
+
+        public delegate void DisplayAppHandler();
         static void Main(string[] args)
         {
-
+            
             HomePage home = new HomePage();
             Events Event = new Events();
+            Program program = new Program();
+            program.DisplayApp += program.Run;
+
+            program.DisplayApp.Invoke();
 
             
-
-            Console.WriteLine("hellos");
-            Console.WriteLine("hell yes");
-            Application.Run(new Splash_Screen());
-            Application.Run(new HomePage());
-
 
             likedUsers liked = new likedUsers();
 
@@ -36,6 +39,11 @@ namespace PRG281_Project
             TabPage page = new TabPage();   
             tab.BackColor = System.Drawing.Color.Pink;
 
+        }
+        public void Run()
+        {
+            Application.Run(new Splash_Screen());
+            Application.Run(new HomePage());
         }
 
         
