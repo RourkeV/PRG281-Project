@@ -251,19 +251,6 @@ namespace PRG281_Project
         static string userChatName;
         static string userSur = "";
 
-        public void displayNew(int i)
-        {
-            string viewName;
-            decimal viewAge;
-            string viewBio;
-            viewName = userDetails[i].name1;
-            userChatName = viewName;
-            viewAge = userDetails[i].age1;
-            viewBio = userDetails[i].Bio;
-        }
-
-
-
 
 
 
