@@ -31,11 +31,11 @@ namespace PRG281_Project
         {
             if (prgBarSplash.Value < 100)
             {
-                prgBarSplash.Value += 1;
+                prgBarSplash.Value += 5;
                 lblProgressAmount.Text = prgBarSplash.Value.ToString() + "%";
 
                 lblAppName.Location = new Point(x, 120);
-                x -= 10;
+                x -= 20;
             }
             else
             {

@@ -51,7 +51,7 @@
             // timerSplash
             // 
             this.timerSplash.Enabled = true;
-            this.timerSplash.Interval = 50;
+            this.timerSplash.Interval = 75;
             this.timerSplash.Tick += new System.EventHandler(this.timerSplash_Tick);
             // 
             // prgBarSplash
