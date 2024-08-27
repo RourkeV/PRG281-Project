@@ -260,6 +260,7 @@ namespace PRG281_Project
             userChatName = viewName;
             viewAge = userDetails[i].age1;
             viewBio = userDetails[i].Bio;
+        }
 
 
 

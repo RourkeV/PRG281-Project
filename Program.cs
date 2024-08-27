@@ -23,7 +23,7 @@ namespace PRG281_Project
         {
             
             HomePage home = new HomePage();
-            Events Event = new Events();
+            
             Program program = new Program();
             program.DisplayApp += program.Run;
 
@@ -43,7 +43,7 @@ namespace PRG281_Project
         public void Run()
         {
             Application.Run(new Splash_Screen());
-            Application.Run(new HomePage());
+            Application.Run(new UserSignIn());
         }
 
         
