@@ -323,6 +323,32 @@
             this.imageMainList.Images.SetKeyName(3, "ChatBot_Icon1.png");
             this.imageMainList.Images.SetKeyName(4, "Search_Icon.png");
             // 
+
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.White;
+            this.btnSignOut.Image = global::PRG281_Project.Properties.Resources.Sign_Out_Icon;
+            this.btnSignOut.Location = new System.Drawing.Point(12, 12);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(90, 75);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.White;
+            this.btnFilter.Image = global::PRG281_Project.Properties.Resources.Filter_Icon;
+            this.btnFilter.Location = new System.Drawing.Point(525, 12);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(90, 75);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click_1);
+            // 
+
             // tabControl1
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;

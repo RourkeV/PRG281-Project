@@ -32,13 +32,7 @@ namespace PRG281_Project
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
 
-        public bool hasFilter = false;
-
-
-        public event GenerateRandomNumHandler GenerateRandomNum;
-
-
-        public delegate void GenerateRandomNumHandler();
+        
 
         public HomePage()
         {
@@ -350,7 +344,7 @@ namespace PRG281_Project
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnFilter_Click_1(object sender, EventArgs e)
         {
             //https://www.flaticon.com/free-icons/filter to attribute freepik incase of hassle
             pnlFilter.Visible = true;
