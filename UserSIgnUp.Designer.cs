@@ -47,7 +47,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.White;
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(89, 347);
+            this.btnSubmit.Location = new System.Drawing.Point(84, 330);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(99, 35);
@@ -119,7 +119,7 @@
             this.chkBxShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkBxShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkBxShow.ForeColor = System.Drawing.Color.Black;
-            this.chkBxShow.Location = new System.Drawing.Point(117, 308);
+            this.chkBxShow.Location = new System.Drawing.Point(145, 296);
             this.chkBxShow.Name = "chkBxShow";
             this.chkBxShow.Size = new System.Drawing.Size(99, 17);
             this.chkBxShow.TabIndex = 7;
@@ -142,12 +142,13 @@
             // 
             this.lblMovePage.AutoSize = true;
             this.lblMovePage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMovePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMovePage.ForeColor = System.Drawing.Color.Black;
-            this.lblMovePage.Location = new System.Drawing.Point(77, 429);
+            this.lblMovePage.Location = new System.Drawing.Point(63, 438);
             this.lblMovePage.Name = "lblMovePage";
-            this.lblMovePage.Size = new System.Drawing.Size(127, 13);
+            this.lblMovePage.Size = new System.Drawing.Size(162, 16);
             this.lblMovePage.TabIndex = 9;
-            this.lblMovePage.Text = "Already have an Account";
+            this.lblMovePage.Text = "Already have an account?";
             // 
             // lblLogin
             // 
