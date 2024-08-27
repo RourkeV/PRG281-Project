@@ -91,7 +91,6 @@
     <Compile Include="API.Designer.cs">
       <DependentUpon>API.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events.cs" />
     <Compile Include="FixedTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
