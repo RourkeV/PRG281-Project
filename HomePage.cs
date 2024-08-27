@@ -1,9 +1,13 @@
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,15 +17,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PRG281_Project
 {
+
+
     public partial class HomePage : Form
     {
 
+        bool clickedbtn = false;
+        public static readonly HttpClient client = new HttpClient();
         private Point _startPoint;
         private bool _isDragging = false;
         private Point _initialPosition;
         usersLiked likedUsers = new usersLiked();
-
-
 
         public HomePage()
         {
@@ -42,6 +48,8 @@ namespace PRG281_Project
             userPicture.MouseDown += new MouseEventHandler(pictureBox_MouseDown);
             userPicture.MouseMove += new MouseEventHandler(pictureBox_MouseMove);
             userPicture.MouseUp += new MouseEventHandler(pictureBox_MouseUp);
+
+            textBoxUserChat.KeyDown += new KeyEventHandler(textBox_KeyDown);
         }
 
         private void pictureBox_MouseDown(object sender, MouseEventArgs e)
@@ -98,7 +106,7 @@ namespace PRG281_Project
                 {
                     MessageBox.Show("You have matched!");
                     //match = true;
-                    matchedUsers.AddUser("Calvin", "Nijenhuis");
+                    matchedUsers.AddUser(userChatName, userSur);
                     flowLayoutMessage.Controls.Clear();
                     AddUsersFromList();
                     //matchedUsers.Add(); in brackets add details pushed to form, then add them to tabcontrol
@@ -106,17 +114,11 @@ namespace PRG281_Project
                 }
                 else
                 {
-                    matchedUsers.AddUser("Bob", "stone");
-                    flowLayoutMessage.Controls.Clear();
                     AddUsersFromList();
                     //nextUser();                  
                 }
 
                 displayNew(viewCount);
-
-
-
-
             }
             else if (userCard.Left < -this.Width / 9092)
             {
@@ -154,12 +156,17 @@ namespace PRG281_Project
 
 
         }
+
+        static string userChatName;
+        static string userSur = "";
+
         public void displayNew(int i)
         {
             string viewName;
             decimal viewAge;
             string viewBio;
             viewName = userDetails[i].name1;
+            userChatName = viewName;
             viewAge = userDetails[i].age1;
             viewBio = userDetails[i].Bio;
 
@@ -338,6 +345,8 @@ namespace PRG281_Project
             flowLayoutMessage.PerformLayout();
         }
 
+        static string nameOfMatchedUser;
+
         private void UserButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Button clickedButton = sender as System.Windows.Forms.Button;
@@ -347,14 +356,123 @@ namespace PRG281_Project
             string userName = clickedButton.Text;
             string userBio = "This is the bio of " + userName; // Example bio, replace with actual data retrieval
 
-            API chatBetweenUsers = new API();
+            nameOfMatchedUser = userName;
             panelChatBot.Visible = true;
             lblChatUser.Visible = true;
             lblUserNameChat.Visible = true;
             textBoxUserChat.Visible = true;
             submitBtnUserChat.Visible = true;
 
+            lblUserNameChat.Text = userName;
+        }
 
+        private async Task<string> GetAIResponseAsync(string userInput)
+        {
+            try
+            {
+                string apiKey = "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";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+
+                var payload = new
+                {
+                    model = "gpt-3.5-turbo-0125",
+                    messages = new[]
+                    {
+                        new { role = "system", content = "You are to act as a person, this person is being implemented into a chat to simulate what it would be like to chat to another person in our dating app." },
+                        new { role = "user", content = userInput }
+                    },
+                    max_tokens = 350,
+                    temperature = 0.7,
+                    top_p = 0.85
+                };
+
+                var content = new StringContent(
+                    JsonConvert.SerializeObject(payload),
+                    System.Text.Encoding.UTF8,
+                    "application/json"
+                );
+
+                HttpResponseMessage response = await client.PostAsync("https://api.openai.com/v1/chat/completions", content);
+                response.EnsureSuccessStatusCode();
+
+                string result = await response.Content.ReadAsStringAsync();
+
+                var jsonResponse = JObject.Parse(result);
+
+                if (jsonResponse["choices"] != null &&
+                    jsonResponse["choices"].Any() &&
+                    jsonResponse["choices"][0]["message"] != null &&
+                    jsonResponse["choices"][0]["message"]["content"] != null)
+                {
+                    var aiResponse = jsonResponse["choices"][0]["message"]["content"].ToString();
+                    return aiResponse;
+                }
+                else
+                {
+                    return "AI response not available.";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+                return "Error occurred.";
+            }
+        }
+
+        private bool lengthValidation(string input)
+        {
+            return input.Length > 0;
+        }
+
+        private async Task SubmitUserInputAsync()
+        {
+            string userInput = textBoxUserChat.Text.Trim();
+
+            if (lengthValidation(userInput))
+            {
+
+                richTextBox.SelectionAlignment = HorizontalAlignment.Right;
+                richTextBox.AppendText("User: " + userInput + Environment.NewLine + Environment.NewLine);
+                textBoxUserChat.Clear();
+                richTextBox.ScrollToCaret();
+
+                string aiResponse = await GetAIResponseAsync(userInput);
+
+                richTextBox.SelectionAlignment = HorizontalAlignment.Left;
+                richTextBox.AppendText(nameOfMatchedUser + ": " + aiResponse + Environment.NewLine + Environment.NewLine);
+                richTextBox.ScrollToCaret();
+            }
+            else
+            {
+                MessageBox.Show("Input is invalid. Please try again.");
+            }
+        }
+
+        private async void submitBtn_Click(object sender, EventArgs e)
+        {
+            if (clickedbtn == false)
+            {
+                richTextBox.Clear();
+                clickedbtn = true;
+            }
+
+            await SubmitUserInputAsync();
+
+
+        }
+
+        private async void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (clickedbtn == false)
+                {
+                    richTextBox.Clear();
+                    clickedbtn = true;
+                }
+
+                await SubmitUserInputAsync();
+            }
         }
 
         private void flowLayoutMessage_Paint(object sender, PaintEventArgs e)
