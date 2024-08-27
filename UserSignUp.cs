@@ -106,5 +106,10 @@ namespace PRG281_Project
             new UserSignIn().Show();
             this.Hide();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
