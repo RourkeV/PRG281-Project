@@ -39,13 +39,6 @@ namespace PRG281_Project
             InitializeComponent();
             AddUsersFromList();
 
-
-            System.Drawing.Image SignOutImg;
-            SignOutImg = btnSignOut.Image;
-            System.Drawing.Image resizedImage = new Bitmap(SignOutImg, new Size(64, 64));
-            btnSignOut.Image = resizedImage;
-
-
             userCard.MouseDown += new MouseEventHandler(userCard_MouseDown);
             userCard.MouseMove += new MouseEventHandler(userCard_MouseMove);
             userCard.MouseUp += new MouseEventHandler(userCard_MouseUp);
@@ -188,9 +181,6 @@ namespace PRG281_Project
             decimal maxAge = numMax.Value;
             string gender = cmbGender.Text;
 
-
-
-
             while (true)
             {
                 
@@ -245,8 +235,6 @@ namespace PRG281_Project
             rchTxtBio.Text = curBio;
             //for user photo we need to figure out how to store images or just use random images
             displayNew(viewCount);
-
-
         }
 
         static string userChatName;
@@ -291,32 +279,6 @@ namespace PRG281_Project
             }
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -330,20 +292,6 @@ namespace PRG281_Project
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHobbyOne_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblBio_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnFilter_Click_1(object sender, EventArgs e)
         {
@@ -355,18 +303,9 @@ namespace PRG281_Project
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void lblHobbyThree_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
@@ -379,10 +318,6 @@ namespace PRG281_Project
 
         }
 
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAPIProfile_Click(object sender, EventArgs e)
         {
@@ -390,10 +325,7 @@ namespace PRG281_Project
             displayAPI.Show();
         }
 
-        private void lblChatBot_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         private void AddUsersFromList()
         {
             foreach (var user in matchedUsers.MatchedUsers)

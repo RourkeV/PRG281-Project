@@ -289,7 +289,6 @@
             this.lblBio.Name = "lblBio";
             this.lblBio.Size = new System.Drawing.Size(294, 79);
             this.lblBio.TabIndex = 2;
-            this.lblBio.Click += new System.EventHandler(this.lblBio_Click);
             // 
             // lblUsername
             // 
