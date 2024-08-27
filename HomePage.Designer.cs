@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.userCard = new System.Windows.Forms.Panel();
             this.pnlFilter = new System.Windows.Forms.Panel();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
             this.lblMax = new System.Windows.Forms.Label();
             this.lblMin = new System.Windows.Forms.Label();
             this.numMax = new System.Windows.Forms.NumericUpDown();
             this.numMin = new System.Windows.Forms.NumericUpDown();
-            this.cbGender = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblfilterAge = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -118,13 +118,13 @@
             // pnlFilter
             // 
             this.pnlFilter.BackColor = System.Drawing.Color.Salmon;
+            this.pnlFilter.Controls.Add(this.cmbGender);
             this.pnlFilter.Controls.Add(this.btnCancel);
             this.pnlFilter.Controls.Add(this.btnAccept);
             this.pnlFilter.Controls.Add(this.lblMax);
             this.pnlFilter.Controls.Add(this.lblMin);
             this.pnlFilter.Controls.Add(this.numMax);
             this.pnlFilter.Controls.Add(this.numMin);
-            this.pnlFilter.Controls.Add(this.cbGender);
             this.pnlFilter.Controls.Add(this.label6);
             this.pnlFilter.Controls.Add(this.lblfilterAge);
             this.pnlFilter.Location = new System.Drawing.Point(69, 28);
@@ -132,6 +132,17 @@
             this.pnlFilter.Size = new System.Drawing.Size(251, 249);
             this.pnlFilter.TabIndex = 11;
             this.pnlFilter.Visible = false;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "male",
+            "female"});
+            this.cmbGender.Location = new System.Drawing.Point(81, 126);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(121, 24);
+            this.cmbGender.TabIndex = 9;
             // 
             // btnCancel
             // 
@@ -158,7 +169,7 @@
             this.lblMax.AutoSize = true;
             this.lblMax.Location = new System.Drawing.Point(159, 49);
             this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(27, 13);
+            this.lblMax.Size = new System.Drawing.Size(32, 16);
             this.lblMax.TabIndex = 6;
             this.lblMax.Text = "Max";
             // 
@@ -167,7 +178,7 @@
             this.lblMin.AutoSize = true;
             this.lblMin.Location = new System.Drawing.Point(73, 49);
             this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(24, 13);
+            this.lblMin.Size = new System.Drawing.Size(28, 16);
             this.lblMin.TabIndex = 5;
             this.lblMin.Text = "Min";
             // 
@@ -180,7 +191,7 @@
             0,
             0});
             this.numMax.Name = "numMax";
-            this.numMax.Size = new System.Drawing.Size(45, 20);
+            this.numMax.Size = new System.Drawing.Size(45, 22);
             this.numMax.TabIndex = 4;
             this.numMax.Tag = "";
             this.numMax.Value = new decimal(new int[] {
@@ -198,31 +209,21 @@
             0,
             0});
             this.numMin.Name = "numMin";
-            this.numMin.Size = new System.Drawing.Size(44, 20);
+            this.numMin.Size = new System.Drawing.Size(44, 22);
             this.numMin.TabIndex = 3;
             this.numMin.Value = new decimal(new int[] {
             18,
             0,
             0,
             0});
-            // 
-            // cbGender
-            // 
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
-            "male",
-            "female"});
-            this.cbGender.Location = new System.Drawing.Point(73, 119);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(121, 21);
-            this.cbGender.TabIndex = 2;
+            this.numMin.ValueChanged += new System.EventHandler(this.numMin_ValueChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(112, 94);
+            this.label6.Location = new System.Drawing.Point(109, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.Size = new System.Drawing.Size(52, 16);
             this.label6.TabIndex = 1;
             this.label6.Text = "Gender";
             // 
@@ -231,7 +232,7 @@
             this.lblfilterAge.AutoSize = true;
             this.lblfilterAge.Location = new System.Drawing.Point(85, 32);
             this.lblfilterAge.Name = "lblfilterAge";
-            this.lblfilterAge.Size = new System.Drawing.Size(109, 13);
+            this.lblfilterAge.Size = new System.Drawing.Size(137, 16);
             this.lblfilterAge.TabIndex = 0;
             this.lblfilterAge.Text = "Choose an age range";
             // 
@@ -253,7 +254,7 @@
             this.lblViewBio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewBio.Location = new System.Drawing.Point(27, 373);
             this.lblViewBio.Name = "lblViewBio";
-            this.lblViewBio.Size = new System.Drawing.Size(29, 13);
+            this.lblViewBio.Size = new System.Drawing.Size(36, 17);
             this.lblViewBio.TabIndex = 9;
             this.lblViewBio.Text = "Bio:";
             // 
@@ -263,7 +264,7 @@
             this.lblViewAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblViewAge.Location = new System.Drawing.Point(273, 333);
             this.lblViewAge.Name = "lblViewAge";
-            this.lblViewAge.Size = new System.Drawing.Size(76, 20);
+            this.lblViewAge.Size = new System.Drawing.Size(94, 25);
             this.lblViewAge.TabIndex = 8;
             this.lblViewAge.Text = "User Age";
             // 
@@ -273,7 +274,7 @@
             this.lblSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchName.Location = new System.Drawing.Point(111, 333);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(83, 20);
+            this.lblSearchName.Size = new System.Drawing.Size(102, 25);
             this.lblSearchName.TabIndex = 7;
             this.lblSearchName.Text = "Username";
             // 
@@ -284,7 +285,7 @@
             this.lblAge.Location = new System.Drawing.Point(237, 333);
             this.lblAge.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(37, 18);
+            this.lblAge.Size = new System.Drawing.Size(50, 24);
             this.lblAge.TabIndex = 6;
             this.lblAge.Text = "Age:";
             // 
@@ -305,7 +306,7 @@
             this.lblUsername.Location = new System.Drawing.Point(26, 333);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(87, 20);
+            this.lblUsername.Size = new System.Drawing.Size(108, 25);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Username:";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
@@ -409,7 +410,7 @@
             this.txtAge.Location = new System.Drawing.Point(95, 159);
             this.txtAge.Name = "txtAge";
             this.txtAge.ReadOnly = true;
-            this.txtAge.Size = new System.Drawing.Size(100, 20);
+            this.txtAge.Size = new System.Drawing.Size(100, 22);
             this.txtAge.TabIndex = 25;
             // 
             // txtName
@@ -417,7 +418,7 @@
             this.txtName.Location = new System.Drawing.Point(95, 120);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 24;
             // 
             // btnEdit
@@ -435,7 +436,7 @@
             this.lblChatBot.AutoSize = true;
             this.lblChatBot.Location = new System.Drawing.Point(473, 404);
             this.lblChatBot.Name = "lblChatBot";
-            this.lblChatBot.Size = new System.Drawing.Size(93, 13);
+            this.lblChatBot.Size = new System.Drawing.Size(117, 16);
             this.lblChatBot.TabIndex = 21;
             this.lblChatBot.Text = "Need Assistance?";
             this.lblChatBot.Click += new System.EventHandler(this.lblChatBot_Click);
@@ -465,7 +466,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(45, 201);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 18);
+            this.label1.Size = new System.Drawing.Size(46, 24);
             this.label1.TabIndex = 18;
             this.label1.Text = "Bio:";
             // 
@@ -484,7 +485,7 @@
             this.lblAgeHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeHead.Location = new System.Drawing.Point(42, 159);
             this.lblAgeHead.Name = "lblAgeHead";
-            this.lblAgeHead.Size = new System.Drawing.Size(41, 18);
+            this.lblAgeHead.Size = new System.Drawing.Size(54, 24);
             this.lblAgeHead.TabIndex = 15;
             this.lblAgeHead.Text = "Age:";
             // 
@@ -494,7 +495,7 @@
             this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeading.Location = new System.Drawing.Point(243, 24);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(90, 29);
+            this.lblHeading.Size = new System.Drawing.Size(107, 36);
             this.lblHeading.TabIndex = 12;
             this.lblHeading.Text = "Profile";
             // 
@@ -505,7 +506,7 @@
             this.lblNameHead.Location = new System.Drawing.Point(30, 122);
             this.lblNameHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNameHead.Name = "lblNameHead";
-            this.lblNameHead.Size = new System.Drawing.Size(57, 18);
+            this.lblNameHead.Size = new System.Drawing.Size(71, 24);
             this.lblNameHead.TabIndex = 10;
             this.lblNameHead.Text = "Name:";
             // 
@@ -540,7 +541,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(251, -69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(210, 20);
+            this.label2.Size = new System.Drawing.Size(253, 25);
             this.label2.TabIndex = 28;
             this.label2.Text = "Welcome to the Love Bot";
             // 
@@ -585,7 +586,7 @@
             this.lblUserNameChat.AutoSize = true;
             this.lblUserNameChat.Location = new System.Drawing.Point(174, 29);
             this.lblUserNameChat.Name = "lblUserNameChat";
-            this.lblUserNameChat.Size = new System.Drawing.Size(88, 13);
+            this.lblUserNameChat.Size = new System.Drawing.Size(114, 16);
             this.lblUserNameChat.TabIndex = 27;
             this.lblUserNameChat.Text = "example example";
             // 
@@ -606,7 +607,7 @@
             this.lblChatUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChatUser.Location = new System.Drawing.Point(11, 24);
             this.lblChatUser.Name = "lblChatUser";
-            this.lblChatUser.Size = new System.Drawing.Size(168, 20);
+            this.lblChatUser.Size = new System.Drawing.Size(208, 25);
             this.lblChatUser.TabIndex = 0;
             this.lblChatUser.Text = "Welcome to chat with: ";
             // 
@@ -628,7 +629,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(496, 415);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.Size = new System.Drawing.Size(117, 16);
             this.label4.TabIndex = 23;
             this.label4.Text = "Need Assistance?";
             // 
@@ -659,7 +660,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(493, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.Size = new System.Drawing.Size(117, 16);
             this.label5.TabIndex = 23;
             this.label5.Text = "Need Assistance?";
             // 
@@ -678,7 +679,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(263, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "Need Assistance?";
             // 
@@ -780,7 +781,6 @@
         private System.Windows.Forms.Label lblChatUser;
         private System.Windows.Forms.Label lblUserNameChat;
         private System.Windows.Forms.Panel pnlFilter;
-        private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblfilterAge;
         private System.Windows.Forms.Button btnAccept;
@@ -789,5 +789,6 @@
         private System.Windows.Forms.NumericUpDown numMax;
         private System.Windows.Forms.NumericUpDown numMin;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cmbGender;
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -111,10 +112,7 @@ namespace PRG281_Project
                     AddUsersFromList();
                     //nextUser();                  
                 }
-                if (hasFilter == true)
-                {
-                    filter();
-                }
+
 
                 displayNew(viewCount);
           
@@ -133,10 +131,6 @@ namespace PRG281_Project
                 // Dont store user
 
                 //nextUser();
-                if (hasFilter == true)
-                {
-                    filter();
-                }
 
                 displayNew(viewCount);
 
@@ -145,6 +139,87 @@ namespace PRG281_Project
 
             // Reset the card position
             userCard.Location = _initialPosition;
+        }
+
+        public void displayNew(int i)
+        {
+            string viewName;
+            decimal viewAge;
+            string viewBio;
+
+            if (hasFilter == true)
+            {
+                filter(i);
+            }
+
+
+            viewName = userDetails[viewCount].name1;
+            viewAge = userDetails[viewCount].age1;
+            viewBio = userDetails[viewCount].Bio;
+
+
+            lblSearchName.Text = viewName;
+            lblBio.Text = viewBio;
+            lblViewAge.Text = viewAge.ToString();
+
+            viewCount++;
+        }
+
+        static HomePage homePage = new HomePage();
+        
+        
+        public void filter(int userCount)
+        {
+            decimal viewAge;
+            string viewGender;
+
+            viewAge = userDetails[userCount].age1;
+            viewGender = userDetails[userCount].Gender;
+
+            decimal minAge = numMin.Value;
+            decimal maxAge = numMax.Value;
+            string gender = cmbGender.Text;
+
+
+
+
+            while (true)
+            {
+                
+                viewAge = userDetails[viewCount].age1;
+                viewGender = userDetails[viewCount].Gender;
+                MessageBox.Show(minAge.ToString());
+                MessageBox.Show(gender);
+                MessageBox.Show(viewAge.ToString());
+                MessageBox.Show(viewGender);
+
+                if (viewAge >= minAge && viewAge <= maxAge)
+                {
+
+                    if (viewGender == gender)
+                    {
+
+                        break;
+                    }
+                    else 
+                    { 
+                        viewCount++; 
+                    }
+                }
+                else 
+                { 
+                    viewCount++;
+                }
+            }
+
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            pnlFilter.Visible = false;
+            hasFilter = true;
+
+            displayNew(viewCount);
         }
 
         private void SwipeForm_Load(object sender, EventArgs e)
@@ -168,61 +243,10 @@ namespace PRG281_Project
 
 
         }
-        public void displayNew(int i)
-        {
-            string viewName;
-            decimal viewAge;
-            string viewBio;
-            viewName = userDetails[i].name1;
-            viewAge = userDetails[i].age1;
-            viewBio = userDetails[i].Bio;
-
-            
-            lblSearchName.Text = viewName;
-            lblBio.Text = viewBio;
-            lblViewAge.Text = viewAge.ToString();
-
-            viewCount++;
-        }
-
-        static void filter()
-        {          
-            decimal viewAge;
-            string viewGender;        
-         
-            HomePage homePage = new HomePage();
-
-            decimal minAge = homePage.numMin.Value;
-            string gender = homePage.cbGender.Text;
-
-          
 
 
-            while (true)
-            {
-                viewAge = userDetails[viewCount].age1;
-                viewGender = userDetails[viewCount].Gender;
-                if (viewAge >= minAge) 
-                {
-                    if (viewGender == gender)
-                    {
 
-                        break;
-                    }
-                    else { viewCount++; }
-                    break;                    
-                }
-                else { viewCount++; }
-            }
 
-        }
-
-        private void btnAccept_Click(object sender, EventArgs e)
-        {
-            pnlFilter.Visible = false;
-            hasFilter = true;
-            displayNew(viewCount);
-        }
 
 
 
@@ -460,6 +484,9 @@ namespace PRG281_Project
             pnlFilter.Visible = false;
         }
 
-
+        private void numMin_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
