@@ -94,7 +94,7 @@ namespace PRG281_Project
                 Random random = new Random();
                 int number = 0;
                 // Swiped right
-                //MessageBox.Show("Swiped Right!");
+                
 
                 //add user to possible match if other user(maybe a randomiser) also swipes right its a match
 
@@ -124,7 +124,7 @@ namespace PRG281_Project
             else if (userCard.Left < -this.Width / 9092)
             {
                 // Swiped left
-                //MessageBox.Show("Swiped Left!");
+                
 
                 // Dont store user
 
@@ -186,7 +186,6 @@ namespace PRG281_Project
                 
                 viewAge = userDetails[viewCount].age1;
                 viewGender = userDetails[viewCount].Gender;
-                MessageBox.Show("Results have been filtered!");
 
                 if (viewAge >= minAge && viewAge <= maxAge)
                 {
@@ -213,6 +212,7 @@ namespace PRG281_Project
         {
             pnlFilter.Visible = false;
             hasFilter = true;
+            
 
             displayNew(viewCount);
         }
